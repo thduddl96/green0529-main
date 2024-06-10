@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a태그</title>
+    <style>
+      a {
+        display: block;
+      }
+      /* 방문하지 않은 링크 */
+      a:link {
+        color: red;
+        text-decoration: none;
+      }
+      /* 방문한 링크*/
+      a:visited {
+        color: blue;
+      }
+      /* 마우스를 올린 링크 */
+      a:hover {
+        color: green;
+        text-decoration: underline;
+      }
+      /* 마우스를 누른 링크 */
+      a:active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://WWW.naver.com" target="_blank">링크태그1</a>
+    <a href="http://WWW.google.com" target="_new">구글</a>
+    <a href="htto://WWW.google.com">구글</a>
+    <a href="./images/photo1.jpg">이미지</a>
+    <a href="images/photo2.jpg이미지2"></a>
+    <a href="../HTMLCSS/images/photo3.jpg">이미지3</a>
+    <a
+      href="https://t1.daumcdn.net/daumtop_deco/images/pctop/2023/logo_daum.png"
+      >다음</a
+    >
+  </body>
+</html>

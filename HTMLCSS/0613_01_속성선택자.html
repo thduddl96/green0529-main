@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h1[class] {
+        color: red;
+      } */
+      img {
+        width: 100px;
+      }
+      /* p[class="box"] {
+        color: red;
+      } */
+      /* p[class~="box"] {
+        color: red;
+      } */
+      /* p[class|="box"] {
+        color: red;
+      } */
+      /* p[class^="box"] {
+        color: red;
+      } */
+      /* p[class$="big"] {
+        color: red;
+      } */
+      p[class*="big"] {
+        color: red;
+      }
+      a[href^="mailto"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/photo1.jpg" />
+    <img src="images/photo1.jpg" alt="photo1" />
+    <h1>제목태그</h1>
+    <h1 class="title">제목태그</h1>
+    <h1 class="big">제목태그</h1>
+    <p class="box">문단태그</p>
+    <p class="box big">문단태그</p>
+    <p class="boxbig">문단태그</p>
+    <p class="box-big">문단태그</p>
+    <p class="boxbigtop">문단태그</p>
+    <a href="">링크태그</a>
+    <a href="mailto:aaa@naver.com">링크태그</a>
+  </body>
+</html>

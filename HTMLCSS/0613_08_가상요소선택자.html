@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li:first-child {
+        color: red;
+      }
+      li:nth-child(5) {
+        color: red;
+      }
+      li:last-child::first-line {
+        text-decoration: underline;
+      }
+      li:last-child::first-letter {
+        font-size: 50px;
+      }
+      li:hover {
+        color: blue;
+        cursor: pointer;
+      }
+      p:nth-child(2) {
+        color: blue;
+      }
+      p:last-child {
+        color: blue;
+      }
+      a:hover::before {
+        content: "♥";
+      }
+      a:hover::after {
+        content: "♥";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+      <li>리스트5</li>
+      <li>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </li>
+    </ul>
+    <p>문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <a href="#">링크태그</a>
+  </body>
+</html>

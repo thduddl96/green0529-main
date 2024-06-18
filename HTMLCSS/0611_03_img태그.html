@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img 태그</title>
+    <style></style>
+  </head>
+  <body>
+    <picture>
+      <source media="(min-width:1280px)" srcset="images/photo1.jpg" />
+      <source media="(min-width:1024px)" srcset="images/photo2.jpg" />
+      <source media="(min-width:768px)" srcset="images/photo3.jpg" />
+      <source media="(min-width:500px)" srcset="images/photo4.jpg" />
+      <source media="(max-width:499px)" srcset="images/photo5.jpg" />
+      <img src="images/photo6.jpg" alt="photo6" />
+    </picture>
+  </body>
+</html>

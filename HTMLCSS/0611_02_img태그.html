@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img 태그</title>
+    <style>
+      .link1 {
+        color: red;
+      }
+      .link2 {
+        color: blue;
+      }
+      .link3 {
+        color: green;
+      }
+
+      .one {
+        width: 100px !important;
+      }
+      #p01 {
+        width: 600px;
+      }
+      .two {
+        width: 200px;
+      }
+      .three {
+        width: 300px;
+      }
+      .four {
+        width: 400px;
+      }
+      .five {
+        width: 500px;
+      }
+      .six {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="link1">문단태그</p>
+    <p class="link2">문단태그</p>
+    <p class="link3">문단태그</p>
+    <a href="#" class="link1">link1</a>
+    <a href="#" class="link2">link2</a>
+    <a href="#" class="link3">link3</a>
+    <img
+      src="images/photo1.jpg"
+      alt="photo"
+      class="one"
+      id="p01"
+      style="width: 200px"
+    />
+    <img src="images/photo2.jpg" alt="photo" class="two" />
+    <img src="images/photo3.jpg" alt="photo" class="three" />
+    <img src="images/photo4.jpg" alt="photo" class="four" />
+    <img src="images/photo5.jpg" alt="photo" class="five" />
+    <img src="images/photo6.jpg" alt="photo" class="six" />
+    <a href="http://www.naver.com" target="_blank">
+      <img src="images/cake.jpg" alt="cake" />
+    </a>
+    <img src="images/map.jpg" alt="지도" usemap="#korea" />
+    <map name="korea">
+      <area
+        shape="rect"
+        coords="140,260,180,280"
+        href="https://www.daejeon.go.kr/"
+        alt="대전"
+        target="_blank"
+      />
+      <area
+        shape="circle"
+        coords="90,523,30"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주도"
+        target="_blank"
+      />
+      <area
+        shape="poly"
+        coords="330,290,325,304,342,303"
+        href="https://www.pohang.go.kr/sites/pohang/index.do"
+        alt="포항"
+        target="_blank"
+      />
+    </map>
+  </body>
+</html>

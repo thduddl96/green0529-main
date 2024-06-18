@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body>p:nth-of-type(2){color: red;} */
+        /* body :not(p){
+          color: red;  
+        } */
+        /* p:only-child{color: red;} */
+        /* p:only-of-type{color: red;} */
+        /* p:nth-last-child(3){color: red;}
+        p::selection{background-color: yellow;} */
+        p{color: red;}
+        p:nth-child(2){color: blue;}
+        .first{color: green;}
+        #one{color: yellow;}
+    </style>
+</head>
+<body>
+    <h1>제목태그</h1>
+    <p class="first" id="one">문단태그</p>
+    <h2 class="first">제목태그</h2>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <div>
+        <p>문단태그</p>
+    </div>
+    <div>
+        <p>문단태그</p>
+        <span>인라인태그</span>
+    </div>
+</body>
+</html>

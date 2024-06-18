@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .parent{height: 65px;}
-    .parent,.parent1{width: 1200px;margin: 0 auto;border: 1px solid;position: relative;background-color: yellow;}
-    .parent>div{position: absolute;}
-    .parent>div:first-child{left: 0;}
-    .parent>div:last-child{right: 0;}
-    .parent1{overflow: hidden;}
-    .parent>div:first-child{float: left;}
-    .parent>div:last-child{float: left;}
-  </style>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{height: 65px;}
+        .parent,.parent1{width: 1200px;margin: 0 auto;border: 1px solid;position: relative;background-color: yellow;}
+        .parent>div{position: absolute;}
+        .parent>div:first-child{left: 0;}
+        .parent>div:last-child{right: 0;}
+        .parent1{overflow: hidden;}
+        .parent1>div:first-child{float: left;}
+        .parent1>div:last-child{float: right;}
+    </style>
 </head>
 <body>
-  <div class="parent">
-    <div>left<br>left<br>left</div>
-    <div>right</div>
-  </div>
-  <div class="parent1">
-    <div>left<br>left<br>left<br>left</div>
-    <div>right</div>
-  </div>
+    <div class="parent">
+        <div>left<br>left<br>left</div>
+        <div>right</div>
+    </div>
+    <div class="parent1">
+        <div>left<br>left<br>left<br>left</div>
+        <div>right</div>
+    </div>
 </body>
 </html>

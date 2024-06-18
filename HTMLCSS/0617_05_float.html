@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    *{margin: 0;padding: 0;}
-    .wrap{width: 1200px;margin: 0 auto;}
-    .one{height: 100px;background-color: red;}
-    .two{height: 100px;background-color: blue;}
-    .third{height: 500px;}
-    .third>div{float: left;height: 100%;}
-    .three{width: 20%;background-color: green;}
-    .four{width: 70%;background-color:pink;}
-    .five{width: 10%;background-color: green;}    
-    .six{width: 100px;background-color:blue;}    
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{width: 1200px;margin: 0 auto;border: 1px solid;}
+        .one{overflow: hidden;}
+        .one>div{float: left;}
+        .one>div:nth-child(1){width: 20%;background-color: red;}
+        .one>div:nth-child(2){width: 60%;background-color: blue;}
+        .one>div:nth-child(3){width: 20%;background-color: yellow;}
+        .two{background-color: green;}
+    </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="one">1</div>
-  <div class="two">2</div>
-  <div class="third">
-    <div class="three">3</div>
-    <div class="four">4</div>
-    <div class="five">5</div>
-  </div>
-  <div class="six">6</div>
-  </div>
+    <div class="parent">
+        <div class="one">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="two">1</div>
+    </div>
 </body>
 </html>

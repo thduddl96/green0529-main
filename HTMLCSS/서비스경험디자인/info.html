@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인사말</title>
+  <style>
+    .clearfix:before.clearfix::after{
+      content: "";display: block;
+    }
+    .clearfix::after{
+      clear: both;
+    }
+    @font-face {
+		font-family: aritab;
+		src: url(webfonts/Arita-buriB.otf) format("opentype");
+	}
+	@font-face {
+		font-family: arital;
+		src: url(webfonts/Arita-buriL.otf) format("opentype");
+	}
+  @font-face {
+		font-family: kim;
+		src: url(webfonts/KimjungchulScript-Bold.woff) format("woff");
+	}
+    *{margin: 0;padding: 0;}
+    .info{width: 1350px;margin: 100px auto; background-color: rgb(251, 248, 241);position: relative;height: 1000px;}
+    .top>div{float: left;}
+    .leader{position: relative; width:460px; height: 563px; top: -50px;left: -50px;z-index: 3;
+    border-radius: 50px;overflow: hidden;box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    }
+    .desc{width: 690px;padding-top: 150px;position: relative;z-index: 2;}
+    h1{font: 46px/2 aritab;color: #471404;}
+		h2{font: 26px: wantedB;margin-bottom: 80px;}
+    .desc p{font: 20px wantedR;margin-bottom:  50px;}
+    .bg1{position: absolute;z-index: 1;top: 250px;left: 100px;}
+    .bottom{position: relative;z-index: 2;}
+    .bottom>div{float: left;}
+    .people{position: relative;left: -50px}
+    .date{position: relative;left: 250px; top: 80px}
+    .date p{font:20px wantedR;}
+    .date span{font: 40px kim;}
+    .bg2{position: absolute;right: 0;bottom: 0;}
+    .main{background-color: #ccc;height: 827px;margin-bottom: 100px; border-radius: 0 0 200px;}
+  </style>
+</head>
+<body>
+  <bg1>
+    <div class="info">
+        <div class="top clearfix">
+          <div class="leader">
+            <img src="images/cts23726_img01.png" alt="시장">
+          </div>
+            
+              <div class="desc">
+                <h1>존경하는 88만 청주시민 여러분!</h1>
+                <h2>통합 청주시가 출범하고 어느덧 열 돌을 맞이했습니다.
+          <br>
+                  청주시와 역사적 동행을 하고 계신 88만 청주시민 여러분께<br> 진심으로 감사를 드립니다.</h2>
+                  <p>
+                    지난 10년은 모두가 함께 이룬 성과의 시간이었습니다.</p>
+                  <p>
+                    헌정사상 최초로 주민주도의 자율통합을 이루었고<br>
+                    대한민국의 미래를 이끌어갈 첨단산업의 중심지로 자리매김하는 등<br> 	통합 청주시가 더욱 역동적으로 성장 발전해가는 성과들이<br> 크게 나타나고 있습니다.
+                  </p>
+                    <p>이제 우리는 청주청원 통합 10주년이라는 역사적인 대전환점에 와 있습니다.
+                    </p>
+                    <p>희망찬 새 시대를 염원하던 통합의 정신을 되새기며<br>
+                      미래 100만 자족도시 청주를 향해<br> 모두 함께 힘차게 나아갑시다.</p>
+              </div>
+        </div>
+		<div class="bg1">
+			<img src="images/cts23726_deco01.png" alt="bg1">
+		</div>
+		<div class="bottom clearfix">
+      <div class="people">
+        <img src="images/cts23726_deco03.png" alt="people">
+      </div>
+      <div class="date">
+        <p>2024.6.18</p>
+        <p>청주시장<span>이범석</span></p>
+      </div>
+    </div>
+		<div class="bg2">
+			<img src="images/cts23726_deco02.png" alt="bg2">
+		</div>
+	</div>
+  <div class="main"></div>
+</body>
+</html>

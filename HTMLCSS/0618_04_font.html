@@ -4,17 +4,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+
 	<style>
 		@font-face {
-			font-family: notosanskr;
-			src: url(webfonts/NotoSansKR-Regular.woff) format("woff");
+		@font-face {
+			font-family: ;
+			src: url(webfonts/a);
 		}
-		*{margin: 0;padding: 0;}
-		
-		.info{ font: bold 24px notosanskr, sans-serif;}
-	</style>
-</head>
-<body>
-	<div class="info">인사말 info</div>
+		}
+	@font-face {
+		font-family: aritab;
+		src: url(webfonts/Arita-buriB.otf) format("opentype");
+	}
+	@font-face {
+		font-family: arital;
+		src: url(webfonts/Arita-buriL.otf) format("opentype");
+	}
+		p{font: 30px solid;}
+		p::before{content: "\f09a";font-family: brands;}
+		h1{font-family: aritab;}
+		h1{font-family: arital;}
+	 </style>
+	</head>
+	<body>
+		<p>&#xf007;</p>
+		<h1>존경하는 88만 청주시민 여러분!</h1>
 </body>
 </html>

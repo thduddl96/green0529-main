@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.parent{width: 100%;margin: 0 auto;height: 100vh;}
+		.parent>div{width: 50%;float: left;font-weight: bold;}
+		.left{background-color: yellow;}
+		.right{background-color: blue;}
+		h6:nth-of-type(1){text-transform: uppercase;line-height: 0.5em;}
+		h6:nth-of-type(2){font-weight: normal;font-style:italic;font-variant: small-caps;}
+		span{
+			/* font:italic small-caps bold 20px/0.5em 돋움,sans-serif; */
+			font: 20px 돋움,sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="left">child</div>
+		<div class="right">child</div>
+	</div>
+	<p>문단태그</p>
+	<h6>제목태그abc</h6>
+	<h6>제목태그abc</h6>
+	<span>인라인태그</span>
+</body>
+</html>

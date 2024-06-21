@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .clearfix::before,.clearfix::before{
+      content: "";
+      display: block;   
+     }
+    .clearfix::after{clear: both;}
+   /* article{overflow: hidden;}*/
+    div,span{border: 1px solid;width: 50px;}
+    div{float: left;}
+    span{float: right;}
+    section{width: 50px;border: 1px solid;margin: 50px auto;
+      /*clear: both;*/
+    }
+    nav{float: right;}
+    nav span{float: left;}
+  </style>
+</head>
+<body>
+  <article class="clearfix">
+    <div>블록요소11111111111</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <span>인라인요소1</span>
+    <span>인라인요소2</span>
+    <span>인라인요소3</span>
+    <span>인라인요소4</span>
+    <span>인라인요소5</span>
+  </article>
+  <section>블록요소</section>
+  <article class="clearfix">
+    <div>블록요소11111111111</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <nav>
+    <span>인라인요소1</span>
+    <span>인라인요소2</span>
+    <span>인라인요소3</span>
+    <span>인라인요소4</span>
+    <span>인라인요소5</span>
+    </nav>
+  </article>
+  <section>블록요소</section>
+</body>
+</html>

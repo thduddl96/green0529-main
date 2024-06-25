@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    table{border-collapse: collapse;}
+    .first th,.first td{width: 300px;border: 1px solid; padding: 10px;}
+    div{width: 400px;border: 1px solid;}
+    div table{width: 90%;background-color: #ddd;margin: 0 auto;table-layout: fixed;}
+    div table td:first-child{width: 70%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+    div table td:last-child{width: 30%;}
+ </style>
+</head>
+<body>
+  <table class="first">
+    <thead>
+      <tr>
+        <th>셀11</th>
+        <th>셀12</th>
+        <th>셀13</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>셀21</td>
+        <td>셀22</td>
+        <td>셀23</td>
+      </tr>
+      <tr>
+        <tr>
+          <td>셀21</td>
+          <td>셀22</td>
+          <td>셀23</td>
+        </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+      <td>셀31</td>
+      <td>셀32</td>
+      <td>셀33</td>
+    </tr>
+    </tfoot>
+  </table>
+  <div>
+  <table>
+    <tr>
+      <td>
+        표를 정의할 때 사용하는 태그이며, 행과 열의 2차원 정보로 구성되어 있다.
+      </td>
+      <td>2024.06.25</td>
+    </tr>
+    <tr>
+<td>
+  표를 정의할 때 사용하는 태그이며, 행과 열의 2차원 정보로 구성되어 있다.
+</td>
+<td>2024.06.25</td>
+</tr>
+<tr>
+<td>
+  표를 정의할 때 사용하는 태그이며, 행과 열의 2차원 정보로 구성되어 있다.
+</td>
+<td>2024.06.25</td>
+</tr>
+<tr>
+<td>
+  표를 정의할 때 사용하는 태그이며, 행과 열의 2차원 정보로 구성되어 있다.
+</td>
+<td>2024.06.25</td>
+</tr>
+  </table>
+  </div>
+</body>
+
+</html>

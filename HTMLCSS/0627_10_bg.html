@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0;padding: 0;}
+  body{background-color: #d3222a;}
+  /*.wrapper{width: 1000px;margin: 0 auto;}*/
+  .wrapper{background-color: #d3222a;}
+  .top{text-align: right;width: 1000px;margin: 0 auto;overflow: hidden;}
+  .top ul{float: right;list-style: none;}
+  .top ul li{float: left;}
+  .top ul li a{color: #fff;text-decoration: none;text-transform: uppercase;line-height: 30px;}
+  .top ul li a:after{content: "";padding: 0 10px;}
+  .top ul li:last-child a:after{content: "";}
+  .pattern{background-image: url(./images/pattern.gif);height: 82px;}
+  .pattern_inner{width: 1000px;margin: 0 auto;}
+  .main{height: 625px;overflow: hidden;width: 1000px;margin: 0 auto;}
+  .main>div{float: left;position: relative;}
+  .main>div ul{position: absolute;top: 220px;left: 50px; list-style: none;}
+  .main>div ul li a{color: #000;text-decoration: none;text-transform: uppercase;}
+  .main>div:last-child{width: 514px;height: 100%;background-image: url(./images/index_main_02.gif);}
+  .main>div:last-child p{color: #fff;font-size: 24px;}
+  .foot{clear: left;height: 100px;background-color: #fff;border-bottom: 1px solid #ccc;}
+  .foot_inner{width: 1000px;margin: 0 auto;text-align: center;line-height: 100px;}
+  </style>
+</head>
+<body>
+ <div class="wrapper">
+  <div class="top">
+    <ul>
+      <li><a href="#">회원가입</a></li>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">japanse</a></li>
+      <li><a href="#">chinese</a></li>
+      <li><a href="#">italian</a></li>
+
+    </ul>
+   </div>
+  <div class="pattern">
+    <div class="pattern_inner">
+     <img src="./images/index_pattern.gif" alt="pattern"></div></div>
+  <div class="main">
+    <div>
+      <img src="./images/index_main_01.gif" alt="main">
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">instory</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">product</a></li>
+      <li><a href="#">illustrator</a></li>
+      <li><a href="#">contant</a></li>
+    </ul>
+    </div>
+    <div><p>home 메인 페이지입니다</p></div>
+  </div>
+  <div class="foot"><div class="foot_inner"><img src="./images/copyright.gif" alt="copyright"></div></div>
+ </div>
+</body>
+</html>

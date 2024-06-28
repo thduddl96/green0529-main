@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{background-color: #9a9a9a;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    #wrap{background-color: #161616;}
+    .topmenu{background-color: #666;}
+    .top{width: 1000px;margin: 0 auto;overflow: hidden;}
+    .top ul{float: right;}
+    .top ul li{float: left;;}
+    .top ul li a{color: #fff;text-transform: uppercase;padding: 0 10px;height: 30px;display: block;line-height: 30px;}
+    .top ul li:nth-child(4) a{background-color: #fff;height: 20px;color:#000;line-height: 20px;margin-top: 5px;}
+    .top ul li a img{vertical-align: middle;}
+    nav{background-color: #161616;}
+    nav .logo{float: left;}
+    nav .menu{width: 1000px;margin: 0 auto; height: 70px;}
+    nav .menu ul{float:right;}
+    nav .menu ul li {float: left;line-height: 70px;padding: 0 20px;}
+    nav .menu ul li a{color: #fff;text-transform: uppercase;}
+    .visual{height: 400px;background: #9a9a9a url(./images/mad_17.jpg) center no-repeat;}
+    .pro{width: 1000px;margin: 0 auto;overflow: hidden;padding: 20px 0;}
+    .pro li{float:left;margin-left: calc((100% - (235px * 4)) / 3);}
+    .pro li:first-child{margin-left: 0;}
+    .event{width: 1000px;margin: 0 auto;overflow: hidden;}
+    .event > li{float: left;width: 50%;}
+    .event > li div{width: 90%;margin: 0 auto;color: #fff;}
+    .event > li div li{font-size: 14px;}
+    .event > li div li span:first-child{font-weight: bold;}
+    .event > li div li span:nth-child(2){margin: 0 20px;}
+    .event > li div li span:nth-child(3){color: #9a9a9a;}
+    footer{border-top: 1px solid #9a9a9a;}
+    .foot{width: 1000px;margin: 0 auto;text-align: center;color: #fff;font-size: 14px;padding: 50px 0;}
+    .foot ul{display: inline-block;}
+    .foot ul li{float: left;padding: 0 10px;}
+    .foot address{font-style: normal;margin: 10px 0;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+        <div class="topmenu">
+          <div class="top">
+            <ul>
+              <li><a href="#">login</a></li>
+              <li><a href="#">join</a></li>
+              <li><a href="#">gust</a></li>
+              <li><a href="#">검색어를 입력해주세요</a></li>
+              <li><a href="#"><img src="./images/zoom.png" alt="돋보기"></a></li>
+            </ul>
+          </div>
+        </div>
+      <nav>
+        <div class="menu">
+        <div class="logo"><img src="images/mad_12.gif" alt="logo"></div>
+        <ul>
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">MEMU</a></li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">MERVERSHIP</a></li>
+          <li><a href="#">EVENT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <ul>
+     <div class="visual"></div> 
+     <ul class="pro">
+      <li><img src="./images/mad_25.jpg" alt="steak"></li>
+      <li><img src="./images/mad_27.jpg" alt="rice"></li>
+      <li><img src="./images/mad_29.jpg" alt="pizza"></li>
+      <li><img src="./images/mad_31.jpg" alt="pasta"></li>
+     </ul>
+     <ul class="event">
+       <li><img src="./images/mad_39.jpg" alt="이벤트"></li>
+       <li>
+        <div>
+          <h3>공지사항</h3>
+          <ul>
+            <li><span>MAD SURPRISE</span><span>매월 지정일 매드서프라이즈!</span><span>2017-06-28</span></li>
+            <li><span>MAD CELEBRATION</span><span>생일, 결혼기념일 스페셜!</span><span>2017-06-28</span></li>
+            <li><span>MAD DAY</span><span>매월 마지막 주 수요일 기억하세요!</span><span>2017-06-28</span></li>
+            <li><span>MAD 10%</span><span>멤버십이라면 언제나 10% 할인제공!</span><span>2017-06-28</span></li>
+            <li><span>MAD REWARDS</span><span>올수록 커지는 리워즈 혜택!</span><span>2017-06-28</span></li>
+          </ul>
+        </div>
+       </li>
+    </ul>
+    </main>
+    <footer>
+      <div class="foot">
+        <ul>
+          <li>서비스이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>기기운영관리방침 </li>
+          <li>고객서비스센</li>
+          <li>관리자문의</li>
+        </ul>
+        <address>서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아</address>
+        <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+      </div> 
+    </footer>
+  </div>
+</body>
+</html>

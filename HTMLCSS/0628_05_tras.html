@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0;padding: 0;}
+   div{margin: 100px;border: 1px solid;}
+   p{width: 200px;height: 200px;background: #ccc;
+    /*transition-property: width,height;
+    transition-duration: 1s,2s;
+    transition-timing-function: linear,ease;
+    transition-delay: 1s;*/
+    transition: width 1s linear 1s,height 2s ease 1s;
+  }
+   p:hover{width: 400px;height: 600px;}
+   ul{list-style: none;}
+   ul li{width: 50px;height: 50px;background: #ccc;margin: 10px;white-space: nowrap;transition: all 2s;}
+   ul:hover li{width: 500px;}
+   ul li:nth-child(2){transition-timing-function: ease;}
+   ul li:nth-child(3){transition-timing-function: ease-in;}
+   ul li:nth-child(4){transition-timing-function: ease-out;}
+   ul li:nth-child(5){transition-timing-function: ease-in-out;}
+   ul li:nth-child(6){transition-timing-function: linear;}
+   ul li:nth-child(7){transition-timing-function:cubic-bezier(.17,.67,1,-0.2)}
+  </style>
+</head>
+<body>
+  <div>
+    <p></p>
+  </div>
+  <ul>
+    <li>default</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+    <li>linear</li>
+    <li>cubic-bezier</li>
+  </ul>
+</body>
+</html>

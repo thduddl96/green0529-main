@@ -5,44 +5,104 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     *{margin: 0;padding: 0;}
     ul{list-style: none;}
-    title{padding: 50px 0;text-align: center;}
-    .pr{width: 1280px;margin: 0 auto;}
-    .con .left{width: 680px;height: 550px;float: left;}
-    .con .left ul li{width: 50%;height: 550px;float: left;transition: 0.5s;background-size: 100%;}
-    .con .left ul li:hover{background-size: 120%;}
-    .con .left ul li:first-child{background-image: url(./images/pr_img1.jpg);}
-    .con .left ul li:last-child{background-image: url(./images/pr_img2.jpg);margin-top: 50px;}
-    .con .right{width: 565px;float: right;margin-top: 50px;}
-    .con .right ul li{float: left;width: 265px;height: 265px;background-color: #f0f0f0;margin: 10px;}
-    .con .right ul li:nth-child(2),.con .right ul li:nth-child(4){margin-right: 0;}
-    
-    
-
-    
+		.title{padding: 50px 0;text-align: center;}
+    .title h1{font-family: "play", sans-serif;font-size: 40px;}
+		.pr{width: 1280px;margin: 0 auto;}
+		.con .left{width: 680px;height: 550px;float: left;}
+		.con .left ul li{width: 50%;height: 550px;float: left;transition: 0.5s;background-size: 100%;}
+		.con .left ul li:hover{background-size: 120%;}
+		.con .left ul li:first-child{background-image: url(images/pr_img1.jpg);}
+		.con .left ul li:last-child{background-image: url(images/pr_img2.jpg);margin-top: 50px;}
+		.con .right{width: 565px;float: right;margin-top: 50px;}
+		.con .right{overflow: hidden;}
+		.con .right ul li{float: left;width: 265px;height: 265px;background-color: #f0f0f0;margin: 10px;position: relative;padding-left: 20px;box-sizing: border-box;}
+		.con .right ul li:nth-child(2),.con .right ul li:nth-child(4){margin-right: 0;}
+    .con .right ul li div{position: absolute;top: 50%;transform: translateY(-50%);}
+    .con .right ul li div p:nth-of-type(1){padding: 20px 0;}
+    .con .right ul li div h1{font-size: 24px;}
+    .con .right ul li div h1 span{display: block;font-weight: bold;}
+    .con .right ul li div p:nth-of-type(2) img{transition: 0.4s;}
+    .con .right ul li:hover div p:nth-of-type(2) img{margin-left: 20px;}
+		.line{position: absolute;background-color: #07348c;}
+		.line-top{width: 100%;height: 5px;left: 0;top: 0;transform: scaleX(0);transform-origin: 0 0;transition: all 0.1s ease-in-out 0.3s;}
+		.line-right{width: 5px;height: 100%;right: 0;top: 0;transform: scaleY(0);transform-origin: 0 0;transition: all 0.1s ease-in-out 0.2s;}
+		.line-bottom{width: 100%;height: 5px;left: 0;bottom: 0;transform: scaleX(0);transform-origin: 100% 0;transition: all 0.1s ease-in-out 0.1s;}
+		.line-left{width: 5px;height: 100%;left: 0;top: 0;transform: scaleY(0);transform-origin: 0 100%;transition: all 0.1s ease-in-out;}
+		ul li:hover .line-top{transform: scaleX(1);transition: all 0.1s ease-in-out;}
+		ul li:hover .line-right{transform: scaleY(1);transition: all 0.1s ease-in-out 0.1s;}
+		ul li:hover .line-bottom{transform: scaleX(1);transition: all 0.1s ease-in-out 0.2s;}
+		ul li:hover .line-left{transform: scaleY(1);transition: all 0.1s ease-in-out 0.3s;}
+    .box{text-align: center;font-size: 18px;color: #fff;transition: opacity 0s 0s;}
+    ul:hover li >p{display: none;}
+    ul li:hover  .box{opacity: 1;transition: opacity 1s 1s;}
   </style>
 </head>
 <body> 
- <div class="pr">
-  <div class="tittle">
-    <h1>PR Center</h1>
-    <p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
-  </div>
+	<div class="pr">
+		<div class="title">
+			<h1>PR Center</h1>
+			<p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
+		</div>
   <div class="con">
   <div class="left">
   <ul>
     <li>극동뉴스</li>
-    <li>극동건설의 다양한 소식을 가장 빠르게<br>전달해드립니다.</li>
+    <div class="box">
+    <li>극동건설의 다양한 소식을 가장 빠르게 전달해드립니다.</li>
+    </div>
   </ul>
   </div>
   <div class="right">
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>
+      <div>
+        <h1>언론속의 <span>극동</span></h1>
+        <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.</p>
+        <p><img src="./images/next_bar_bk.png" alt="next"></p>
+      </div>
+      <span class="line line-top"></span>
+      <span class="line line-right"></span>
+      <span class="line line-bottom"></span>
+      <span class="line line-left"></span>
+    </li>
+    <li>
+      <div>
+        <h1>입주고객  <span>A/S 안내</span></h1>
+        <p>스타클래스 입주 후 A/S 신청에<br>대한 안내 입니다.</p>
+        <p><img src="./images/next_bar_bk.png" alt="next"></p>
+      </div>
+      <span class="line line-top"></span>
+      <span class="line line-right"></span>
+      <span class="line line-bottom"></span>
+      <span class="line line-left"></span>
+    </li>
+    <li>
+      <div>
+        <h1>극동건설 <span>인재채용</span></h1>
+        <p>언론에 소개되는 극동의 소식을<br>  안내해드립니다.</p>
+        <p><img src="./images/next_bar_bk.png" alt="next"></p>
+      </div>
+      <span class="line line-top"></span>
+      <span class="line line-right"></span>
+      <span class="line line-bottom"></span>
+      <span class="line line-left"></span>
+    </li>
+    <li>
+      <div>
+        <h1>기업 <span>홍보영상</span></h1>
+        <p>언론에 소개되는 극동의 소식을<br>  안내해드립니다.</p>
+        <p><img src="./images/next_bar_bk.png" alt="next"></p>
+      </div>
+      <span class="line line-top"></span>
+      <span class="line line-right"></span>
+      <span class="line line-bottom"></span>
+      <span class="line line-left"></span>
+    </li>
   </ul>
  </div>
 </body>

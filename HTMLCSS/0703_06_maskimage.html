@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   *{margin: 0;padding: 0;}
+   ul{list-style: none;width: 400px;}
+   ul li{overflow: hidden;line-height: 80px;padding: 0 20px;border-bottom: 1px solid;cursor: pointer;}
+   ul li p:first-child{float: left;width: 72px;height: 72px;background-color: #000;mask-repeat: no-repeat;}
+   ul li p:last-child{float: right;}
+   ul li span{margin-left: 20px;}
+   ul li img{vertical-align: middle;}
+   ul li:first-child p:first-child{background-color: #be8226; mask-image: url(./images/ico_business_item01.svg);}
+
+   ul li:nth-child(2) p:first-child{mask-image: url(./images/ico_business_item02.svg);}
+   ul li:nth-child(2):hover p:first-child{mask-image: url(./images/ico_business_item02.svg);background-color: #be8226;}
+
+   ul li:nth-child(3) p:first-child{mask-image: url(./images/ico_business_item03.svg);}
+   ul li:nth-child(3):hover p:first-child{mask-image: url(./images/ico_business_item03.svg);background-color: #be8226;}
+
+   ul li:nth-child(4) p:first-child{mask-image: url(./images/ico_business_item04.svg);}
+   ul li:nth-child(4):hover p:first-child{mask-image: url(./images/ico_business_item04.svg);background-color: #be8226;}
+
+   ul li:nth-child(5) p:first-child{mask-image: url(./images/ico_business_item05.svg);}
+   ul li:nth-child(5):hover p:first-child{mask-image: url(./images/ico_business_item05.svg);background-color: #be8226;}
+
+   ul li:nth-child(6) p:first-child{mask-image: url(./images/ico_business_item06.svg);}
+   ul li:nth-child(6):hover p:first-child{mask-image: url(./images/ico_business_item06.svg);background-color: #be8226;}
+   ul li:first-child,ul li:hover{border-bottom-color: #be8226;}
+   ul li:first-child p,ul li:hover p{color: #be8226;}
+   ul li:hover img{content:url(./images/ico_circle_arrow_active.png);}
+  </style>
+</head>
+<body> 
+  <ul>
+    <li>
+      <p></p>
+      <p>건축<span><img src="./images/ico_circle_arrow_active.png" alt="화살표"><span></p>
+    </li>
+    <li>
+      <p></p>
+      <p>선박·해양플랜트<span><img src="./images/ico_circle_arrow.png" alt="화살표"><span></p>
+    </li>
+    <li>
+      <p></p>
+      <p>플랜트<span><img src="./images/ico_circle_arrow.png" alt="화살표"><span></p>
+    </li>
+    <li>
+      <p></p>
+      <p>자동차<span><img src="./images/ico_circle_arrow.png" alt="화살표"><span></p>
+    </li>
+    <li>
+      <p></p>
+      <p>전자·가전·전기<span><img src="./images/ico_circle_arrow.png" alt="화살표"><span></p>
+    </li>
+    <li>
+      <p></p>
+      <p>산업기타<span><img src="./images/ico_circle_arrow.png" alt="화살표"><span></p>
+    </li>
+  </ul>
+</body>
+</html>

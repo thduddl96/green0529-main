@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;margin: 50px;}
+    ul li{width: 300px;height: 300px;position: relative;}
+    .line{position: absolute;background-color: #07348c;transition: all 0.1s ease-in-out;}
+		.line-top{width: 100%;height: 5px;left: 0;top: 0;transform: scaleX(0);}
+    .line-bottom{width: 100%;height: 5PX;right: 0;top: 0;transform: scaleX(0);}
+    .line-right{width: 5px;height: 100%;right: 0;top: 0;transform: scaleY(0);}
+    .line-left{width: 5px;height: 100%;right: 0;top: 0;transform: scaleY(0);}
+		
+		ul li:hover .line-top,ul li:hover .line-bottom{transform: scaleX(1);transition: all 0.1s ease-in-out;}
+		ul li:hover .line-right{transform: scaleY(1);transition: all 0.1s ease-in-out;}
+		
+  </style>
+</head>
+<body> 
+	<ul>
+    <li>
+      <div>
+        <h1>언론속의 <span>극동</span></h1>
+        <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.</p>
+        <p><img src="./images/next_bar_bk.png" alt="next"></p>
+      </div>
+      <span class="line line-top"></span>
+      <span class="line line-right"></span>
+      <span class="line line-bottom"></span>
+      <span class="line line-left"></span>
+    </li>
+  </ul>
+</body>
+</html>

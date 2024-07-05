@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .bg {
+        height: 500px;
+        background: url(./images/photo1.jpg) center/cover;
+      }
+      .text {
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        mix-blend-mode: screen;
+        background-color: #fff;
+        line-height: 500px;
+      }
+
+      .text1{background: url(./images/photo1.jpg) center/cover;font-size: 100px;font-weight: bold;text-align: center;color: transparent;background-clip: text;
+
+        section{position: relative;}
+        p{position: absolute;}
+        p:nth-child(1){left: 0px;}
+        p:nth-child(2){left: 100px;}
+        p:nth-child(3){left: 200px;}
+        p img{mix-blend-mode: multiply;}
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="text">mix-blend-mod</div>
+    </div>
+    <div class="text1">mix-blend-mod</div>
+    <section>
+      <p><img src="./images/logo01.svg" alt="logo" /></p>
+      <p><img src="./images/logo02.svg" alt="logo" /></p>
+      <p><img src="./images/logo03.svg" alt="logo" /></p>
+    </section>
+  </body>
+</html>

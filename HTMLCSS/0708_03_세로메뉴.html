@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      ul{list-style: none;}
+      a{text-decoration: none;color: #333;}
+      #wrap{width: 1000px;}
+      #wrap .left{width: 200px;float: left;}
+      #wrap .left .logo{width: 100%;height: 100px;background: #aaa;}
+      #wrap .left .menu{width: 100%;height: 550px;background: #bbb;}
+      #wrap .left .menu>ul{width: 90%;margin: 0 auto;position: relative;}
+      #wrap .left .menu>ul>li{line-height: 50px;border: 1px solid #333;text-align: center;border-bottom: none;}
+      #wrap .left .menu>ul>li:last-child{border-bottom: 1px solid #333;}
+      #wrap .left .menu>ul>li:hover>a{display:block;background-color:  #000;color: #fff;}
+      #wrap .left .menu>ul>li .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;top: -30px;left: 100%;width: 100%;background: #000;color: #fff;}
+      #wrap .left .menu>ul>li .sub li a{color: #fff;}
+      
+      
+      #wrap .left .menu>ul>li .sub li{line-height: 30px;text-align: center;}
+      #wrap .left .menu>ul>li .sub li:hover a{display: block;background: #fff;color: #000;}
+      #wrap .left .menu>ul>li:hover .sub{height: 250px;}
+
+
+
+
+
+      #wrap .right{width: 800px;float: left;}
+      #wrap .right .slide{width: 100%;height: 350px;background: #ccc;}
+      #wrap .right .content{height: 200px;width: 100%;}
+      #wrap .right .content >div{float: left;width: 33.333%;height: 100%;}
+      #wrap .right .content >div.notice{float: left;width: #ddd;}
+      #wrap .right .content >div.banner{float: left;width: #eee;}
+      #wrap .right .content >div.go{background: #ddd;}
+      #wrap .right .foot{width: 100%;height: 100px;}
+      #wrap .right .foot>div{float: left;}
+      #wrap .right .foot>div.logo{width: 20%;height: 100%;background: #aaa;}
+      #wrap .right .foot>div:last-child{width: 80%;height: 100%;background: #bbb;}
+
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+     <div class="left">
+      <div class="logo">로고</div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">이용안내</a>
+            <ul class="sub">
+              <li><a href="#">이용방법</a></li>
+              <li><a href="#">이용시간</a></li>
+              <li><a href="#">이용요금</a></li>
+            </ul>
+          </li>
+          <li><a href="#">이벤트정보</a>
+            <ul class="sub">
+              <li><a href="#">현장이벤트</a></li>
+              <li><a href="#">온라인이벤트/a></li>
+              <li><a href="#">이벤트예약</a></li>
+            </ul>
+          </li>
+          <li><a href="#">프로그램</a>
+            <ul class="sub">
+              <li><a href="#">프로그램안내</a></li>
+              <li><a href="#">온라인예약</a></li>
+              <li><a href="#">단체예약상담</a></li>
+            </ul>
+          </li>
+          <li><a href="#">고객센터</a>
+            <ul class="sub">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자주묻는질문</a></li>
+              <li><a href="#">자료실</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+     </div>
+     <div class="right">
+      <div class="slide">이미지슬라이드</div>
+      <div class="content">
+        <div class="notice">공지사항갤러리</div>
+        <div class="banner">배너</div>
+        <div class="go">바로가기</div>
+     </div>
+     <div class="foot">
+     <div class="logo">로고</div>
+     <div>
+      <div class="footmenu">하단메뉴</div>
+      <div class="copyright">copyright</div>
+
+     </div>
+    </div>
+    </div>
+  </body>
+</html>

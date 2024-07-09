@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>세로메뉴</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ff0000;
+        border-radius: 50px;
+        animation-name: ani;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        white-space: nowrap;
+      }
+      @keyframes ani {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(200px);
+        }
+      }
+      div:first-child {
+        animation-timing-function: ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

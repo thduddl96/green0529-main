@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>세로메뉴</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      ul{list-style: none;}  
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      body {
+        background-color: #f5f5f5;
+      }
+      #wrap{width: 1000px;}
+
+      #wrap header {
+        height: 100px;
+        width: 1900px;
+      }
+      
+      #wrap .menu {
+        float: left;
+      }
+      #wrap .menu > ul {
+        height: 100px;
+      }
+      #wrap .menu > ul > li {
+        float: left;
+        position: relative;
+        width: 200px;
+      }
+      #wrap .menu > ul > li > a {
+        
+        line-height: 20px;
+        margin-top: 50px;
+        
+        padding: 10px;
+        position: relative;
+        font-weight: bold;
+        font-size: 100px;
+      }
+
+      div.right ul {
+        float:left;
+      }
+      div.right ul li a{
+        width: 1900px;height: 60px;
+        float: left;
+        display: inline;
+        border-bottom: 1px solid #000;
+        font-weight:normal;
+        font-size: 30px;
+        line-height: 90px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="logo">
+          <div class="menu left">
+            <ul>
+              <li>
+                <a href="#">our<br>services</a>
+
+                 </div>
+                </ul>
+              </li>
+
+          <div class="right">
+            <ul>
+              <li><a href="#">UX/UI</a></li>
+              <p>Concept Proposal / UX Planning /  UI Design</p>
+              <li><a href="#">Motion</a></li>
+              <p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p>
+              <li><a href="#">Prodution</a></li>
+              <p>Pre-Production / Production / Post-Production</p>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
+

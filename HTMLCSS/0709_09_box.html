@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div{width: 100px;height: 100px;background: #ccc;animation-name: ani;animation-duration: 5s;
+      animation-iteration-count: infinite;animation-direction: alternate;white-space: nowrap;}
+      @keyframes ani {
+      	0%{transform: translateX(0);}
+      	100%{transform: translateX(500px);}
+      }
+      div:first-child{animation-timing-function: ease;}
+      div:nth-child(2){animation-timing-function: ease-in;}
+      div:nth-child(3){animation-timing-function: ease-out;}
+      div:nth-child(4){animation-timing-function: ease-in-out;}
+      div:nth-child(5){animation-timing-function: linear;}
+      div:nth-child(6){animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+    </style>
+  </head>
+  <body>
+    <div>ease</div>
+    <div>ease-in</div>
+    <div>ease-out</div>
+    <div>ease-in-out</div>
+    <div>linear</div>
+    <div>cubic-bezier</div>
+  </body>
+</html>

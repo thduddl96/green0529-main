@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background: url(https://www.t-won.com/img/main/brand_bg.jpg);
+      }
+      div.plus {
+        margin: 100px;
+        position: relative;
+      }
+      div.plus p {
+        position: absolute;
+        display: inline-block;
+      }
+      div.plus p:first-child {
+        color: #fff;
+        line-height: 50px;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 00.5s;
+      }
+      div.plus p:last-child {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+      }
+      div.plus:hover p:first-child {
+        width: 100%;
+        transition: 1s;
+      }
+      div.plus:hover p:last-child {
+        transform: translateX(100px);
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="plus">
+      <a href="">
+        <p>View more</p>
+        <p>+</p>
+      </a>
+
+      <div class="left"><img src="./images/brand_img.png" alt="brand"</div>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <h3>5성급 호텔의품격</h3>
+          <h2>프리미엄 다이닝</h2>
+          <p>
+            도원스타일은 중식당 ‘도원(桃園)’의 세컨드 브랜드입니다. <br />도원은
+            더플라자 호텔의 파인 다이닝 중식당으로, 1976년 오픈 이후 40여년간
+            사랑받아 왔습니다. <br />도원스타일은 호텔 도원의 뛰어난 맛과
+            서비스를 백화점 등 다양한 공간에서 제공하기 위해<br />
+            탄생했습니다.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

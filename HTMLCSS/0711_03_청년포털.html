@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.menu {
+        width: 720px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      ul.menu li {
+        width: 25%;
+        float: left;
+        text-align: center;
+      }
+      ul.menu li a {
+        display: block;
+      }
+      ul.menu li a p:last-child {
+        width: 142px;
+        height: 142px;
+        margin: 20px auto;
+      }
+      ul.menu li:first-child a p:last-child {
+        background-image: url(./images/bg_info_m06.png);
+      }
+      ul.menu li:nth-child(2) a p:last-child {
+        background-image: url(./images/bg_info_m02.png);
+      }
+      ul.menu li:nth-child(3) a p:last-child {
+        background-image: url(./images/bg_info_m03.png);
+      }
+      ul.menu li:nth-child(4) a p:last-child {
+        background-image: url(./images/bg_info_m04.png);
+      }
+      ul.menu li:hover a p:last-child {
+        background-position: 0 -240px;
+        animation-name: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation: alternate;
+      }
+      ul.menu li:first-child a p:last-child {
+        animation: move ls infinite alternate;
+      }
+      @keyframes move {
+        0%,
+        100% {
+          transform: translateY(0);
+          animation-timing-function: ease-in;
+        }
+        50% {
+          transform: translateY(10px);
+          animation-timing-function: ease-out;
+        }
+        /*100% {
+          transform: translateY(0);
+          animation-timing-function: ease-in;
+        }*/
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        <a href="">
+          <p>대전청년포털</p>
+          <p></p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>대전청년포털</p>
+          <p></p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>대전청년포털</p>
+          <p></p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>대전청년포털</p>
+          <p></p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

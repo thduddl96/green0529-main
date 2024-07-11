@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .txt {
+        font-size: 70px;
+        position: relative;
+        font-weight: bold;
+      }
+      .black {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        animation-name: txt;
+        animation-duration: 3s;
+      }
+      .gray {
+        color: #e6e6e6;
+      }
+      @keyframes txt {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .txt2 {
+        font-size: 70px;
+        position: relative;
+        font-weight: bold;
+      }
+      .black2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        animation-name: txt;
+        animation-duration: 3s;
+      }
+      .gray2 {
+        color: #e6e6e6;
+      }
+      @keyframes txt {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p class="black hide">Harness Your Data to</p>
+      <p class="gray">Harness Your Data to</p>
+    </div>
+    <div class="txt2">
+      <p class="black hide2">Boost Efficiency and Reduce Emissions</p>
+      <p class="gray2">Boost Efficiency and Reduce Emissions</p>
+    </div>
+  </body>
+</html>

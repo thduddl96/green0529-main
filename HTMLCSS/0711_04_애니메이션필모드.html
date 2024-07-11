@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: green;
+        margin: 10px;
+        animation: move 5s 1s;
+      }
+
+      div.none {
+        animation-fill-mode: none;
+      }
+      div.forwards {
+        animation-fill-mode: forwards;
+      }
+      div.backwards {
+        animation-fill-mode: backwards;
+      }
+      div.both {
+        animation-fill-mode: both;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+          background: red;
+        }
+        100% {
+          transform: translateX(500px);
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="none">none</div>
+    <div class="forwards">forwards</div>
+    <div class="backwards">backwards</div>
+    <div class="both">both</div>
+  </body>
+</html>

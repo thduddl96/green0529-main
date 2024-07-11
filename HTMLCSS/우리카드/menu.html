@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .quickMenu {
+        background: #e2fdfe;
+      }
+      ul.quick {
+        width: 1080px;
+        margin: 50px auto;
+        overflow: hidden;
+        padding: 50px 0;
+      }
+      ul.quick li {
+        float: left;
+        width: calc(100% / 6);
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      ul.quick li:last-child {
+        border-right: none;
+      }
+      ul.quick li a {
+        display: block;
+      }
+      ul.quick li a p {
+        text-align: center;
+      }
+      ul.quick li a p:first-child {
+        height: 50px;
+      }
+      ul.quick li a p:last-child {
+        padding-top: 20px;
+      }
+
+      ul.quick li:hover a p:first-child {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: red;
+        margin: 0 auto;
+      }
+
+      .special {
+        width: 1080px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      .special li {
+        float: left;
+        width: calc(100% / 4);
+        position: relative;
+      }
+      .special li a {
+        display: block;
+      }
+      .special li a > p {
+        width: 192px;
+        height: 256px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .special li a > p img {
+        transition: 0.5s;
+      }
+      .special li:hover a > p img {
+        transform: scale(1.2);
+      }
+      .special li .bg p {
+        position: absolute;
+        left: 90px;
+        top: 140px;
+      }
+      .special li .bg p:first-child {
+        z-index: 1;
+      }
+      .special li .text {
+        margin-top: 50px;
+        text-align: center;
+        width: 192px;
+        word-break: keep-all;
+        letter-spacing: -2px;
+      }
+      .special li .text h1 p {
+        font-size: 18px;
+        font-weight: normal;
+      }
+      .special li .text > p {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      .special2 {
+        width: 1080px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      .special2 li {
+        float: left;
+        width: calc(100% / 4);
+        text-align: center;
+        position: relative;
+      }
+
+      .special2 li::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 1px;
+        height: 100px;
+        background: #ccc;
+        transform: translateY(-50%);
+      }
+      .special2 li:first-child img {
+        width: 100%;
+      }
+      .special2 li:last-child: {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quickMenu">
+      <ul class="quick">
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/ico_quick_menu1.png" alt="quick" /></p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="special">
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mlon_1_bg.png" alt="bg" /></p>
+          <div class="bg">
+            <p><img src="./images/special_mlon_1_obj.png" alt="obj" /></p>
+            <p><img src="./images/special_mlon_1_shd.png" alt="obj" /></p>
+          </div>
+          <div class="text">
+            <h1>
+              단기카드대출
+              <p>(현금서비스)</p>
+            </h1>
+            <p>
+              현금이 급할 때 바로 찾아쓰는,<br />
+              편리한 생활자금 마련방법
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mlon_2_bg.png" alt="bg" /></p>
+          <div class="bg">
+            <p><img src="./images/special_mlon_2_obj.png" alt="obj" /></p>
+            <p><img src="./images/special_mlon_1_shd.png" alt="obj" /></p>
+          </div>
+          <div class="text">
+            <h1>
+              장기카드대출
+              <p>(현금서비스)</p>
+            </h1>
+            <p>
+              목돈이 필요할 때<br />
+              복잡한 심사 과정 없이 간편하게
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mlon_3_bg.png" alt="bg" /></p>
+          <div class="bg">
+            <p><img src="./images/special_mlon_3_obj.png" alt="obj" /></p>
+            <p><img src="./images/special_mlon_1_shd.png" alt="obj" /></p>
+          </div>
+          <div class="text">
+            <h1>
+              일부결제금액이월약정
+              <p>(리볼빙)</p>
+            </h1>
+            <p>
+              원하는 만큼만 결제하고 매월<br />
+              결제금액을 계획적으로 관리
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mlon_4_bg.png" alt="bg" /></p>
+          <div class="bg">
+            <p><img src="./images/special_mlon_4_obj.png" alt="obj" /></p>
+            <p><img src="./images/special_mlon_1_shd.png" alt="obj" /></p>
+          </div>
+          <div class="text">
+            <h1>
+              올인원대출
+              <p>(신용대출)</p>
+            </h1>
+            <p>
+              우리카드가 없어도 서류없이,<br />
+              방문없이, 내 신용만으로
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <ul class="special2">
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mbnf_1_obj.png" alt="special" /></p>
+          <p>해외이용의 정석</p>
+          <p>여행,직구,항공<br />무엇이든 우리카드로</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mbnf_2_obj.png" alt="special" /></p>
+          <p>해외이용의 정석</p>
+          <p>여행,직구,항공<br />무엇이든 우리카드로</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mbnf_3_obj.png" alt="special" /></p>
+          <p>해외이용의 정석</p>
+          <p>여행,직구,항공<br />무엇이든 우리카드로</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="./images/special_mbnf_4_obj.png" alt="special" /></p>
+          <p>해외이용의 정석</p>
+          <p>여행,직구,항공<br />무엇이든 우리카드로</p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

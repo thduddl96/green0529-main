@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      li{font-size: 14px;margin: 20px 10px;}  
+       #wrap header{width: 400px;height: 60px;}
+      .left li{float: left;}
+      .right li{float: right;}
+      .right li:last-child{width:75px; height: 36px;color: #fff;background-color: #0b57d0;border-radius: 50px;text-align: center;}
+      
+      .main{position: absolute;top: 290px;}
+      .main .searchbox{border-radius: 50px;width: 386px;height: 46px;border: 1px solid #dadce0;left: 0 auto;}
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+    <ul class="left">
+        <li><a href="#">google 정보</a></li>
+        <li><a href="#">스토어</a></li>
+    </ul>
+      <ul class="right">  
+          <li><a href="#">Gmail</a></li>
+          <li><a href="#">이미지</a></li>
+          <li><img src="./images/google/image/menu.gif" alt="photo" /></li>
+          <li><a href="#">로그인</a></li>
+      </ul>
+      </header>
+      <div class="main">
+        <div class="logo"><img src="./images/google.png" alt="google"></div>
+        <div class="searchbox">
+          <ul>
+            <li><div class="searchbox"><img src="./images/google/image/search_cr23.svg" alt="search"</div></li>
+          </ul>
+          
+        </div>
+  </div>
+</body>
+</html>

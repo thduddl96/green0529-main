@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap{width: 1400px;}
+      .flex {
+       
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        width: 100px;
+        height: 100px;
+        flex-wrap: wrap;
+      }
+      .flex div {float: left;}
+    
+      .container1 div:first-child {content: "";
+        align-content: center;
+        justify-content: flex-end
+        width: 500px;
+      }
+      .container2 div:nth-child(2){
+        align-content: flex-end;
+      }
+      .container3 div:nth-child(3) {
+        align-content: center;
+      }
+      .container4 div:nth-child(4){
+        align-content: space-between;
+      }
+      .container5 div:nth-child(4){
+        align-content: space-around;
+      }
+      .container6 div:nth-child(4){
+        align-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="flex containerl">
+        
+        <div><img src="./images/review1.jpg" alt="review1"></div>
+        <div><img src="./images/review2.jpeg" alt="review2"></div>
+        <div><img src="./images/review3.jpeg" alt="review3"></div>
+        <div><img src="./images/review4.jpg" alt="review4"></div>
+        <div><img src="./images/review5.JPG" alt="review5"></div>
+        <div><img src="./images/review6.jpeg" alt="review6"></div>
+        <div><img src="./images/review7.jpeg" alt="review6"></div>
+        <div><img src="./images/review8.jpeg" alt="review6"></div>
+      </div>
+        
+  </body>
+</html>

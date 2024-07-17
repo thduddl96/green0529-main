@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .review {
+        width: 1440px;
+        margin: 50px auto;
+      }
+      .review ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .review ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 215px;
+      }
+      .review ul li .inner {
+        display: flex;
+        justify-content: space-between;
+      }
+      .review ul li:first-child,
+      .review ul li:nth-child(3) {
+        width: 450px;
+      }
+      .review ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .review ul li:nth-child(2),
+      .review ul li:nth-child(4) {
+        height: 460px;
+      }
+      .review ul li:nth-child(2) div,
+      .review ul li:nth-child(4) div {
+        height: 100%;
+      }
+      .review ul li:nth-child(1) > div:first-child,
+      .review ul li:nth-child(3) > div:last-child {
+        height: 226px;
+      }
+      .review ul li .inner div {
+        width: 215px;
+        height: 215px;
+      }
+      .review ul li p {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="review">
+      <ul>
+        <li>
+          <div>
+            <p><img src="./images/review1.jpg" alt="reviewl" /></p>
+          </div>
+          <div class="inner">
+            <div>
+              <p><img src="./images/review2.jpeg" alt="review2" /></p>
+            </div>
+            <div>
+              <p><img src="./images/review3.jpeg" alt="review3" /></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><img src="./images/review4.jpg" alt="review4" /></p>
+          </div>
+        </li>
+        <li>
+          <div class="inner">
+            <div>
+              <p><img src="./images/review5.jpeg" alt="review5" /></p>
+            </div>
+            <div>
+              <p><img src="./images/review6.jpeg" alt="review6" /></p>
+            </div>
+          </div>
+          <div>
+            <p><img src="./images/review7.jpeg" alt="review7" /></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><img src="./images/review8.jpeg" alt="review8" /></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

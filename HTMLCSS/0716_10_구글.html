@@ -9,6 +9,7 @@
       * {
         margin: 0;
         padding: 0;
+        font-family: ;
       }
       ul {
         list-style: none;
@@ -20,12 +21,14 @@
       li{font-size: 14px;margin: 20px 10px;}  
        #wrap header{width: 400px;height: 60px;}
       .left li{float: left;}
-      .right li{float: right;}
-      .right li:last-child{width:75px; height: 36px;color: #fff;background-color: #0b57d0;border-radius: 50px;text-align: center;}
+      .nav li{float: right;}
+      .nav li:last-child{width:75px; height: 36px;color: #fff;background-color: #0b57d0;border-radius: 50px;text-align: center;}
       
       .main{position: absolute;top: 290px;}
       .main .searchbox{border-radius: 50px;width: 386px;height: 46px;border: 1px solid #dadce0;left: 0 auto;}
-
+      .footer{position: absolute;bottom: 0;width: 100%;background: #ccc;}
+      .first-line{padding: 15px 30px;border-bottom: 1px solid #dadce0;font-size: 15px;color: #70757a;}
+      .second-line{padding-right: 30px;text-decoration: none;}
     </style>
   </head>
   <body>
@@ -35,7 +38,7 @@
         <li><a href="#">google 정보</a></li>
         <li><a href="#">스토어</a></li>
     </ul>
-      <ul class="right">  
+      <ul class="nav">  
           <li><a href="#">Gmail</a></li>
           <li><a href="#">이미지</a></li>
           <li><img src="./images/google/image/menu.gif" alt="photo" /></li>
@@ -46,10 +49,19 @@
         <div class="logo"><img src="./images/google.png" alt="google"></div>
         <div class="searchbox">
           <ul>
-            <li><div class="searchbox"><img src="./images/google/image/search_cr23.svg" alt="search"</div></li>
+            <li><img src="./images/google/image/search_cr23.svg" alt="search"</li>
           </ul>
           
         </div>
   </div>
+ <div class="footer">
+  <div class="first-line">대한민국</div>
+  <div class="second-line">
+    <span>
+    <a href="#" class="second-line-a">광고</a>
+    <a href="#" class="second-line-a">비즈니스</a>
+    <a href="#" class="second-line-a">검색의 원리</a>
+    </span>
+ </div>
 </body>
 </html>

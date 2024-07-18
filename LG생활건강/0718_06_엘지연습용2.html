@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #fff;
+      }
+      .item {
+        display: flex;
+        width: 1300px;
+        height: px;
+        border-radius: 100px;
+      }
+      .item > li {
+        flex: 1;
+        position: relative;
+        transition: all 0.5s;
+      }
+      .item > li:hover {
+        flex: 3;
+      }
+      .item > li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        padding: 100px;
+        object-fit: cover;
+      }
+      .item li:first-child {
+        align-content: space-between;
+      }
+      .item li:nth-child(2) {
+        align-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="item">
+      <li><img src="images/new_esg_img1.jpg" alt="new1" /></li>
+      <li><img src="images/new_esg_img2.jpg" alt="new2" /></li>
+      <li><img src="images/new_esg_img3.jpg" alt="new3" /></li>
+      <li><img src="images/new_esg_img4.jpg" alt="new4" /></li>
+    </ul>
+  </body>
+</html>

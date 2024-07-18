@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      container img {
+        width: 200px;
+      }
+      .container p:first-child {
+        width: 100px;
+      }
+      .container p:first-child(2) {
+        flex-basis: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <dic class="container">
+      <p><img src="./images/photo1.jpg" alt="photo1" /></p>
+      <p><img src="./images/photo2.jpg" alt="photo2" /></p>
+    </dic>
+  </body>
+</html>

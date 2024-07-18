@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .news {
+        width: 1336px;
+        height: 400px;
+        margin: 50px auto;
+      }
+      .news ul {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .news ul li {
+        flex-basis: 13%;
+        border-radius: 10px;
+        padding: 30px 10px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: flex-basis 0.5s;
+      }
+      .news ul li:first-child {
+        background: url(./images/new_esg_img1.jpg);
+        flex-basis: calc(95% - (13% * 3));
+      }
+      .news ul li:nth-child(2) {
+        background: url(./images/new_esg_img2.jpg);
+      }
+      .news ul li:nth-child(3) {
+        background: url(./images/new_esg_img3.jpg);
+      }
+      .news ul li:nth-child(4) {
+        background: url(./images/new_esg_img4.jpg);
+      }
+
+      .news ul:hover li:hover {
+        flex-basis: calc(95% - (13% * 3));
+      }
+      .news ul:hover li:not(:hover) {
+        flex-basis: 13;
+      }
+      .news ul li p {
+        color: #fff;
+      }
+      .news ul li p:first-child {
+        font-size: 18px;
+        display: none;
+      }
+      .news ul li p:last-child {
+        font-size: 24px;
+      }
+      .news ul li:hover p:first-child {
+        display: block;
+      }
+      .news ul li:hover p:last-child {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news">
+      <ul>
+        <li>
+          <p>LG생활 건강이 만드는</p>
+          <p>지속가능한 삶</p>
+        </li>
+        <li>
+          <p>지구를 물려주기 위한</p>
+          <p>우리의 약속</p>
+        </li>
+        <li>
+          <p>고객의 건강과 안전을</p>
+          <p>지키는 열정</p>
+        </li>
+        <li>
+          <p>공평하고 행복한 세상을 만들기 위한</p>
+          <p>나눔과 포용</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

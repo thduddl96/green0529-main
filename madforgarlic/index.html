@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .list {
+        width: 1504px;
+        margin: 0 auto;
+      }
+      .list > ul {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+      }
+      .list > ul > li {
+        position: relative;
+      }
+      .list > ul li .over {
+        font-size: 16px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover .over {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .list > ul .over p {
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .list > ul > li .over .inner {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .list > ul > li .over .inner p:first-child {
+        opacity: 0;
+        transition: 0.5s 0.2s;
+      }
+
+      .list > ul > li .over .inner a {
+        opacity: 0;
+        transition: 0.5s 0.2s;
+      }
+      .list > ul > li:hover .over .inner p:first-child {
+        opacity: 1;
+      }
+      .list > ul > li:hover .over .inner a {
+        opacity: 1;
+      }
+
+      .list > ul > li:hover .over .inner {
+        transform: translateY(-20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul>
+        <li>
+          <img src="./images/madfor1.png" alt="madfor1" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_brand.png" alt="" /></p>
+              <p>BREAD & STARTER</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <ul>
+            <li><img src="./images/madfor2.png" alt="madfor2" /></li>
+            <li><img src="./images/madfor3.png" alt="madfor3" /></li>
+          </ul>
+        </li>
+        <li>
+          <img src="./images/madfor4.jpg" alt="madfor4" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_starter.png" alt="" /></p>
+              <p>SALAD</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="./images/madfor5.png" alt="madfor5" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_pasta.png" alt="" /></p>
+              <p>PASTA</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="./images/madfor6.jpg" alt="madfor6" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_pizza.png" alt="" /></p>
+              <p>PIZZA</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="./images/madfor7.jpg" alt="madfor7" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_ricerisotto.png" alt="" /></p>
+              <p>RICE & RISOTTO</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="./images/madfor8.jpg" alt="madfor8" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="./images/m-icon_steak.png" alt="" /></p>
+              <p>STEAK</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .flex-container item {
+        display: flex;
+        width: 1304px;
+        height: 300px;
+      }
+
+      .item ul {
+        display: flex;
+        justify-content: content;
+        border-radius: 100px;
+      }
+      .item ul li > div {
+        position: relative;
+      }
+      .item ul li p.box {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        margin-top: -90px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">
+        <ul>
+          <li>
+            <div>
+              <p><img src="./images/new_esg_img1.jpg" alt="" /></p>
+              <p class="box">
+                <a href="#">
+                  <span>LG생활 건강이 만드는<br /></span>
+                  <span>지속 가능한 삶</span>
+                </a>
+              </p>
+            </div>
+            <div>
+              <p><img src="./images/new_esg_img2.jpg" alt="" /></p>
+              <p class="box">
+                <a href="#">
+                  <span>LG생활 건강이 만드는<br /></span>
+                  <span>지속 가능한 삶</span>
+                </a>
+              </p>
+            </div>
+            <div>
+              <p><img src="./images/new_esg_img3.jpg" alt="" /></p>
+              <p class="box">
+                <a href="#">
+                  <span>LG생활 건강이 만드는<br /></span>
+                  <span>지속 가능한 삶</span>
+                </a>
+              </p>
+            </div>
+            <div>
+              <p><img src="./images/new_esg_img4.jpg" alt="" /></p>
+              <p class="box">
+                <a href="#">
+                  <span>LG생활 건강이 만드는</span>
+                  <span>지속 가능한 삶</span>
+                </a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

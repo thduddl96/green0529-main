@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+
+      .logo {
+        background: #aaa;
+      }
+      .menu {
+        background: #bbb;
+        grid-column: 2 / span 4;
+      }
+      .slide {
+        background: #ccc;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+      .con1 {
+        background: #ddd;
+        grid-column: 1 / span 2;
+      }
+      .con2 {
+        background: #eee;
+      }
+      .con3 {
+        background: #aaa;
+        grid-column: 4 / span 2;
+      }
+      .ftlogo {
+        background: #bbb;
+      }
+      .copyright {
+        background: #ccc;
+        grid-column: 2 / span 3;
+      }
+      .sns {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="logo"></div>
+      <div class="menu"></div>
+      <div class="slide"></div>
+      <div class="con1"></div>
+      <div class="con2"></div>
+      <div class="con3"></div>
+      <div class="ftlogo"></div>
+      <div class="copyright"></div>
+      <div class="sns"></div>
+    </div>
+  </body>
+</html>

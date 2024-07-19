@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 215px 22px 215px 215px 215px 22px 215px 22px 215px;
+        grid-template-rows: 215px 11px 11px 215px;
+      }
+      #wrap > div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .review1 {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+      }
+      .review2 {
+        grid-row: 4;
+        grid-column: 1;
+      }
+      .review3 {
+        grid-row: 4;
+        grid-column: 3;
+      }
+      .review4 {
+        grid-row: 1 / span 4;
+        grid-column: 4;
+      }
+      .review5 {
+        grid-column: 5;
+        grid-row: 1;
+      }
+      .review6 {
+        grid-column: 7;
+        grid-row: 1;
+      }
+      .review7 {
+        grid-row: 3 / span 2;
+        grid-column: 5 / span 3;
+      }
+      .review8 {
+        grid-row: 1 / span 5;
+        grid-column: 8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="review1"><img src="./images/review1.jpg" alt="review" /></div>
+      <div class="review2">
+        <img src="./images/review2.jpeg" alt="review2" />
+      </div>
+      <div class="review3">
+        <img src="./images/review3.jpeg" alt="review3" />
+      </div>
+      <div class="review4">
+        <img src="./images/review4.jpg" alt="review4" />
+      </div>
+      <div class="review5">
+        <img src="./images/review5.JPG" alt="review5" />
+      </div>
+      <div class="review6">
+        <img src="./images/review6.jpeg" alt="review6" />
+      </div>
+      <div class="review7">
+        <img src="./images/review7.jpeg" alt="review7" />
+      </div>
+      <div class="review8">
+        <img src="./images/review8.jpeg" alt="review8" />
+      </div>
+    </div>
+  </body>
+</html>

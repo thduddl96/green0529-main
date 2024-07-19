@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      #wrap header {
+        height: 100px;
+        display: flex;
+      }
+      #wrap header .logo {
+        width: 200px;
+        background: #aaa;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #wrap header .logo p {
+        width: 100px;
+        height: 40px;
+        background: #000;
+      }
+      #wrap header .menu {
+        width: 1000px;
+        background: #bbb;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #wrap header .menu nav {
+        width: 800px;
+        margin-right: 20px;
+      }
+      #wrap header .menu nav > ul {
+        display: flex;
+      }
+      #wrap header .menu nav > ul > li {
+        width: 25%;
+        text-align: center;
+        line-height: 50px;
+        position: relative;
+      }
+      #wrap header .menu nav > ul > li > a {
+        border: 1px solid #333;
+        border-right: none;
+        display: block;
+      }
+      #wrap header .menu nav > ul > li:last-child > a {
+        border-right: 1px solid #333;
+      }
+      #wrap header .menu nav > ul > li .sub {
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="logo"><p></p></div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">menu1</a>
+                <ul class="sub">
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu2</a>
+                <ul class="sub">
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu3</a>
+                <ul class="sub">
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu4</a>
+                <ul class="sub">
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

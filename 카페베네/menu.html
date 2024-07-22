@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+     
+   
+   #wrap header{height: 100px;}
+   #wrap header:hover{background-color: #fff;}
+   #wrap header .top{width: 1190px;margin:0 auto;height: 100px;}
+   #wrap header .top>div{float: left;}
+   #wrap .logo{width: 132px;height: 64px;}
+   #wrap .logo a{display:block; width: 100%;height: 100%;background-image: url(./images/logo.png);}
+   
+
+   #wrap .menu{}
+   #wrap .menu > ul{height: 100%;}
+   
+   #wrap .menu > ul > li{float: left;position: relative;width: 142px;}
+   #wrap .menu > ul > li > a{display: block;line-height: 100px;text-align: center;
+  font-size: 15px;font-weight: bold;}
+   
+   #wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 100px;width: 100%;z-index: 1;}
+
+   #wrap .menu > ul:hover .sub{height: 320px;padding: 20px 0;}
+   #wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
+   
+   #wrap .menu > ul .sub li:hover a{color:rgb(69, 69, 245);display: block;text-decoration: underline;}
+   
+
+   .top .right ul:first-child li{float: left;}
+   .top .right ul:last-child{clear: left;}
+   .top .right ul:last-child li a {
+    background-color: #00A5B1;
+    color: #fff;
+    border-radius: 20px;
+    
+    padding: 8px 30px 9px;
+    font-size: 14px;
+    margin-right: 15px;
+   font-weight: bold;}
+
+
+  
+  
+  
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="logo">
+            <a href="#"></a></div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#">CAFEEBENE</a>
+                <ul class="sub">
+                  <li><a href="#">브랜드스토리</a></li>
+                  <li><a href="#">베네캣스토리</a></li>
+                  <li><a href="#">카페베네원두</a></li>
+                  <li><a href="#">카페베네소식</a></li>
+                  <li><a href="#">매거진</a></li>
+                </ul>
+              </li>
+              <li>
+              <a href="#">MENU</a>
+              <ul class="sub">
+                <li><a href="#">신메뉴</a></li>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">푸드</a></li>
+                <li><a href="#">MD상품</a></li>
+                <li><a href="#">Retail</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+              <ul class="sub">
+                <li><a href="#">국내</a></li>
+                <li><a href="#">해외></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MEMBERSHIP</a>
+              <ul class="sub">
+                <li><a href="#">등급&혜택</a></li>
+                <li><a href="#">가입방법안내</a></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">FAQ</a></li>
+                
+              </ul>
+            </li>
+            <li>
+              <a href="#">GLOBAL</a>
+              <ul class="sub">
+                <li><a href="#">해외매장안내</a></li>
+                <li><a href="#">해외사업소개</a></li>
+                <li><a href="#">해외가맹&유통문의</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CONRENTS</a>
+              <ul class="sub">
+                <li><a href="#">커피</a></li>
+                <li><a href="#">우리동네</a></li>
+                <li><a href="#">사람들</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">매장</a></li>
+              </ul>
+            </li>
+            <li class="right">
+              <ul>
+                <li><a href="#">KR</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">가맹문의</a></li>
+              </ul>
+            </li>
+
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

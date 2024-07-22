@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .top {
+        overflow: hidden;
+        width: 100%;
+        height: 60px;
+        padding: 6px;
+      }
+      .top .left {
+        float: left;
+        height: 100%;
+        color: #202124;
+      }
+      .top .right {
+        float: right;
+        height: 100%;
+      }
+      .top a {
+        padding: 5px;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .top .left ul {
+        height: 100%;
+      }
+      .top .left ul li {
+        float: left;
+        height: 100%;
+        line-height: 60px;
+        margin-left: 10px;
+      }
+      .top .left ul li:first-child {
+        margin-left: 15px;
+      }
+
+      .top .right ul {
+        height: 100%;
+      }
+      .top .right ul li {
+        float: left;
+        height: 100%;
+        margin-right: 10px;
+        line-height: 60px;
+      }
+      .top .right ul li:nth-child(4) a {
+        background-color: #0b57d0;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 20px;
+        margin-right: 15px;
+      }
+      .top .right ul li a img {
+        vertical-align: middle;
+      }
+
+      .main {
+        width: 900px;
+        height: 300px;
+        margin: 200px auto 0;
+      }
+      .main > p:first-child {
+        width: 272px;
+        height: 92px;
+        margin: 0 auto;
+      }
+      .main > p:first-child > a img {
+        width: 100%;
+        height: 100%;
+      }
+      .main > p:nth-child(2) {
+        width: 582px;
+        height: 46px;
+        margin: 20px auto;
+      }
+      input[type="search"] {
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        width: 582px;
+        height: 46px;
+        background: url(image/src.png), url(image/keyboard.gif),
+          url(image/mic.svg), url(image/camera.svg);
+        background-position: 20px, 460px, 500px, 540px;
+        background-size: 25px, 15px, 15px, 15px;
+        background-repeat: no-repeat;
+      }
+      .main .btn {
+        margin: 0 auto;
+        width: 280px;
+        color: #202124;
+      }
+      .main .btn p {
+        font-size: 13px;
+        float: left;
+        text-align: center;
+        background: #eee;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 5px;
+      }
+      .main .btn p:hover {
+        border: 1px solid #ccc;
+      }
+      .main > p:nth-child(2):hover input {
+        box-shadow: 0 0 10px #ccc;
+      }
+
+      .foot {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #eee;
+      }
+      .foot > div {
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        color: #202124;
+      }
+      .foot .upper {
+        border-bottom: 1px solid darkgray;
+      }
+      .foot .upper p {
+        line-height: 50px;
+        margin-left: 20px;
+      }
+      .foot .lower {
+        line-height: 50px;
+      }
+      .foot .lower p {
+        margin: 0 20px;
+      }
+      .foot .lower .lowleft {
+        float: left;
+      }
+      .foot .lower .lowleft p {
+        float: left;
+      }
+      .foot .lower .lowright {
+        float: right;
+      }
+      .foot .lower .lowright p {
+        float: left;
+      }
+      .foot .lower p:hover a {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="left">
+        <ul>
+          <li><a href="#">Google 정보</a></li>
+          <li><a href="#">스토어</a></li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <ul>
+          <li><a href="#">Gmail</a></li>
+          <li><a href="#">이미지</a></li>
+          <li>
+            <a href="#"><img src="image/menu.gif" alt="menu" /></a>
+          </li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <p>
+        <a href="#"><img src="image/googlelogo.png" alt="" /></a>
+      </p>
+      <p><input type="search" name="search" /></p>
+      <div class="btn">
+        <p><a href="#">Google 검색</a></p>
+        <p><a href="#">I'm Feeling Lucky</a></p>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div class="upper">
+        <p>대한민국</p>
+      </div>
+      <div class="lower">
+        <div class="lowleft">
+          <p>광고</p>
+          <p>비즈니스</p>
+          <p>검색의 원리</p>
+        </div>
+        <div class="lowright">
+          <p>개인정보처리방침</p>
+          <p>약관</p>
+          <p>설정</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

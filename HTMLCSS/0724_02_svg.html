@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+        border-radius: 50%;
+      }
+      section {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      section p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <text x="150" y="150" fill="red">I love SVG!</text>
+    </svg>
+    <section>
+      <svg>
+        <circle
+          cx="150"
+          cy="150"
+          r="100"
+          stroke="#000"
+          stroke-width="1"
+          fill="none"
+        />
+      </svg>
+      <p>I love SVG!</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      ul.con {
+        width: 1470px;
+        height: 470px;
+        margin: 0 auto;
+      }
+      ul.con li {
+        float: left;
+      }
+      ul.con li p {
+        padding: 10px;
+      }
+      ul.con li a > p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      ul.con li a > p > img {
+        width: 337px;
+        height: 337px;
+        float: left;
+        position: relative;
+        border-radius: 20px;
+      }
+      ul.con > ul li ul li:hover img {
+        width: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <ul class="con">
+        <li>
+          <a href="#">
+            <p><img src="./images/rice.jpg" alt="01" /></p>
+            <p>카레 콘 카르네</p>
+            <p>#브런치 #안주 #야식</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/cheese.jpg" alt="02" /></p>
+            <p>카레 토마토 솥밥</p>
+            <p>#토마토 #솥밥 #카레</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/tomato.jpg" alt="03" /></p>
+            <p>카레 치즈라면</p>
+            <p>#진라면 #3분카레 #카레라면</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="./images/soup.jpg" alt="04" /></p>
+            <p>고구마사과카레</p>
+            <p>#고구마 #사과 #카레</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

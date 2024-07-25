@@ -13,16 +13,15 @@
       ul {
         list-style: none;
       }
-      .con {
+      .cnb {
         width: 1480px;
         margin: 50px auto;
       }
-      .con ul {
+      .cnb ul {
         display: flex;
         gap: calc(10% / 7);
       }
-
-      .con ul li {
+      .cnb ul li {
         width: calc(90% / 8);
         height: 500px;
         border-radius: 12px;
@@ -32,37 +31,50 @@
         overflow: hidden;
         transition: 0.5s;
       }
-      .con ul li:first-child div {
-        background-image: url(./images/bg_category_1.jpg);
+      .cnb ul li:nth-child(1) {
+        background-image: url(images/bg_category_1.jpg);
       }
-      .con ul li:nth-child(2) div {
-        background-image: url(./images/bg_category_2.jpg);
+      .cnb ul li:nth-child(2) {
+        background-image: url(images/bg_category_2.jpg);
+        background-position: 60%;
       }
-      .con ul li:nth-child(3) div {
-        background-image: url(./images/bg_category_4.jpg);
+      .cnb ul li:nth-child(3) {
+        background-image: url(images/bg_category_4.jpg);
+        background-position: 10%;
       }
-      .con ul li:nth-child(4) div {
-        background-image: url(./images/bg_category_5.jpg);
+      .cnb ul li:nth-child(4) {
+        background-image: url(images/bg_category_5.jpg);
       }
-      .con ul li:nth-child(5) div {
-        background-image: url(./images/bg_category_6.jpg);
+      .cnb ul li:nth-child(5) {
+        background-image: url(images/bg_category_6.jpg);
       }
-      .con ul li:nth-child(6) div {
-        background-image: url(./images/bg_category_3.jpg);
+      .cnb ul li:nth-child(6) {
+        background-image: url(images/bg_category_3.jpg);
+        background-position: 30%;
       }
-      .con ul li:nth-child(7) div {
-        background-image: url(./images/bg_category_7.jpg);
+      .cnb ul li:nth-child(7) {
+        background-image: url(images/bg_category_7.jpg);
       }
-      .con ul li:nth-child(8) div {
-        background-image: url(./images/bg_category_8.jpg);
+      .cnb ul li:nth-child(8) {
+        background-image: url(images/bg_category_8.jpg);
+        background-position: right;
+      }
+      .cnb ul li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        left: 0;
+        top: 0;
       }
 
-      .con ul li p {
+      .cnb ul li p {
         text-align: center;
         position: relative;
         z-index: 1;
       }
-      .con ul li p:first-child {
+      .cnb ul li p:first-child {
         font-size: 24px;
         font-weight: bold;
         position: absolute;
@@ -70,8 +82,7 @@
         transform: translateY(-50%);
         width: 100%;
       }
-
-      .con ul li p:last-child {
+      .cnb ul li p:last-child {
         font-size: 16px;
         opacity: 0;
         position: absolute;
@@ -79,138 +90,97 @@
         transition: 0s;
         line-height: 20px;
       }
-
-      .con ul:hover li:hover {
-        flex-basis: calc(100% - (15% * 3));
-      }
-      .con ul:hover li:hover div {
-        width: 100%;
-        margin: 0 auto;
-      }
-      .con ul:hover li:not(:hover) div {
-        width: 93%;
-        margin: 0 auto;
-      }
-      .con ul:hover li:not(:hover) {
-        flex-basis: 15%;
-      }
-
-      .con ul li p {
-        color: #fff;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-      .con ul li p:first-child {
-        font-size: 24px;
-        font-weight: bold;
-        position: absolute;
-        transform: translateY(-50%);
-        width: 100%;
-      }
-      .con ul li p:last-child {
-        font-size: 16px;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        transition: 0s;
-        line-height: 20px;
-      }
-      .con ul:hover {
+      .cnb ul:hover li:hover {
         width: 20%;
       }
-      .con ul li:hover p:first-child {
+
+      .cnb ul:hover li:hover p:first-child {
         top: 43%;
         font-size: 32px;
       }
-      .con ul li:hover:nth-child(3) p:first-child,
-      .con ul li:hover:nth-child(6) p:first-child {
+      .cnb ul:hover li:hover:nth-child(3) p:first-child,
+      .cnb ul:hover li:hover:nth-child(6) p:first-child {
         top: 40%;
       }
-      .con sul:hover li:hover p:last-child {
+      .cnb ul:hover li:hover p:last-child {
         opacity: 1;
         top: 50%;
-        transition: 0.5 0.5s;
+        transition: 0.5s 0.5s;
       }
-      .con sul:hover li:hover::after {
+      .cnb ul:hover li:hover::after {
         background: rgba(0, 0, 0, 0.6);
       }
     </style>
   </head>
   <body>
-    <div class="con">
+    <div class="cnb">
       <h1>노랑풍선이 만드는 여행</h1>
       <ul>
         <li>
-          <div>
-            <p>
-              전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함께 행복한 추억을
-              만듭니다.
-            </p>
-            <p>Package</p>
-          </div>
+          <p>Package</p>
+          <p>
+            전세계 맞춤 패키지여행으로<br />
+            연인, 친구, 가족과 함께<br />
+            행복한 추억을 만듭니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              신혼부부의 취향과 조건에 맞춘 특별한 여행으로 낭만적인 순간을
-              함께합니다.
-            </p>
-            <p>Honeymoon</p>
-          </div>
+          <p>Honeymoon</p>
+          <p>
+            신혼부부의 취향과 조건에 맞춘 <br />
+            연인, 친구, 가족과 함께<br />
+            특별한 여행으로<br />
+            낭만적인 순간을 함께합니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              골프투어, 가족여행, 크루즈여행, 휴양여행, 성지순례, 문화탐방 등
-              원하는 테마로 여행할 수 있습니다.
-            </p>
-            <p>Golf & Theme</p>
-          </div>
+          <p>Golf<br />& Theme</p>
+          <p>
+            골프투어, 가족여행, 크루즈여행,<br />
+            휴양여행, 성지순례, 문화탐방 등<br />
+            원하는 테마로 여행할 수 있습니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              세계 주요 도시 및 국내 항공 권 예약·발권과 단체 그룹 예약까지
-              가능합니다.
-            </p>
-            <p>Air Ticket</p>
-          </div>
+          <p>Air Ticket</p>
+          <p>
+            세계 주요 도시 및<br />
+            국내 항공 권 예약·발권과<br />
+            단체 그룹 예약까지 가능합니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              마음에 맞는 전세계 및 국내 호텔을 쉽고 빠르게 예약할 수 있습니다.
-            </p>
-            <p>Hotel</p>
-          </div>
+          <p>Hotel</p>
+          <p>
+            마음에 맞는 전세계 및 국내 호텔을<br />쉽고 빠르게 예약할 수
+            있습니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              배낭여행 및 개별여행을 위한 유레일 패스 등 교통권과 현지투어,
-              입장티켓을 예약할 수 있습니다.
-            </p>
-            <p>Tour & Ticket</p>
-          </div>
+          <p>Tour<br />& Ticket</p>
+          <p>
+            배낭여행 및 개별여행을 위한<br />유레일 패스 등 교통권과
+            현지투어,<br />입장티켓을 예약할 수 있습니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              국내의 문화유적, 제주 패키지, 골프 및 렌터카, 특급 호텔 예약을
-              제공합니다.
-            </p>
-            <p>Domestic</p>
-          </div>
+          <p>Domestic</p>
+          <p>
+            국내의 문화유적, 제주 패키지,
+            <br />
+            골프 및 렌터카, 특급 호텔 예약을
+            <br />
+            제공합니다.
+          </p>
         </li>
         <li>
-          <div>
-            <p>
-              국제회의 및 박람회, 기업·단체 연수 단체 포상, 대학교, 지역 모임 등
-              인센티브 여행을 함께합니다.
-            </p>
-            <p>Incentive</p>
-          </div>
+          <p>Incentive</p>
+          <p>
+            국제회의 및 박람회, 기업·단체 연수
+            <br />
+            단체 포상, 대학교, 지역 모임 등<br />
+            인센티브 여행을 함께합니다.
+          </p>
         </li>
       </ul>
     </div>

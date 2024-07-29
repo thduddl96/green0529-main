@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,minium-scale=1.0,maxium-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1280px;
+        height: 300px;
+        background: red;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 1280px) {
+        .wrap {
+          height: 500px;
+          background: blue;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .wrap {
+          background: yellow;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .wrap {
+          background: green;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .wrap {
+          background: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>커뮤니케이션</p>
+      <img src="./images/01.png" alt="" />
+    </div>
+  </body>
+</html>

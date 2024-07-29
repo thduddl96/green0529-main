@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+
+        gap: 20px;
+        padding: 10px;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        background-color: #000;
+        align-items: center;
+        font-size: 16px;
+        word-break: keep-all;
+      }
+      .footer {
+        position: relative;
+        padding: 20px;
+      }
+      #wrap .footer {
+        color: #fff;
+      }
+      #wrap .left a {
+        color: #f4731f;
+      }
+      #wrap .right a {
+        justify-content: center;
+        gap: 6px;
+        height: 48px;
+        padding: 0 16px;
+        color: #f4731f;
+        float: right;
+        border-radius: 0;
+        font-weight: bold;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="footer">
+        <div class="left">
+          <p>
+            해당 사이트는 쿠키를 사용하며, 이는 귀하에게 유용한 정보를 파악
+            하고, 최적화된 정보를 제공하는 마케팅에 활용될 수 있습니다. 이
+            사이트를 계속 사용함으로써 쿠키 활용에 동의하게 됩니다.
+          </p>
+          <a href="#">상세보기</a>
+        </div>
+        <div class="right">
+          <a href="#">확인</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

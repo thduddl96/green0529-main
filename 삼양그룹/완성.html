@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.cardList {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      ul.cardList li {
+        flex: 1 0 20%;
+        height: 360px;
+        transition: 0.5s;
+        background-size: 100%;
+        position: relative;
+      }
+      ul.cardList li:nth-child(1) {
+        background-image: url(images/main_sec01_card_list_type01_bg1_pc.jpg);
+      }
+      ul.cardList li:nth-child(2) {
+        background-image: url(images/main_sec01_card_list_type01_bg2_pc.png);
+      }
+      ul.cardList li:nth-child(3) {
+        background-image: url(images/main_sec01_card_list_type01_bg3_pc.jpg);
+      }
+      ul.cardList li:nth-child(4) {
+        background-image: url(images/main_sec01_card_list_type01_bg4_pc.jpg);
+      }
+      ul.cardList li:hover {
+        background-size: 120%;
+      }
+      ul.cardList li a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      ul.cardList li:nth-child(1) a:after {
+        background-color: rgba(0, 163, 241, 0.84);
+      }
+      ul.cardList li:nth-child(2) a:after {
+        background-color: rgba(219, 92, 41, 0.79);
+      }
+      ul.cardList li:nth-child(3) a:after {
+        background-color: rgba(139, 185, 6, 0.76);
+      }
+      ul.cardList li:nth-child(4) a:after {
+        background-color: rgba(0, 163, 241, 0.64);
+      }
+      ul.cardList li:hover a:after {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 1530px) {
+        ul.cardList {
+          max-width: 1280px;
+        }
+        ul.cardList li {
+          background-size: cover;
+        }
+        ul.cardList li:hover {
+          background-size: cover;
+        }
+        ul.cardList li:hover a:after {
+          opacity: 0;
+        }
+      }
+      img {
+        max-width: 100%;
+        transition: all 0.2s linear;
+      }
+      .cardList:hover img {
+        transform: scale(1.4);
+      }
+      @media screen and (max-width: 1024px) {
+        ul.cardList {
+          width: 90%;
+        }
+        ul.cardList li {
+          flex: 1 0 50%;
+          height: 250px;
+        }
+        ul.cardList li:nth-child(1) {
+          background-image: url(images/main_sec01_card_list_type01_bg1_m.jpg);
+        }
+        ul.cardList li:nth-child(2) {
+          background-image: url(images/main_sec01_card_list_type01_bg2_m.png);
+        }
+        ul.cardList li:nth-child(3) {
+          background-image: url(images/main_sec01_card_list_type01_bg3_m.jpg);
+        }
+        ul.cardList li:nth-child(4) {
+          background-image: url(images/main_sec01_card_list_type01_bg4_m.jpg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="cardList">
+      <li>
+        <a href="#">
+          <p>화학</p>
+          <p>언제나 편리하게</p>
+          <p>
+            <img src="images/main_sec01_card_list_arrow.svg" alt="화살표" />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>식품</p>
+          <p>누구나 풍요롭게</p>
+          <p>
+            <img src="images/main_sec01_card_list_arrow.svg" alt="화살표" />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>의약바이오</p>
+          <p>오래도록 건강하게</p>
+          <p>
+            <img src="images/main_sec01_card_list_arrow.svg" alt="화살표" />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>패키징</p>
+          <p>어디서나 즐겁게</p>
+          <p>
+            <img src="images/main_sec01_card_list_arrow.svg" alt="화살표" />
+          </p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

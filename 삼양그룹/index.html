@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .inner h2 {
+        float: left;
+        font-size: 10px;
+      }
+      .inner right > p {
+        float: right;
+      }
+      ul.content {
+        width: 100%;
+        display: flex;
+        margin: 100px;
+
+        font-size: 30px;
+        color: #fff;
+      }
+      ul.content li {
+        width: 400px;
+        height: 360px;
+        background-repeat: no-repeat;
+      }
+      ul.content li:nth-child(1) {
+        background-image: url(./images/bg1.jpg);
+      }
+      ul.content li:nth-child(2) {
+        background-image: url(./images/bg2.png);
+      }
+      ul.content li:nth-child(3) {
+        background-image: url(./images/bg3.jpg);
+      }
+      ul.content li:nth-child(4) {
+        background-image: url(./images/bg4.jpg);
+      }
+
+      ul.content li p {
+        font-weight: bold;
+        padding: 10px;
+      }
+      ul.content li p:nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .content {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="left">
+        <h2>
+          삼양은 언제나<br />
+          당신의곁에 있습니다.
+        </h2>
+      </div>
+      <div class="right">
+        <p>
+          스페셜티 사업 및 글로벌 시장확대를 위해<br />
+          화학, 식품, 의약바이오, 패키징 사업으로<br />
+          미래성장동력을 만들어갑니다.
+        </p>
+      </div>
+    </div>
+    <ul class="content">
+      <li>
+        <p>화학</p>
+        <p>언제나 편리하게</p>
+      </li>
+      <li>
+        <p>식품</p>
+        <p>누구나 풍요롭게</p>
+      </li>
+      <li>
+        <p>의약바이오</p>
+        <p>오래도록 건강하게</p>
+      </li>
+      <li>
+        <p>패키징</p>
+        <p>어디서나 즐겁게</p>
+      </li>
+    </ul>
+  </body>
+</html>

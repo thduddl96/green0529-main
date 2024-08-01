@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      ul.con img {
+        width: 400px;
+        height: 400px;
+        margin: 5px;
+      }
+      ul.con {
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+      ul.con li {
+        flex: 1 0 20%;
+        height: 360px;
+        transition: 0.5s;
+        background-size: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      ul.con li a {
+        position: relative;
+
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+      }
+      ul.con li a p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0 auto;
+      }
+      ul.con li a p:first-child:hover {
+        color: rgb(251, 119, 11);
+      }
+      ul.con li a p:nth-child(2) {
+        font-size: 16px;
+        margin-top: 20px;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li>
+        <a href="#">
+          <p>경영정보</p>
+          <p>주주 및 이사회 구성을<br />안내해 드립니다.</p>
+          <p><img src="./images/bg_info_1.jpg" alt="01" /></p>
+          <div class="bg"></div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>재무정보</p>
+          <p>영업현황 및 재무제표를<br />안내해드립니다.</p>
+          <p><img src="./images/bg_info_2.jpg" alt="01" /></p>
+          <div class="bg"></div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>주식정보</p>
+          <p>주가정보를<br />안내해드립니다.</p>
+          <p><img src="./images/bg_info_3.jpg" alt="01" /></p>
+          <div class="bg"></div>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

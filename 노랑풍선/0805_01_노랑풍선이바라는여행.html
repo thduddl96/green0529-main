@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.hope {
+        width: 95%;
+        max-width: 1480px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      ul.hope li {
+        display: flex;
+        gap: 104px;
+        align-items: center;
+      }
+      ul.hope li:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      ul.hope li > p {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 440px;
+      }
+      ul.hope li > p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ul.hope li div {
+        flex-shrink: 0;
+        width: 440px;
+      }
+      @media screen and (max-width: 1024px) {
+        ul.hope li > p {
+          width: 60%;
+          height: auto;
+        }
+        ul.hope li div {
+          width: 30%;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        ul.hope li {
+          flex-direction: column;
+          gap: 40px;
+          align-items: flex-start;
+        }
+        ul.hope li:nth-child(even) {
+          flex-direction: column;
+          text-align: left;
+        }
+        ul.hope li > p {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="hope">
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+            alt="story_1"
+          />
+        </p>
+        <div>
+          <p>여행의 새로운 가치를 알립니다</p>
+          <p>가치를 전달하는 여행</p>
+          <p>Value-Creating</p>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+            alt="story_2"
+          />
+        </p>
+        <div>
+          <p>고객의, 고객에 의한, 고객을 위한</p>
+          <p>신뢰를 받는 여행</p>
+          <p>Trustworthy</p>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+            alt="story_3"
+          />
+        </p>
+        <div>
+          <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+          <p>혁신적인 여행</p>
+          <p>Innovative</p>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+            alt="story_4"
+          />
+        </p>
+        <div>
+          <p>여행의 새로운 가치를 알립니다</p>
+          <p>가치를 전달하는 여행</p>
+          <p>Value-Creating</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

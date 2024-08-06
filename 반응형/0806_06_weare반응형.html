@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.container {
+        width: 80%;
+        max-width: 1132px;
+        display: flex;
+        margin: 0 auto;
+        gap: 6px;
+      }
+      ul.container li {
+        text-align: center;
+      }
+      ul.container li p:first-child {
+        color: rgb(84, 84, 162);
+      }
+      @media screen and (max-width: 960px) {
+        ul.container {
+          flex-direction: column;
+        }
+        ul.container li p:nth-child(2) {
+          font-size: 14px;
+          color: rgb(89, 89, 89);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>
+        <p><img src="./images/promo01.png" alt="집" /></p>
+        <div class="txt">
+          <p>HOME</p>
+          <p>
+            Lorem Ipsum is simply dummy text of theprinting and typesetting
+            industry.
+          </p>
+        </div>
+      </li>
+      <li>
+        <p><img src="./images/promo02.png" alt="사람" /></p>
+        <div class="txt">
+          <p>WE ARE</p>
+          <p>
+            Lorem Ipsum is simply dummy text of theprinting and typesetting
+            industry.
+          </p>
+        </div>
+      </li>
+      <li>
+        <p><img src="./images/promo03.png" alt="일" /></p>
+        <div class="txt">
+          <p>WORK</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </li>
+      <li>
+        <p><img src="./images/promo04.png" alt="블로그" /></p>
+        <div class="txt">
+          <p>BLOG</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .flex-container{display: flex;
+  flex-direction: column;
+  gap: 10px;}
+  .header, .footer {
+    background-color: #ccc;
+    text-align: center;
+    padding: 10px;
+  }
+  .content-container{display: flex;
+  gap: 10px;}
+  .sidebar{background-color: rgb(255, 186, 186);padding: 10px;flex: 1;}
+  .main-content{background-color: aquamarine;padding: 15px;flex: 3;}
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="header"><header></div>
+      <div class="content-container">
+        <div class="sidebar">sidebar</div>
+        <div class="main-content">Main content</div>
+        <div class="sidebar">sidebar</div>        
+      </div>
+      <div class="footer">Footer</div>
+  </div>
+</body>
+</html>

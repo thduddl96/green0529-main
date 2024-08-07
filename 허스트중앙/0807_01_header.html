@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      /* body {
+        background: #000;
+      } */
+      header {
+        height: 72px;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        /* 스크롤을 내려도 상단에 항상 고정 됨. */
+      }
+      header .head {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+        /* 스크롤을 지워지게 하는(?) */
+        height: 100%;
+        position: relative;
+      }
+      header .head .gnb ul li {
+        padding: 0 34px;
+      }
+      header .head .login ul li {
+        padding: 0 34px;
+      }
+      header .head ul {
+        display: flex;
+      }
+      header .head .menu {
+        display: none;
+      }
+      @media screen and (max-width: 900px) {
+        header .head .gnb {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: none;
+        }
+        header .head .login {
+          display: none;
+        }
+        header .head .menu {
+          display: block;
+        }
+      }
+      section {
+        height: 100vh;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="logo"><a href="#">로고</a></div>
+        <div class="gnb">
+          <ul>
+            <li><a href="#">서비스소개</a></li>
+            <li><a href="#">멤버십</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">마이페이지</a></li>
+          </ul>
+        </div>
+        <div class="login">
+          <ul>
+            <li><a href="#">SIGNUP</a></li>
+            <li><a href="#">LOGIN</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <p>
+            <img
+              src="https://www.hjmembers.co.kr/resources/images/main/ico-menu-mo.png"
+              alt="상단메뉴"
+            />
+          </p>
+        </div>
+      </div>
+    </header>
+    <section></section>
+  </body>
+</html>

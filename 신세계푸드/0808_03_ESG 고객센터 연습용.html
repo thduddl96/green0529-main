@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .esg {
+        width: 90%;
+        max-width: 940px;
+        margin: 0 auto;
+        text-align: center;
+      }
+     
+      .esg ul {
+        display: flex;
+        gap: 20px;
+      }
+      .esg ul li{flex: 1 1 20%;}
+      .cnb ul li p:first-child {
+        color: yellow;
+      }
+      .cnb ul li p {
+        color: #fff;
+        position: relative;
+        background: rgb(255, 76, 22);
+        border-radius: 10px;
+        width: 168px;
+        height: 300px;
+        padding: 24px 13px 18px 13px;
+        box-sizing: border-box;
+        word-break: break-all;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+      @media screen and (max-width: 960px) {
+        .cnb ul {
+          height: 369px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="esg">
+      <h2>고객불만 처리절차</h2>
+      <ul>
+        <li>
+          <p class="title"><a href="#">접수</a></p>
+          <div>
+          <p>홈페이지</p>
+          <p>유선</p>
+          <p>우편</p>
+          <!-- 부모로 div로 묶어주는 게 좋음 -->
+        </div>
+        </li>
+        <li>
+          <p class="title"><a href="#">현장방문</a></p>
+          <div>
+          <p>매장 및 제조사</p>
+          <p>품질혁신팀</p>
+          <p>연구분석팀</p>
+          <p>식품안전센터</p>
+          
+        </div>
+        </li>
+        
+        <li>
+          <p class="title"><a href="#">원인분석</a></p>
+          <div>
+          <p>매장 및 제조사</p>
+          <p>품질혁신팀</p>
+          <p>연구분석팀</p>
+          <p>식품안전센터</p>
+          
+        </div>
+        </li>
+        <li>
+          <p class="title"><a href="#">고객보고</a></p>
+          <div>
+          <p>홈페이지</p>
+          <p>유선</p>
+          <p>우편</p>
+          
+        </div>
+        </li>
+      </ul>
+  </body>
+</html>

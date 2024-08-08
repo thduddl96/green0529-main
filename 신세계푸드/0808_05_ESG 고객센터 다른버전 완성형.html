@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+      .esg {
+        width: 95%;
+        max-width: 940px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .esg ul {
+        display: flex;
+        gap: 20px;
+      }
+      .esg ul li {
+        flex: 1 1 20%;
+        background: #d2492c;
+        border-radius: 20px;
+        height: 305px;
+        padding: 24px 13px 18px;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .esg ul li .bg {
+        width: 108px;
+        height: 100px;
+        background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png);
+      }
+      .esg ul li:nth-child(2) .bg {
+        background-position: -108px 0;
+      }
+      .esg ul li:nth-child(3) .bg {
+        background-position: -216px 0;
+      }
+      .esg ul li:nth-child(4) .bg {
+        background-position: -324px 0;
+      }
+      .esg ul li:nth-child(5) .bg {
+        background-position: -432px 0;
+      }
+      .esg ul li p.title span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: #ecff96;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        color: #d2492c;
+      }
+      @media screen and (max-width: 960px) {
+        .esg ul li .bg {
+          width: 54px;
+          height: 50px;
+          background-size: auto 50px;
+        }
+        .esg ul li:nth-child(2) .bg {
+          background-position: -54px 0;
+        }
+        .esg ul li:nth-child(3) .bg {
+          background-position: -108px 0;
+        }
+        .esg ul li:nth-child(4) .bg {
+          background-position: -162px 0;
+        }
+        .esg ul li:nth-child(5) .bg {
+          background-position: -216px 0;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .esg {
+          text-align: left;
+        }
+        .esg ul {
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        .esg ul li {
+          flex: 1 1 80%;
+          flex-direction: row;
+        }
+        .esg ul li div {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="esg">
+      <h2>고객불만 처리절차</h2>
+      <ul>
+        <li>
+          <p class="bg"></p>
+          <section>
+            <p class="title">
+              <a href="#"><span>1</span>접수</a>
+            </p>
+            <div>
+              <p>홈페이지</p>
+              <p>유선</p>
+              <p>우편</p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <p class="bg"></p>
+          <section>
+            <p class="title"><a href="#">현장방문</a></p>
+            <div>
+              <p>매장 관리자</p>
+              <p>CS 담당자</p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <p class="bg"></p>
+          <section>
+            <p class="title"><a href="#">원인분석</a></p>
+            <div>
+              <p>매장 및 제조사</p>
+              <p>품질혁신팀</p>
+              <p>연구분석팀</p>
+              <p>식품안전센터</p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <p class="bg"></p>
+          <section>
+            <p class="title"><a href="#">대책수립</a></p>
+            <div>
+              <p>원인분석 및 대책수립</p>
+              <p>재발방지 교육 및 개선</p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <p class="bg"></p>
+          <section>
+            <p class="title"><a href="#">고객보고</a></p>
+            <div>
+              <p>결과보고</p>
+              <p>소비자분쟁해결기준에 의한 보상</p>
+            </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

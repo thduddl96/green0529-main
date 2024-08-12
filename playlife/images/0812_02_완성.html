@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .top {
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        background: #222;
+        left: 0;
+        top: 0;
+        line-height: 40px;
+        font-size: 14px;
+        text-align: center;
+        z-index: 999;
+      }
+      .top .close {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .main {
+        position: relative;
+        top: 40px;
+        display: flex;
+      }
+      .main .left {
+        width: 40%;
+        position: sticky;
+        top: 0;
+        height: 100%;
+        /* sticky를 쓸려면 높이값이 있어야함. top의 좌표도 있어야함.
+        부모에 높이를 주지 않으면 적용이 안됨. */
+      }
+      .main .left p {
+        width: 100%;
+        height: 100vh;
+      }
+      .main .left p:after{position: absolute;top: 0;right:0;bottom: 0;left: 0;z-index: 9;background-color: rgba(0, 0, 0, 0.375); content: "";}
+      .main .left p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .main .right {
+        width: 60%;
+        padding: 77px 0;
+      }
+      .main .right > ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .main .right > ul > li {
+        flex: 0 1 40%;
+      } /* 그로우 커지지마0, 쉬링크 40% */
+      .main .right > ul > li:nth-child(2) {
+        padding-top: 86px;
+      }
+      .main .right > ul > li li > p {
+        padding-bottom: 125%;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+      }
+      /* li 안에 차일드 p를 말하는 것 */
+
+      .main .right > ul > li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        /* 부모의 100을 가질려고  */
+      }
+      .main.reverse{flex-direction: row-reverse;}
+      @media screen and (max-width: 1199px) {
+        .main {
+          flex-direction: column;
+        }
+        .main .left {
+          width: 100%;
+          position: relative;
+        }
+        .main .right {
+          width: 90%;
+          margin: 0 auto;
+          padding: 44px 0;
+        }
+        /* .main .right > ul {
+          flex-direction: column;
+        } */
+        .main .right > ul{display: block;}
+        .main .right > ul > li ul {
+          display: flex;
+          gap: 0 24px;
+        }
+        .main .right > ul > li ul li {
+          display: flex;
+          margin-bottom: 22px;
+          flex: 1 1 45%;
+        }
+        .main .right > ul > li:nth-child(2) {
+          padding-top: 0;
+        }
+        .main .right > ul > li ul li > p {
+          flex: 1 1 45%;
+          padding-bottom: 50%;
+        }
+        .main .right > ul > li ul li > p.desc {
+          flex: 1 1 45%;
+        }
+      }
+      @media screen and (max-width: 719px) {
+        .main .right > ul > li ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <p><a href="#">마음 성장 플랫폼, 플레이라이프</a></p>
+      <p class="close">
+        <a href="#"><img src="./icon_banner_close.svg" alt="close" /></a>
+      </p>
+    </div>
+    <div class="main">
+      <div class="left">
+        <p><img src="./main.jpg" alt="main" /></p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 1번과 3번 -->
+                <p><img src="./m01.jpg" alt="m01" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./m03.jpg" alt="main_b03" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 2번과 4번 -->
+                <p><img src="./m02.jpg" alt="m02" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./m04.jpg" alt="main_b04" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main reverse">
+      <div class="left">
+        <p><img src="./main.jpg" alt="main" /></p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 1번과 3번 -->
+                <p><img src="./m01.jpg" alt="m01" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./m03.jpg" alt="main_b03" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 2번과 4번 -->
+                <p><img src="./m02.jpg" alt="m02" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./m04.jpg" alt="main_b04" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+    
+   
+
+  </body>
+</html>

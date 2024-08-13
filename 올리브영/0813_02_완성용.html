@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .platforms {
+        width: 90%;
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .platforms .left {
+        width: 40%;
+        position: sticky;
+        top: 100px;
+        height: 100%;
+      }
+      .platforms .left h1 {
+        font-size: 54px;
+      }
+      .platforms .left ul li:first-child a {
+        color: #82dc28;
+      }
+
+      .platforms .left ul li a {
+        color: #565e65;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 60px;
+      }
+      .platforms .left ul li a:hover {
+        color: #82dc28;
+      }
+      .platforms .right {
+        flex: 1;
+      }
+
+      .platforms .right ul li::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100px;
+      }
+      .platforms .right ul li .con {
+        display: flex;
+      }
+      .platforms .right ul li .con .number span {
+        display: none;
+      }
+      .platforms .right ul li .con .info {
+        flex: 1;
+      }
+      .platforms .right ul li .con .info .inner {
+        width: 85%;
+        margin: 0 auto;
+      }
+      .platforms .right ul li .con .info .inner h1 {
+        font-size: 25px;
+      }
+      .platforms .right ul li .con .info .inner p {
+        color: rgb(67, 64, 64);
+
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+      .platforms .right ul li .con .info .inner p a:last-child {
+        color: #000;
+        text-decoration: underline;
+      }
+      .platforms .right ul li .con .info .inner img {
+        width: 100%;
+        object-fit: cover;
+      }
+      footer {
+        padding: 500px;
+      }
+
+      @media screen and (max-width: 1169px) {
+        .platforms {
+          flex-direction: column;
+        }
+        .platforms .left {
+          width: 100%;
+          position: relative;
+          top: 0px;
+          height: auto;
+        }
+        .platforms .left ul {
+          display: none;
+        }
+        .platforms .right ul li::before {
+          height: 50px;
+        }
+        .platforms .right ul li .con {
+          flex-direction: column;
+        }
+        .platforms .right ul li .con .number span {
+          display: inline-block;
+        }
+        platforms .right ul li .con .info .inner {
+          width: 96%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="platforms">
+      <div class="left">
+        <h1>LIVE YOUNG<br />Platforms</h1>
+        <ul>
+          <li><a href="#con1">올리브영 매장</a></li>
+          <li><a href="#con2">올리브영 Oline</a></li>
+          <li><a href="#con3">올리브영 글로벌</a></li>
+          <li><a href="#con4">디플롯</a></li>
+          <!-- #은 id에만 붙음 -->
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li id="con1">
+            <div class="con">
+              <p class="number">01<span>올리브영 매장(국내)</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p><img src="./images/01.jpg" alt="" /></p>
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                    큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를
+                    통해 파트너사들에게<br />매력적인 브랜딩,마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                  <p><a href="#">올리브영 매장이 더 보고싶다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con2">
+            <div class="con">
+              <p class="number">02<span>올리브영 Oline</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p><img src="./images/02.jpg" alt="" /></p>
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                    큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를
+                    통해 파트너사들에게<br />매력적인 브랜딩,마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                  <p><a href="#">올리브영 Oline 서비스가 궁금하다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con3">
+            <div class="con">
+              <p class="number">03<span>올리브영 글로벌</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p><img src="./images/03.jpg" alt="" /></p>
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                    큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를
+                    통해 파트너사들에게<br />매력적인 브랜딩,마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                  <p><a href="#">올리브영 글로벌 플랫폼을 보고싶다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con4">
+            <div class="con">
+              <p class="number">04<span>디플롯</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p><img src="./images/04.jpg" alt="" /></p>
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                    큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를
+                    통해 파트너사들에게<br />매력적인 브랜딩,마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                  <p><a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

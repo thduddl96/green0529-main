@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .main {
+        display: flex;
+      }
+      .main .left {
+        width: 46%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+      }
+      .main .left p {
+        height: 100vh;
+      }
+      .main .left p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main .right {
+        flex: 1;
+        border-bottom: 1px solid#b5b5b5;
+      }
+      .main .right > ul {
+        display: flex;
+      }
+      .main .right > ul > li {
+        flex: 1 1 50%;
+      }
+      .main .right > ul > li ul li {
+        border: 1px solid#b5b5b5;
+        padding: 50px;
+        box-sizing: border-box;
+        border-bottom: none;
+      }
+      .main .right > ul > li:first-child ul li {
+        border-right: none;
+      }
+      .main .right > ul > li ul li > p img {
+        width: 100%;
+      }
+      .main .right > ul > li ul li .decs > p {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+      .main .right > ul > li ul li .prod {
+        display: flex;
+        align-items: center;
+      }
+      .main .right > ul > li ul li .prod img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <p><img src="./01.jpg" alt="" /></p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <p><img src="speclal.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>SPECIAL EVENT<br />마음을 편안하게 하는 여름휴가</h3>
+                  <div class="prod">
+                    <p><img src="./speclal-cross.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 티레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="speclal-cross2.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="./all days.jpg" alt="all" /></p>
+                <div class="desc">
+                  <h3>모든 날 모든 순간<br />ALL DAYS!</h3>
+                  <div class="prod">
+                    <p><img src="all days-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>우먼스 나이키스포츠웨어 링거 티셔츠</p>
+                      <p>39,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="all days-02.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                      <p>119,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="./cross.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>SPECIAL EVENT<br />마음을 편안하게 하는 여름휴가</h3>
+                  <div class="prod">
+                    <p><img src="./cross-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>케어 베어스 우산</p>
+                      <p>1,900원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="./cross-02.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>미니 3D 사탕</p>
+                      <p>1,900원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="adidas.png" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>
+                    한 주간 베스트를 알아보는<br />"주간오픽" 8월1주 아디다스편
+                  </h3>
+                  <div class="prod">
+                    <p><img src="./adidas-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>아디다스</p>
+                      <p>아딜렛 컴포트</p>
+                      <p>31,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="adidas-02.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>아디다스</p>
+                      <p>가젤/p></p>
+                      <p>129,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="desc">
+                  <h3>
+                    A-RT SERVICE<br />아트닷컴의<br />다양한 서비스를<br />안내해
+                    드려요.
+                  </h3>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <p><img src="sale.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>클리어런스 세일<br />썸머 시즌 오프 시작합니다!</h3>
+                  <div class="prod">
+                    <p><img src="sale-1.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>나이키 캄 슬라이드</p>
+                      <p>39,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="sale-2.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 을 터레인 샌들</p>
+                      <p>22,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="autumn.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>미리 만나보는 가을<br />신상 얼리버드 쿠폰 혜택!</h3>
+                  <div class="prod">
+                    <p><img src="autumn-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>우먼스 나이키 코트 비전 로우 넥스트네이처 MS</p>
+                      <p>89,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="autumn-02.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>아디다스</p>
+                      <p>VS 조그 2.0</p>
+                      <p>79,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="black.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>SPECIAL EVENT<br />마음을 편안하게 하는 여름휴가</h3>
+                  <div class="prod">
+                    <p><img src="black-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>반스</p>
+                      <p>업랜드-블랙/블랙/화이트</p>
+                      <p>119,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="black-02.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>반스</p>
+                      <p>업랜드-화이트/블랙</p>
+                      <p>107,100원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p><img src="./hot.jpg" alt="speclal" /></p>
+                <h2>HOT한 여름의 절정 8월<br />이달의 혜택을 만나보세요</h2>
+              </li>
+              <li>
+                <p><img src="./nike.png" alt="" /></p>
+              </li>
+              <li>
+                <div class="desc">
+                  <h3>"나이키의 여정"<br />시작과 성장의 역사</h3>
+                  <div class="prod">
+                    <p><img src="nike-01.jpg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>에어 포스1 07</p>
+                      <p>139,000원</p>
+                    </div>
+                  </div>
+                  <div class="prod">
+                    <p><img src="nike-02.jpeg" alt="" /></p>
+                    <div class="txt">
+                      <p>나이키</p>
+                      <p>나이키 코르테즈 레더</p>
+                      <p>119,000원</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main {
+        position: relative;
+        top: 40px;
+        display: flex;
+      }
+      .main .left {
+        width: 55%;
+        position: sticky;
+        top: 0;
+        height: 100%;
+      }
+      .maim .left p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main .right {
+        width: 60%;
+        padding: 50px;
+      }
+      .main .right > ul {
+        display: flex;
+
+        gap: 60px;
+      }
+      .main .right > ul > li {
+        flex: 0 1 40%;
+      }
+      div.desc h3 {
+        font-size: 20px;
+        margin: 10px;
+        padding-bottom: 10px;
+      }
+      div.desc p img {
+        width: 100px;
+        height: 100px;
+      }
+      div.desc p {
+        font-size: 13px;
+      }
+
+      div.desc p:nth-child(3) {
+        display: flex;
+        font-size: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <p><img src="./01.jpg" alt="" /></p>
+        <p>VANS The Upland</p>
+        <p>반스업랜드 신규 컬러 출시</p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <p><img src="speclal.jpg" alt="speclal" /></p>
+                <div class="desc">
+                  <h3>SPECIAL EVENT<br />마음을 편안하게 하는 여름휴가</h3>
+                  <p><img src="./speclal-cross.jpg" alt="" /></p>
+                  <p>크록스</p>
+                  <p>클래식 올 티레인 클로그</p>
+                  <p>47,000원</p>
+                  <p><img src="speclal-cross2.jpg" alt="" /></p>
+                  <p>크록스</p>
+                  <p>클래식 번지 코드 클로그</p>
+                  <p>65,000원</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="all days.jpg" alt="all" /></p>
+                <div class="desc">
+                  <h3>모든 날 모든 순간<br />ALL DAYS!</h3>
+
+                  <p><img src="all days-01.jpg" alt="" /></p>
+                  <p>나이키</p>
+                  <p>우먼스 나이키스포츠웨어 링거 티셔츠</p>
+                  <p>39,000원</p>
+                  <p><img src="all days-02.jpg" alt="" /></p>
+                  <p>나이키</p>
+                  <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                  <p>119,000원</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <p><img src="sale.jpg" alt="sale" /></p>
+                <div class="desc">
+                  <h3>클리어런스 세일<br />썸머 시즌 오프 시작합니다!</h3>
+
+                  <p><img src="sale-1.jpg" alt="" /></p>
+                  <p>나이키</p>
+                  <p>나이키 캄 슬라이드</p>
+                  <p>39,000원</p>
+                  <p><img src="sale-2.jpg" alt="" /></p>
+                  <p>크록스</p>
+                  <p>클래식 울 티레인 샌들</p>
+                  <p>22,000원</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./autumn.jpg" alt="autumn" /></p>
+                <div class="desc">
+                  <h3>미리 만나보는 가을<br />신상 얼리버드 쿠폰 혜택!</h3>
+                  <p><img src="autumn-01.jpg" alt="autumn-01" /></p>
+                  <p>나이키</p>
+                  <p>우먼스 나이키 코트 비전 로우 넥스트네이처 M5</p>
+                  <p>89,000원</p>
+                  <p><img src="autumn-02.jpg" alt="autumn-02" /></p>
+                  <p>아디다스</p>
+                  <p>VS 조그 2.0</p>
+                  <p>79,000원</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

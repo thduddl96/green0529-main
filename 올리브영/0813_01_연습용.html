@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+      }
+      .main .inner {
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .main .inner > ul {
+        width: 45%;
+      }
+      .main .inner > ul > li {
+        width: 100%;
+        line-height: 30px;
+
+      }
+      .main .inner > ul > li:hover {
+        border-bottom: 3px solid #fff;
+      }
+      .main .inner > ul > li > a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        color: #000
+        transition: 0.5s;
+      }
+      .main .inner > ul > li:hover > a {
+        color: rgb(152, 227, 41);
+      }
+      .main .inner > ul > li:nth-child(1):hover > a::after {
+        content: url(./images/01.jpg);
+        margin-left: 30px;
+      }
+      .main .inner > ul > li:nth-child(2):hover > a::after {
+        content: url(./images/02.jpg);
+        margin-left: 30px;
+      }
+      .main .inner > ul > li:nth-child(3):hover > a::after {
+        content: url(./images/03.jpg);
+        margin-left: 30px;
+      }
+      .main .inner > ul > li:nth-child(4):hover > a::after {
+        content: url(./images/04.jpg);
+        margin-left: 30px;
+      }
+
+
+      .main .inner > ul > li:after {
+        position: absolute;
+        bottom: -300px;
+        right: -100px;
+      }
+
+      .main .inner > ul .sub {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 55%;
+        height: 100%;
+        padding-left: 50px;
+        display: none;
+
+
+      }
+      .main .inner > ul > li:hover .sub {
+        display: block;
+      }
+      .main .inner > ul > li:first-child .sub {
+        display: block;
+      }
+      .main .inner > ul .sub li {
+        line-height: 30px;
+      }
+      .main .inner > ul .sub li p:nth-child(2) {
+        color: #fff;
+        margin-top: 50px;
+      }
+
+      .main .inner > ul .sub li a {
+        font-size: 18px;
+        margin-top: 50px;
+        display: inline-block;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+      .main .inner > ul .sub li a span {
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inner">
+        <h1>OLIVE YOUNG<br />Platforms</h1>
+        <ul>
+          <li>
+            <a href="#">올리브영 매장</a>
+            <ul class="sub">
+              <li>
+                <p><img src="./images/01.jpg" alt="" /></p>
+                <p>
+                  고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                </p>
+                <p>
+                  우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                  큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를 통해
+                  파트너사들에게<br />매력적인 브랜딩,마케팅 채널로 진화하고
+                  있습니다.
+                </p>
+                <a href="#">올리브영 매장이 더 보고싶다면?</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">올리브영 Oline(국내)</a>
+            <ul class="sub">
+              <li>
+                <p><img src="./images/02.jpg" alt="" /></p>
+                <p>
+                  고객이 건강한 아름다움을 찾아가는<br />온라인 PLAYGROUND를
+                  제공합니다.
+                </p>
+                <p>
+                  우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해
+                  월 이용자 수 480만명,<br />
+                  멤버십 회원 수 1,400만명 이상의 뷰티&헬스 커뮤니티를
+                  구현했습니다.<br />
+                  또한 업계 최초 당일 배송 서비스인 오늘드림을 실행하여
+                  고객경험을 혁신했습니다.
+                </p>
+                <a href="#">올리브영 Oline 서비스가 궁금하다면?</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">올리브영 글로벌</a>
+            <ul class="sub">
+              <li>
+                <p><img src="./images/03.jpg" alt="" /></p>
+                <p>전세계에 한국의<br />뷰티&헬스를 알립니다.</p>
+                <p>
+                  우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보
+                  역할을 수행합니다.<br />2019년 런칭한 글로벌몰과 연간 약
+                  300만명 이상이 외국인 고객이 방문하는 국내 글로벌
+                  특화매장은<br />파트너사와 함께 글로벌 시장에서 성장을 할 수
+                  있는 핵심 원동력입니다.
+                </p>
+                <a href="#">올리브영 글로벌 플랫폼을 보고싶다면?</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">디플롯</a>
+            <ul class="sub">
+              <li>
+                <p><img src="./images/04.jpg" alt="" /></p>
+                <p>
+                  가치지향 라이프스타일 플랫폼을 통해<br />고객에게 다양한
+                  즐거움을 선물합니다.
+                </p>
+                <p>
+                  고객이 뷰티&헬스를 넘어 라이프스타일 전반에서 자신만의
+                  가치와<br />취향을 반영한 브랜드를 탐색할 수 있습니다.<br />
+                  이러한 고객 경험의 확장을 통해 우리는 뷰티&헬스를 넘어선<br />
+                  종합 라이프스타일 플랫폼으로 도약합니다.
+                </p>
+                <a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

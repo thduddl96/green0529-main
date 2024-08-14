@@ -26,6 +26,23 @@
         gap: 104px;
         align-items: center;
       }
+      ul.hope li p:first-child {
+        color: rgb(105, 98, 98);
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 50px;
+      }
+      ul.hope li p:nth-child(2) {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 40px;
+      }
+      ul.hope li p:nth-child(3) {
+        color: rgba(255, 191, 0, 0.863);
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 60px;
+      }
       ul.hope li:nth-child(even) {
         flex-direction: row-reverse;
         text-align: right;
@@ -45,19 +62,55 @@
         width: 440px;
       }
       @media screen and (max-width: 1024px) {
+        ul.hope li div {
+          width: 100%;
+        }
         ul.hope li > p {
-          width: 60%;
+          width: 100%;
           height: auto;
+        }
+
+        ul.hope li p img {
+          border-radius: 10px;
+        }
+        ul.hope li p:first-child {
+          font-size: 15px;
+          line-height: 40px;
+        }
+        ul.hope li p:nth-child(2) {
+          font-size: 20px;
+          line-height: 10px;
+        }
+        ul.hope li p:nth-child(3) {
+          font-size: 20px;
         }
         ul.hope li div {
           width: 30%;
         }
       }
       @media screen and (max-width: 750px) {
+        ul.hope li div {
+          width: 100%;
+        }
         ul.hope li {
           flex-direction: column;
           gap: 40px;
           align-items: flex-start;
+        }
+        ul.hope li p:first-child {
+          color: rgb(105, 98, 98);
+          font-weight: bold;
+        }
+        ul.hope li p:nth-child(2) {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 40px;
+        }
+        ul.hope li p:nth-child(3) {
+          color: rgba(255, 191, 0, 0.863);
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 30px;
         }
         ul.hope li:nth-child(even) {
           flex-direction: column;
@@ -106,9 +159,9 @@
           />
         </p>
         <div>
-          <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
-          <p>혁신적인 여행</p>
-          <p>Innovative</p>
+          <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+          <p>즐거움을 선사하는 여행</p>
+          <p>Joyful</p>
         </div>
       </li>
       <li>
@@ -119,9 +172,9 @@
           />
         </p>
         <div>
-          <p>여행의 새로운 가치를 알립니다</p>
-          <p>가치를 전달하는 여행</p>
-          <p>Value-Creating</p>
+          <p>다양한 여행상품으로 여행 문화를 선도합니다.</p>
+          <p>혁신적인 여행</p>
+          <p>Innovative</p>
         </div>
       </li>
     </ul>

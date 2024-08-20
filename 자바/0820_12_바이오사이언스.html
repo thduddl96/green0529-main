@@ -16,8 +16,11 @@
         border: 1px solid #ccc;
         display: none;
       }
-      .txt {
+      .list .txt a {
         color: #ccc;
+      }
+      .list .txt a.active {
+        color: red;
       }
       .active {
         color: red;
@@ -43,18 +46,19 @@
       <section>뉴스 구독</section>
     </div>
     <script>
-      document.querySelectorAll(".txt")[0].classList.add("active");
+      document.querySelectorAll(".txt")[0].firstChild.classList.add("active");
       document.querySelectorAll(".txt")[0].classList.add("on");
       function myfnc() {
         document.querySelectorAll("txt").forEach(function (keys, item) {
-          keys.classList.remove("active");
+          keys.firstChild.classList.remove("active");
         });
       }
       document.querySelectorAll(".txt").forEach(function (keys, item) {
         console.log(keys);
-        keys.onclick = function () {
+        keys.onmouseenter = function (e) {
+          e.preventDefault();
           myfnc();
-          keys.classList.add("active");
+          keys.firstChild.classList.add("active");
           console.log(item);
           document.querySelectorAll("section").forEach(function (value, key) {
             value.classList.remove("on");

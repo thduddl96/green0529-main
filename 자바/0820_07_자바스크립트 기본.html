@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The DOMTokenList Object</h1>
+    <h2>The entries() Method</h2>
+
+    <p>The entries in the list are:</p>
+    <p id="demo" class="c1 c2 c3"></p>
+
+    <script>
+      let list = document.getElementById("demo").classList;
+      let text = "";
+      for (let x of list.entries()) {
+        text += x[0] + " " + x[1] + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>

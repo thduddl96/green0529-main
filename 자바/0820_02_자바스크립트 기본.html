@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: none;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        console.log("onload");
+        document.getElementById("demo1").style.display = "block";
+      };
+      // 1.웹페이지가 모두 로드된 후 실행되는 코드
+      window.addEventListener("load", function () {
+        console.log("load");
+      });
+      // 2. 문서가 로드된 후 실행되는 코드
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMConentLoaded");
+      });
+      // 3. DOM 구성이 완료된 후 실행되는 코드
+      function myfnc1() {
+        document.getElementById("demo1").style.display = "block";
+        document.getElementById("demo2").style.display = "none";
+      }
+      // 1번이 나올 때, 2번이 안 나오게 하는 것.
+      function myfnc2() {
+        document.getElementById("demo1").style.display = "none";
+        document.getElementById("demo2").style.display = "block";
+      }
+      // 2번이 나올 때, 1번이 안 나오게 하는 것.
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo1">demo1</p>
+    <p id="demo2">demo2</p>
+    <button type="button" onclick="myfnc1()">demo1</button>
+    <button type="button" onclick="myfnc2()">demo2</button>
+    <script>
+      document.getElementById("demo1").style.display = "block";
+    </script>
+  </body>
+</html>

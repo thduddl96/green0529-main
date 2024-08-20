@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        position: absolute;
+        width: 300px;
+        top: 0;
+        left: 200px;
+        display: none;
+      }
+      img.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt">photo1</p>
+    <p class="txt">photo2</p>
+    <p class="txt">photo3</p>
+    <p class="txt">photo4</p>
+    <p class="txt">photo5</p>
+    <p class="txt">photo6</p>
+    <div>
+      <img src="../HTMLCSS/images/photo1.jpg" alt="" />
+      <img src="../HTMLCSS/images/photo2.jpg" alt="" />
+      <img src="../HTMLCSS/images/photo3.jpg" alt="" />
+      <img src="../HTMLCSS/images/photo4.jpg" alt="" />
+      <img src="../HTMLCSS/images/photo5.jpg" alt="" />
+      <img src="../HTMLCSS/images/photo6.jpg" alt="" />
+    </div>
+    <script>
+      document.getElementsByTagName("img")[0].classList.add("on");
+      document.querySelectorAll(".txt").forEach(function (keys, item) {
+        console.log(keys);
+        keys.onclick = function () {
+          console.log(item);
+          document.querySelectorAll("img").forEach(function (value, key) {
+            value.classList.remove("on");
+          });
+          ///이미지라는 태그를 갖고 있는 것을 죄다 찾으러 감,다 없애고 클릭한 아이템에만 on을 줌.
+          document.getElementsByTagName("img")[item].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

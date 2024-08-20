@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="txt">하나</p>
+    <p class="txt">둘</p>
+    <p class="txt">셋</p>
+    <p class="txt">넷</p>
+    <p class="txt">다섯</p>
+    <div>
+      <p class="txt">하나</p>
+      <p class="txt">둘</p>
+      <p class="txt">셋</p>
+      <p class="txt">넷</p>
+      <p class="txt">다섯</p>
+    </div>
+    <h4>제목태그</h4>
+    <h3>제목태그</h3>
+    <script>
+      // document.querySelector(".txt").style.color = "red";
+      // 칼라도 문단이여서 따옴표를 쓴 거임.
+      // document.querySelectorAll(".txt")[1].style.color = "red";
+      // all이라고 해서 다 선택되는 게 아님.1번째만 색을 바꿀 거야.
+      document.querySelectorAll("div>p")[2].style.color = "red";
+      document.querySelector("h3,h4").style.color = "red";
+    </script>
+  </body>
+</html>

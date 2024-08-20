@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .new {
+        color: red;
+        font-size: 20px;
+      }
+      .example {
+        color: blue;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt">하나</p>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="replace">replace</button>
+    <button id="toggle">toggle</button>
+    <script>
+      document.getElementById("add").onclick = function () {
+        document.querySelector(".txt").classList.add("new");
+        console.log(document.querySelector(".txt").classList);
+      };
+      // 버튼을 클릭 했을 때 실행, add라는 이름이 있는데 다음과 같이 실행해줘.
+      document.getElementById("remove").onclick = function () {
+        document.querySelector(".txt").classList.remove("new");
+      };
+      document.getElementById("toggle").onclick = function () {
+        document.querySelector(".txt").classList.toggle("new");
+      };
+      document.getElementById("replace").addEventListener("click", function () {
+        document.querySelector(".txt").classList.replace("new", "exaple");
+      });
+      // 클릭이라는 이벤트를 발생시킬 때, 뉴를 이그잼플로 바꿔줘. 다른 애로 대체하는 것
+      console.log(document.querySelector(".txt").classList.contains("new"));
+      console.log(document.querySelector(".txt").classList.entries());
+    </script>
+  </body>
+</html>

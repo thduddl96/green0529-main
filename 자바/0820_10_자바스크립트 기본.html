@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        position: absolute;
+        width: 300px;
+        top: 0;
+        left: 200px;
+      }
+      .on {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt">photo1</p>
+    <p class="txt">photo2</p>
+    <p class="txt">photo3</p>
+    <p class="txt">photo4</p>
+    <p class="txt">photo5</p>
+    <p class="txt">photo6</p>
+    <div>
+      <img src="../HTMLCSS/images/photo1.jpg" alt="" />
+    </div>
+    <script>
+      document.querySelectorAll(".txt")[0].classList.add("on");
+      function myfnc() {
+        document.querySelectorAll(".txt").forEach(function (keys, item) {
+          keys.classList.remove("on");
+        });
+      }
+      document.querySelectorAll(".txt").forEach(function (keys, item) {
+        console.log(keys);
+        keys.onclick = function () {
+          myfnc();
+          keys.classList.add("on");
+          console.log(item);
+          document.getElementsByTagName("img")[0].src =
+            "../HTMLCSS/images/photo" + (item + 1) + ".jpg";
+        };
+      });
+    </script>
+  </body>
+</html>

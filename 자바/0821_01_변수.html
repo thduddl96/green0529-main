@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var userName = "그린";
+      var userId = "컴퓨터";
+      var userId = "computer";
+      userId = "12345";
+      var pw;
+      {
+        var pw = "aaaaa";
+      }
+      pw = 456789;
+      document.write(userName + userId + pw);
+
+      let name = "그린";
+      let name1;
+      name2, name3;
+      name1 = "green";
+      name2 = "red";
+      name3 = "blue";
+      // 똑같이 let name 쓰면 안됨.선  언을 먼저하고 값을 입력해야함.
+      // let은 여러개 가능함.
+      name1 = "green";
+      {
+        let name1 = "comeputer";
+      }
+      // 실행문 안에서는 중복이 가능함. 실행문 안에서만 쓸 수 있음. 에러 안남.
+
+      const number = 123;
+
+      const a01 = true;
+      const a02 = null;
+      const a03 = 99;
+      document.write(a01 + a02);
+      // 삼항연산 조건? 참인값 : 거짓인 값
+      // 논리형 데이터. 따옴표가 들어가면 그냥 true만
+      document.write((a02 ? "참" : "거짓") + "<br>");
+      document.write(a03 >= 100 ? "100보다 큰수" : "100보다 작은 수");
+      //  const은 변수 선언과 동시에 값이 들어와야함. 변수 선언하는 방법에는
+      // var(거의안씀) let(제일 많이 씀) const 세 개가 있음
+    </script>
+  </body>
+</html>

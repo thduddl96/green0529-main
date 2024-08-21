@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      div.ld {
+        display: flex;
+      }
+      div.ld ul {
+        display: flex;
+        margin: 0 auto 20px;
+      }
+      div.ld ul li {
+        margin: 10px;
+        padding: 10px 30px;
+        border: 1px solid;
+        border-radius: 30px;
+        background: red;
+        width: 90px;
+        height: 30px;
+      }
+      div.ld ul li a {
+        color: #fff;
+        margin: 10px;
+      }
+      div > p {
+        font-size: 15px;
+        text-align: center;
+        background-image: url(./images/research-ban1.jpg);
+        width: 900px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ld">
+      <ul>
+        <li>
+          <a href="#">연구개발</a>
+        </li>
+        <div>
+          <p>연구개발</p>
+          <p>
+            소비자와 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+            개선합니다.
+          </p>
+        </div>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">기초연구</a>
+        </li>
+        <div>
+          <p>기초연구</p>
+          <p>
+            바이오 연구,신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+            개척합니다.
+          </p>
+        </div>
+      </ul>
+    </div>
+    <script>
+      let btn = document.querySelectorAll("ul li a");
+      let div = document.querySelectorAll("ul li div");
+      let divitem = document.querySelectorAll("ul li div");
+      sec.style.display = "none";
+    </script>
+  </body>
+</html>

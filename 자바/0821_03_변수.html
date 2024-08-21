@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section .bg {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      section p {
+        width: 100px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+      section p.on {
+        background: rgba(255, 255, 255, 0.5);
+        color: red;
+      }
+      /* p 태그에 on class가 들어가서 적용됨. */
+      div#popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid;
+        background: #fff;
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>클릭</p>
+    </section>
+    <div id="popup">
+      popup
+      <a href="#">close</a>
+    </div>
+    <script>
+      let btn = document.querySelector("section>p");
+      let sec = document.querySelector("popup");
+      let secA = document.querySelector("popup a");
+      sec.style.display = "none";
+      //btn.onclick=function(e){
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        sec.style.display = "block";
+      });
+      secA.onclick = function (e) {
+        e.preventDefault();
+        sec.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

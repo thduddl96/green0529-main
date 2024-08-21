@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section .bg {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      section p {
+        width: 100px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+      section p.on {
+        background: rgba(255, 255, 255, 0.5);
+        color: red;
+      }
+
+      /* p 태그에 on class가 들어가서 적용됨. */
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>클릭</p>
+    </section>
+    <script>
+      let btn = document.querySelector("section>p");
+      let sec = document.querySelector("section");
+      // btn.oneclick = function (e) {
+        // a가 #으로 넘어가는 것을 막고, 아래를 실행
+        btn.addEventListener("click",function(){
+        e.prevenDefault();
+        // console.log("실행됨");
+        sec.classList.toggle("bg");
+
+        // document.querySelector("section>p").style.background = "rgba(255,255,255,0.5)";
+        // this.style.background="rgba(255,255,255,0.5)";
+        // this.style.background color="red";
+        this.classList.toggle("on");
+        // add와 remove를 대신 해줌. toggle이
+      };
+    </script>
+  </body>
+</html>

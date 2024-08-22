@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.out {
+        width: 20%;
+        height: 120px;
+        margin: 20px;
+        background: #ccc;
+      }
+      div.in {
+        width: 60%;
+        height: 60%;
+        background: #fc0;
+        margin: 10px auto;
+      }
+      p {
+        line-height: 16px;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out overParent">
+      <p class="overfirst">move your mouse</p>
+      <div class="in overChild">
+        <p class="overlast">move your mouse</p>
+        <p class="over_child">0</p>
+      </div>
+      <p class="over_parent">0</p>
+    </div>
+    <div class="out enterParent">
+      <p class="enterfirst">move your mouse</p>
+      <div class="in enterChild">
+        <p class="enterlast">move your mouse</p>
+        <p class="enter_child">0</p>
+      </div>
+      <p class="enter_parent">0</p>
+    </div>
+    <script>
+      let i = 0;
+      document.querySelector(".overParent").onmouseover = function () {
+        document.querySelector(".overlast").innerHTML = "mouseover";
+        document.querySelector(".over_parent").innerHTML = i++;
+        document.querySelector(".over_child").innerHTML = i++;
+      };
+      document.querySelector(".overParent").onmouseout = function () {
+        document.querySelector(".overfirst").innerHTML = "mouseout";
+        document.querySelector(".overlast").innerHTML = "mouseout";
+      };
+      let j = 0;
+      document.querySelector(".enterParent").onmouseenter = function () {
+        document.querySelector(".enterlast").innerHTML = "mouseover";
+        document.querySelector(".enter_parent").innerHTML = j++;
+        document.querySelector(".enter_child").innerHTML = j++;
+      };
+      document.querySelector(".enterParent").onmouseleave = function () {
+        document.querySelector(".enterfirst").innerHTML = "mouseleave";
+        document.querySelector(".enterlast").innerHTML = "mouseleave";
+      };
+    </script>
+  </body>
+</html>

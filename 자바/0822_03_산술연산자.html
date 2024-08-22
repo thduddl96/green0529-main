@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      a = 30;
+      // 기존에 10이 없어지고 재할당이 되는 것임.
+      // 연산자 왼쪽 오른쪽 칸 띄어주기
+      document.write("a:" + a + "<br>");
+      document.write("a+b:", a + b, +"<br>");
+      // 좌우의 식을 연결하는 ,(쉼표 연산자 프리티어 안 끄고 했을 때 가로안하고 쉼표로 가능.)
+      document.write("a-b:" + (a - b) + "<br>");
+      document.write("a*b:" + a * b + "<br>");
+      document.write("a/b:" + a / b + "<br>");
+      document.write("a%b:" + (a % b) + "<br>");
+      document.write("a**b:" + a ** b + "<br>");
+      document.write("++a:" + ++a + "<br>");
+      // ++가 뜻하는 것은 1씩 증가하는 것임.
+      // 30 + 1 a = a+1 a+=1 전위연산
+      document.write("a++:" + a++ + "<br>");
+      //후위연산 1씩 증가
+      document.write("a:" + a + "<br>");
+      document.write("--a:" + --a + "<br>");
+      //  a = a-1 a-=1 전위연산 1씩 감소
+      document.write("a--:" + a-- + "<br>");
+      //후위연산 1씩 감소
+      document.write("a:" + a + "<br>");
+
+      let c = "하나";
+      let d = "둘";
+      let e = "셋";
+      let txt;
+      txt = "";
+      //오른쪽에 있는 값을 왼쪽에 할당 시키는 거임.(txt에)
+      //txt = txt + c; //txt = 하나
+      txt = txt + c;
+      txt = txt + d; //txt = 하나 둘
+      txt = txt + e; //txt = 하나 둘 셋
+      document.write(txt);
+    </script>
+  </body>
+</html>

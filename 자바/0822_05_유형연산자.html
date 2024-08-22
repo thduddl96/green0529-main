@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = "20";
+      let c = String(30);
+
+      document.write("a의 타입은 : ", typeof a, "<br>");
+
+      document.write("b의 타입은 : ", typeof b, "<br>");
+      document.write("c의 타입은 : ", typeof c, "<br>");
+
+      document.write("10.33의 타입은 : ", typeof 10.33, "<br>");
+      let d = Number("john");
+      document.write(d + "<br>");
+      //NaN은 not a number이라는 뜻
+      document.write(typeof parseFloat(123.4567) + "<br>");
+      document.write(typeof parseFloat("123.4567") + "<br>");
+      document.write(parseInt(123.5567) + "<br>");
+      //소수점 이하는 알아서 숫자 떨구고 123만 나옴.
+      document.write(parseInt("123.5567") + "<br>");
+      let x = "5";
+      let y = +x;
+      document.write(typeof y + "<br>");
+      document.write(String(100 + 23) + "<br>");
+      document.write((100 + 23).tostring() + "<br>");
+      //string,tostring은 문자를 바꾸는 메서드
+
+      let num1 = 5.345789;
+      let num2 = 10000000;
+      document.write(num1.toExponential(3) + "<br>");
+      document.write(num2.toExponential(3) + "<br>");
+      document.write(num1.toFixed(3) + "<br>");
+      document.write(num2.toFixed(3) + "<br>");
+      document.write(num1.toPrecision(3) + "<br>");
+      document.write(num2.toPrecision(3) + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = new String("nice to meet you");
+      //string이라는 메서드를 쓸 거니까 괄호 필요
+      let str1 = "nice to meet you";
+      document.write(str.search("m") + "<br>");
+      document.write(str.search("m") + "<br>");
+      document.write(str.search(/m/i) + "<br>");
+      //대문자를 안 쓰고 소문자를 쓸 거면 슬래시를 넣어줘야 함.
+      document.write(str.replace(/nice/i, "happy") + "<br>");
+      //특정 문자를 원하는 문자로 대체 해주는 replace
+      document.write(str + "<br>");
+      let str2 = "Mr Blue has a blue house and a blue car.";
+      document.write(str2.replace("blue", "red") + "<br>");
+      //가장 처음 만나는 blue를 red로 대체
+      document.write(str2.replace(/blue/g, "red") + "<br>");
+      //소문자 blue를 모두 red로 대체 g는 그룹이라는 뜻
+      document.write(str2.replace(/blue/gi, "red") + "<br>");
+      //대소문자 구분없이 blue를 모두 red로 대체
+      document.write(str2.replaceAll("Blue") + "<br>");
+      document.write(str2.indexOf("Blue") + "<br>");
+      //해당하는 인덱스 번호를 찾음.
+      //Mr Blue has a blue house and a blue car이걸 숫자를 센 거임.빈 띄어쓰기도 포함.
+      document.write(str2.lastIndexOf("Blue") + "<br>");
+      document.write(str2.match("red") + "<br>");
+      document.write(str2.charAt(3) + "<br>");
+      document.write(str2.slice(1, 3) + "<br>");
+      //1부터 시작해서 3바로 직전인.3번 인덱스 전까지 가져올 거야. 영문r과 공백까지 가져옴.
+      document.write(str2.slice(-4, -3) + "<br>");
+      //-4는 포함이고 -3은 미만임 3번 바로 직전까지 가져옴.
+      document.write(str2.slice(1) + "<br>");
+      //M 빼고 다 가져옴.
+      let str3 = "1234567-1234567";
+      //str3 변수의 뒷자리 7자리를 *별표를 7개로
+      document.write(str3.replace(str3.slice(7), "******") + "<br>");
+      //특정원하는 대상을 가져다가 slice(7) 원하는 *로 바꾼 거임.
+      //replace랑 slice 두 개 다 사용 가능함.
+      document.write(str3.substring(7, 8) + "<br>");
+      document.write(str3.substring(-2, 2) + "<br>");
+      //substring에서 인수값에 음수가 입력되면 0으로 처리
+      //인덱스 번호는 0부터 시작함. substring은 -음의 값이 안됨.
+      document.write(str3.substr(0, 6) + "<br>");
+      //0은 스타트 번호 6개를 가져올 거라는 뜻임.
+      document.write(str3.substr(0) + "<br>");
+      document.write(str3.substr(-6) + "<br>");
+      document.write(str3.length + "<br>");
+      document.write("*".repeat(7) + "<br>");
+      // *를 7개 반복 할 거야
+      document.write(str2.split(" ", 2));
+      //공백을 기준으로 2개로 분리하겠다는 뜻.
+      document.write(str2.split(" ").length + "<br>");
+      document.write(str2.split(" ")[2] + "<br>");
+      //자바에서 인덱스는 다 대괄호를 사용함.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>red</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>gray</p>
+    <div>photo1</div>
+    <div>photo2</div>
+    <div>photo3</div>
+    <div>photo4</div>
+    <script>
+      let bgImg = "url(images/photo1.jpg)";
+      const color = ["red", "green", "blue", "gray"];
+      let p = document.querySelectorAll("p");
+      p.forEach(function (v, k) {
+        let txt = v.innerText;
+        console.log(txt);
+        //v.style.backgroundColor = color[k];
+        v.style.backgroundColor = txt;
+      });
+      let bg = document.querySelectorAll("div");
+      bg.forEach(function (v, k) {
+        v.style.backgroundImage = bgImg.replace(bgImg.slice(-6, -5), k + 1);
+      });
+    </script>
+  </body>
+</html>

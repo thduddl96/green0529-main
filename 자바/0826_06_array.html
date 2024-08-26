@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(fruits.join(" * ") + "<br>");
+      //join이라는 메서드를 썼어도 fruits는 변하지 않음.+
+      document.write(typeof fruits.join(" * ") + "<br>");
+      document.write(typeof fruits + "<br>");
+      document.write(fruits[0] + "*");
+      //이렇게 쓰면 오타날 경우가 많기 때문에, 위에처럼 join이라는 메서드를 쓸 것.
+      //값을 가져다가 특정값으로 합하는 것=join
+      document.write(
+        `${fruits[0]}* ${fruits[1]} * ${fruits[2]}*${fruits[3]}<br>`
+      );
+      fruits.pop();
+      document.write(fruits + "<br>");
+      //변수 문자 결합 +연산자
+      //좌우의 식 연결 ,연산자
+      //`${변수}<br>`
+      //`는 백틱이라고 함.
+      document.write(`${fruits}<br>`);
+      fruits.push("Kiwi");
+      document.write(`${fruits}<br>`);
+      fruits.shift();
+      document.write(`${fruits}<br>`);
+      //shift 는 앞에 배열 단어를 하나 삭제함,1이 0이 됨 그래서 바나나 지워지고 오렌지가 옴
+      fruits.unshift("Lemon");
+      document.write(`${fruits}<br>`);
+      //레몬이란 명령어를 맨 앞에 추가함.
+      document.write(`${fruits.length}<br>`);
+      //배열 인덱스보다 하나가 더 큼. 4
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      // myboys는 변수여서 따옴표 안 쓴 거임.
+      document.write(`${typeof myChildren}<br>`);
+      document.write(`${myChildren}<br>`);
+
+      document.write(`${myChildren.splice(2, 0, "Tom")}<br>`);
+      document.write(`${myChildren}<br>`);
+
+      document.write(`${myChildren.splice(2, 1, "Ann", "Tom")}<br>`);
+      document.write(`${myChildren}<br>`);
+
+      document.write(`${myChildren.splice(2, 2)}<br>`);
+      document.write(`${myChildren}<br>`);
+
+      document.write(`${myChildren.slice(1, 3)}<br>`);
+      //1포함 3미만. 슬라이는 뒤에부터도 가져올 수 있음.
+      document.write(`${myChildren.slice(-2, -1)}<br>`);
+      document.write(`${myChildren.sort()}<br>`);
+      document.write(`${myChildren.sort().reverse()}<br>`);
+    </script>
+  </body>
+</html>

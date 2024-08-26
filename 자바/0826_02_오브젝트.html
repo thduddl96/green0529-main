@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+           const car = {type:"Fiat", model:"500", color:"white",price:500};
+      document.write(car.type+"<br>");
+      const car1 = {
+      	type:"Fiat",
+      	model:"500",
+      	color:"white",
+      	price:500,
+      	info:function(){
+      		return document.write(this.type+this.model+this.color+this.price);
+      	}
+      };
+      	car1.info();
+
+      const car2={};
+      car2.type = "Fiat";
+      car2.model = "500";
+      car2.color = "white";
+      car2.price = 500;
+      car2.info() = function(){
+      		return document.write(this.type+this.model+this.color+this.price);
+      	}
+      const car3 = new Object();
+      car3.type = "Fiat";
+      car3.model = "500";
+      car3.color = "white";
+      car3.price = 500;
+      car3.info() = function(){
+      		return document.write(this.type+this.model+this.color+this.price);
+      	}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .con {
+        width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .con li {
+        line-height: 64px;
+        text-align: center;
+      }
+      .con li a {
+        display: block;
+        width: 100%;
+        height: 60px;
+        margin-top: 30px;
+        border-radius: 1px solid;
+      }
+      .con li a.on {
+        background: rgb(2, 0, 133);
+        color: #fff;
+      }
+      .list {
+        position: relative;
+      }
+      .list li {
+        position: relative;
+        left: 0%;
+        top: 0;
+        width: 100%;
+      }
+      .list li p {
+        text-align: center;
+        margin-top: 90px;
+      }
+      .list li div p img {
+        position: relative;
+        top: 10px;
+        transition: 0.5s;
+      }
+      .list li div p {
+        transition-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li><a href="#">ELLE</a></li>
+      <li><a href="#">COSMOPOLITAN</a></li>
+      <li><a href="#">Harper’s BAZAAR</a></li>
+      <li><a href="#">ESQUIRE</a></li>
+      <li><a href="#">STUDIO DOT</a></li>
+      <li><a href="#">YEET</a></li>
+    </ul>
+    <ul class="list">
+      <li>
+        <div>
+          <p><img src="./images/title1.svg" alt="제목" /></p>
+          <p><img src="./images/img_visual_01.png" alt="본문" /></p>
+        </div>
+      </li>
+    </ul>
+    <script>
+      let con = document.querySelectorAll(".con li");
+      let list = document.querySelectorAll(".list li");
+      con[0].classList.add("on");
+      con[0].querySelector("a").classList.add("on");
+      con[0].querySelector("div p").classList.add("on");
+
+      function my() {
+        con.forEach(function (value, key) {
+          value.querySelector("a").classList.remove("on");
+        });
+      }
+      con.forEach(function (value, key) {
+        value.onclick = function (e) {
+          e.preventDefault();
+          my();
+          console.log(key);
+          con.forEach(function (value, key) {
+            value.classList.remove("on");
+            value.querySelector("div h2").classList.remove("on");
+            value.querySelector("div p").classList.remove("on");
+          });
+          con[key].querySelector("a").classList.add("on");
+          con[key].classList.add("on");
+          con[key].querySelector("div p").classList.add("on");
+          con[key].querySelector("div p").classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

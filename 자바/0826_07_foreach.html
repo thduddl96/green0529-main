@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = { name: "홍길동", kor: 90, eng: 80, math: 70 };
+      //자바스크립트 오브젝트
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //자바스크립트 배열
+      fruits.forEach(function (v, i, a) {
+        document.write(`${v}<br>`);
+        document.write(`${i}<br>`);
+        document.write(`${a}<br>`);
+      });
+      Object.keys(fruits);
+      const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+      document.write(`${fruits1.indexOf("Apple", 1)}<br>`);
+      //1은 스타트 번호임.자바 pdf에서indexOf 공부하기
+      document.write(`${Object.keys(fruits1)}<br>`);
+      document.write(`${fruits1 instanceof Array}<br>`);
+      document.write(`${obj instanceof Array}<br>`);
+    </script>
+  </body>
+</html>

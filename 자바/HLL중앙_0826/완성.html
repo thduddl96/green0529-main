@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .btn {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+      .btn li a {
+        display: block;
+        padding: 0 16px;
+        line-height: 44px;
+        background-color: #fff;
+        border: 1px solid#ccc;
+        font-size: 14px;
+      }
+      .btn li a.on {
+        background-color: #211955;
+        color: #fff;
+        border-color: #211955;
+      }
+      .contents .title {
+        width: 1200px;
+        margin: 100px auto 50px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .contents .visual {
+        height: 624px;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">ELLE</a></li>
+      <li><a href="#">COSMOPOLITAN</a></li>
+      <li><a href="#">Harper’s BAZAAR</a></li>
+      <li><a href="#">ESQUIRE</a></li>
+      <li><a href="#">STUDIO DOT</a></li>
+      <li><a href="#">YEET</a></li>
+    </ul>
+    <div class="contents">
+      <p class="title"></p>
+      <p class="visual"></p>
+    </div>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      //let 이라는 변수에 .btn 이 여러개니까 모두 선택해줘 All
+      let bgTitle = "url(images/title1.svg)";
+      let bg = "url(images/img_visual_01.png)";
+      btn[0].querySelector("a").classList.add("on");
+      //0 은 첫번째를 말함.
+      document.querySelector(".title").style.backgroundImage = bgTitle;
+      document.querySelector(".visual").style.backgroundImage = bg;
+
+      function my() {
+        btn.forEach(function (v, k) {
+          btn[k].querySelector("a").classList.add("on");
+        });
+      }
+      btn.forEach(function (v, k) {
+        //v.querySelector("a").onclick=function(e){
+        v.querySelector("a").onmouseenter = function (e) {
+          e.preventDefault();
+          my();
+          console.log(k);
+          btn[k].querySelector("a").classList.add("on");
+          document.querySelector(".title").style.backgroundImage =
+            bgTitle.replace(bgTitle.slice(-6, -5), k + 1);
+          //뒤에서부터 숫자 세어서 가져옴.url(images/title1.svg) 이거
+          document.querySelector(".visual").style.backgroundImage = bg.replace(
+            bg.slice(-6, -5),
+            k + 1
+          );
+        };
+      });
+    </script>
+  </body>
+</html>

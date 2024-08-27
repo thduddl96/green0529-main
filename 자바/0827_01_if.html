@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hour = 20;
+      let greeting = "";
+      if (hour != 18) {
+        greeting = "Good day";
+      } else {
+        greeting = "bad day";
+      }
+      document.write(`${greeting}<br>`);
+      if (hour == 20) {
+        greeting = "hour의 변수값은 20입니다.";
+        hour = 10;
+      }
+      document.write(`${greeting}<br>`);
+      document.write(`${hour}<br>`);
+      if (hour == 10) greeting = "hour의 변수값은 10입니다.";
+      //if(조건) 참인값; {}생략가능
+      document.write(`${greeting}<br>`);
+    </script>
+  </body>
+</html>

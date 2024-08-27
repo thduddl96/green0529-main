@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+      let day = date.getDay(); //0~6
+      console.log(day);
+      switch(){
+        case 0:
+          week ="일요일";
+          break;
+        //0이 케이스일 경우 실행 구문은 일요일
+      }
+        case 0:
+          week ="일요일"
+          break;
+        case 1:
+          week ="월요일"
+          break;
+        case 2:
+          week ="화요일"
+          break;
+        case 3:
+          week ="수요일"
+          break;
+        case 4:
+          week ="목요일"
+          break;
+        case 5:
+          week ="금요일"
+          break;
+        case 5:
+          week ="토요일"
+          break;
+
+
+
+      document.write(`오늘의 요일은 ${week}입니다`);
+    </script>
+  </body>
+</html>

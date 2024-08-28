@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "";
+      for (let i = 0; i < 10; i++) {
+        //if (i === 3) {break;
+        if (i === 3) continue;
+
+        text += "The number is " + i + "<br>";
+      }
+      document.write(text);
+      // continue 문은 지정된 조건이 발생하는 경우 (루프에서) 하나의 반복을 중단하고 루프의 다
+      //음 반복을 계속합니다. break랑 continue 비교해서 잘 알고 있기.
+    </script>
+  </body>
+</html>

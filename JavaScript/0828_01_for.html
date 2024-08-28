@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "";
+      //아무것도 안 넣고 싶을 때 ""를 넣을 수 있음.
+      cars = ["소나타", "아반떼", "그랜저", "밴츠", "볼보", "제네시스"];
+      text += cars[0] + "<br>"; //text = text + "소나타0"+"<br>"
+      text += cars[1] + "<br>"; //text = 소나타 + "아반떼"+"<br>"
+      text += cars[2] + "<br>";
+      text += cars[3] + "<br>";
+      text += cars[4] + "<br>";
+      text += cars[5] + "<br>";
+      //document.write(`${text}<br>`);
+      for (let i = 0; i <= 5; ++i) {
+        text1 += cars[i] + "<br>";
+        //변수를 i로 할 거고 0이야.i가 6보다 작은 5보다 작거나 같을 때까지만.
+        //0을 먼저 출력하고 ++는 그 다음 .
+        //i++ (i는 i더하기 1과 같음.)
+      }
+      document.write(`${text1}<br>`);
+
+      let txt = "";
+      for (let i = 1; i <= 5; i++) {
+        //document.write(`The number is ${i}<br>`);
+        txt + `The number is ${i}<br>`;
+      }
+      document.write(`${txt}<br>`);
+      for (let i = 1; i <= 100; i++) {
+        document.write(`${i}<br>`);
+      }
+      //1~100까지의 숫자 정렬
+      document.write("<br>");
+      for (let i = 100; i >= 1; i--) {
+        document.write(`${i}<br>`);
+      }
+      //100~1까지의 숫자 정렬
+      document.write("<br>");
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+          document.write(`${i},`);
+        }
+      }
+      document.write(`${txt}<br>`);
+      for (let i = 2; i <= 100; i++) {
+        //i=i+2
+        document.write(`${i}<br>`);
+      }
+      //짝수들만 나오게 실행.
+      document.write("<br>");
+      //1부터 10까지의 합계 1+2+3+....+10
+      let sum = 0;//1,2,3,4
+      for (let i = 1; i <= 10; i++) {
+        //i=i+2
+        sum += i, //sum = sum +i sum = 1 +2+3
+      }
+      document.write(`${sum}<br>`)
+    </script>
+  </body>
+</html>

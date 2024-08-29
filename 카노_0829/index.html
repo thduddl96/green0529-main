@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="xeicon.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .brand_wrap {
+        font-family: "Noto Sans KR", sans-serif;
+        background-image: url(./images/main_brand_img_1.jpg);
+        background-repeat: no-repeat;
+        background-position: right center;
+      }
+      .brand {
+        width: 1300px;
+        margin: 0 auto;
+      }
+      .brand h1 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 54px;
+        font-weight: 100;
+        line-height: 1.2;
+        letter-spacing: -0.5;
+        padding-top: 125px;
+        margin-bottom: 50px;
+      }
+      .brand .list li {
+        position: relative;
+        left: -60px;
+        width: 58%;
+        padding: 50px 60px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        background: transparent;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .brand .list li:hover,
+      .brand .list li.on {
+        background: rgba(191, 30, 46);
+        left: -50px;
+        box-shadow: rgba(0, 0, 0, 0.19) 10px 15px 20px;
+      }
+      .brand .list li .brand_icon {
+        width: 100px;
+        position: relative;
+      }
+      .brand .list li .brand_icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+      .brand .list li .brand_icon img:first-child,
+      .brand .list li .brand_icon img.on {
+        opacity: 1;
+      }
+      .brand .list li .brand_desc h2 {
+        margin-bottom: 12px;
+        font-size: 26px;
+        font-family: "Noto Sans KR", sans-serif;
+        letter-spacing: -2px;
+        font-weight: 200;
+      }
+      .brand .list li .brand_desc h2.on {
+        color: #fff;
+      }
+      .brand .list li .brand_desc p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.55;
+        color: #939393;
+      }
+      .brand .list li .brand_desc p.on {
+        color: #fff;
+      }
+      .brand .list li .brand_arrow {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+        opacity: 0;
+      }
+      .brand .list li .brand_arrow.on {
+        opacity: 1;
+      }
+      .brand .list li .brand_arrow i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand_wrap">
+      <div class="brand">
+        <h1>카노와 함께하는<br />브랜드를 소개합니다.</h1>
+        <ul class="list">
+          <li>
+            <p class="brand_icon">
+              <img src="./images/brand_icon_01.png" alt="01" />
+              <img src="./images/brand_icon_on_01.png" alt="on01" />
+            </p>
+            <div class="brand_desc">
+              <h2>이지스토리</h2>
+              <p>산뜻한 일상에 이야기를 전하는 정직한 브랜드입니다.</p>
+            </div>
+            <p class="brand_arrow"><i class="xi-arrow-right"></i></p>
+          </li>
+          <li>
+            <p class="brand_icon">
+              <img src="./images/brand_icon_02.png" alt="02" />
+              <img src="./images/brand_icon_on_02.png" alt="on02" />
+            </p>
+            <div class="brand_desc">
+              <h2>페슬러</h2>
+              <p>반려동물과 함께하는 우리의 일상을 위한 브랜드입니다.</p>
+            </div>
+            <p class="brand_arrow"><i class="xi-arrow-right"></i></p>
+          </li>
+          <li>
+            <p class="brand_icon">
+              <img src="./images/brand_icon_03.png" alt="03" />
+              <img src="./images/brand_icon_on_03.png" alt="on03" />
+            </p>
+            <div class="brand_desc">
+              <h2>홈케어</h2>
+              <p>보다 나은 홈 라이프를 위한 방법을 만드는 브랜드입니다.</p>
+            </div>
+            <p class="brand_arrow"><i class="xi-arrow-right"></i></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let list = document.querySelectorAll(".list li");
+      function myAdd() {
+        list[0].classList.add("on");
+        list[0]
+          .querySelector(".brand_icon")
+          .querySelectorAll("img")[1]
+          .classList.add("on");
+        list[0].querySelector("brand_desc h2").classList.add("on");
+        list[0].querySelector("brand_desc p").classList.add("on");
+        list[0].querySelector("brand_arrow").classList.add("on");
+      }
+      //이미지가 두 개여서 All
+      myAdd();
+      function myRemove() {
+        list.forEach(function (v, k) {
+          v.classList.remove("on");
+          v.querySelector(".brand_icon")
+            .querySelectorAll("img")[1]
+            .classList.remove("on");
+          v.querySelector(".brand_desc h2").classList.remove("on");
+          v.querySelector(".brand_desc p").classList.remove("on");
+          v.querySelector(".brand_arrow").classList.remove("on");
+        });
+        //첫번째 호버를 없앨지 두번째 호버를 없앨지 모르니까 그냥 다 없애주기.
+      }
+      list.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          myRemove();
+          document.querySelector(".brand_wrap").style.backgroundImage =
+            "url(images/main_brand_img_" + (k + 1) + ".jpg)";
+          list[k].classList.add("on");
+          list[k]
+            .querySelector(".brand_icon")
+            .querySelectorAll("img")[1]
+            .classList.add("on");
+          list[k].querySelector(".brand_desc h2").classList.add("on");
+          list[k].querySelector(".brand_desc p").classList.add("on");
+          list[k].querySelector(".brand_arrow").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          myRemove();
+        };
+      });
+      document.querySelector(".brand").onmouseleave = function () {
+        myAdd();
+        document.querySelector(".brand_wrap").style.backgroundImage =
+          "url(images/main_brand_img_1.jpg)";
+      };
+    </script>
+  </body>
+</html>

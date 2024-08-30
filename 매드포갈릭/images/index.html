@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .content {
+        width: 1180px;
+        height: 1120px;
+        margin: 0 auto;
+        font-size: 0;
+        display: flex;
+      }
+      .content > ul {
+        display: flex;
+        gap: 10px;
+      }
+      .content > ul li ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .content > ul li ul li {
+        font-size: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+      .content > ul li ul li p {
+        position: absolute;
+        bottom: 40px;
+        color: #fff;
+        padding-left: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+      }
+      .content > ul li ul li h2 {
+        position: absolute;
+        bottom: 5px;
+        color: #fff;
+        padding-left: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+      }
+
+      .content > ul li ul li img {
+        transition: 0.5s;
+        width: 100%;
+      }
+      .content > ul li ul li:hover img {
+        width: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <img src="./con1.png" alt="01" />
+              <h2>SEARCH</h2>
+              <p>매드포갈릭 매장 찾기</p>
+            </li>
+            <li>
+              <img src="./con2.png" alt="02" />
+              <h2>CONCEPT</h2>
+              <p>매드포갈릭 컨셉 이미지</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

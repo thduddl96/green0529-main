@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {
+        height: 1000px;
+        cursor: url(/HTMLCSS/images/twitter.png), auto;
+      }*/
+      body {
+        height: 3000px;
+      }
+      .custom {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background: rgb(255, 5, 201);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 999;
+        animation: circle 1s infinite;
+      }
+      @keyframes circle {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .con {
+        height: 500px;
+        border: 1px solid;
+        margin: 100px;
+        cursor: none;
+      }
+      .con1 {
+        height: 500px;
+        border: 1px solid red;
+        margin: 100px;
+        cursor: url(images/twiter);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom"></div>
+    <div class="con"></div>
+    <div class="con1"></div>
+    <script>
+      document.querySelector(".con").onmousemove = function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        document.querySelector(".custom").style.left = x + "px";
+        document.querySelector(".custom").style.top = y + "px";
+      };
+      document.querySelector("con").onmousemove = function () {
+        document.querySelector(".custom").style.display = "block";
+      };
+      document.querySelector("con").onmousemove = function () {
+        document.querySelector(".custom").style.display = "none";
+      };
+      document.querySelector(".con").addEventListener("click", function () {});
+      document
+        .querySelector(".con")
+        .addEventListener("mouseenter", function () {});
+      document.querySelector(".con").addEventListener("change", function () {});
+      document
+        .querySelector(".con")
+        .addEventListener("mousemove", function () {});
+
+      document.querySelector(".con").onclick = function () {};
+      document.querySelector(".con").onclick = function () {};
+    </script>
+  </body>
+</html>

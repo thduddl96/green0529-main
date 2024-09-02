@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="fname" />
+    <script>
+      let x = document.getElementById("fname");
+      /*x.onchange = function () {
+        this.value = this.value.toUpperCase();
+      };*/
+      //현재 대상에 있는 걸 다 대문자로 바꿔.
+      /*x.onkeydown = function (e) {
+        console.log(e.keyCode);
+      };*/
+      //키보드에 키를 눌렀을 때 발생하는 이벤트임.
+      //keydown, keypress 키를 누르고 있을 때도 이벤트 발생
+      //keypress는 alt,ctrl,방향키도 ketCode값 반환 안됨.
+      /*x.onkeypress = function (e) {
+        console.log(e.keyCode);
+      };*/
+      x.onkeyup = function (e) {
+        console.log(e.keyCode);
+      };
+      //키보드의 키를 눌렀다 떼었을 때, 이벤트 발생함.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>세로메뉴</title>
+    <style>
+      div#cubic {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        perspective: 800px;
+        margin: 100px auto;
+      }
+      div.box {
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transition: 1s;
+      }
+      div img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+      div img:first-child {
+        transform: translateZ(-200px);
+      }
+      div img:nth-child(2) {
+        transform: rotateX(90deg) translateZ(200px);
+      }
+      div img:nth-child(3) {
+        transform: rotateX(90deg) translateZ(-200px);
+      }
+      div img:nth-child(4) {
+        transform: rotateY(90deg) translateZ(-200px);
+      }
+      div img:nth-child(5) {
+        transform: rotateY(90deg) translateZ(-200px);
+      }
+      div img:last-child {
+        transform: translateZ(200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cubic">
+      <div class="box">
+        <img src="./images/cubic_css1.jpg" alt="cubic" />
+        <img src="./images/cubic_css2.jpg" alt="cubic" />
+        <img src="./images/cubic_css3.jpg" alt="cubic" />
+        <img src="./images/cubic_css4.jpg" alt="cubic" />
+        <img src="./images/cubic_css5.jpg" alt="cubic" />
+        <img src="./images/cubic_css6.jpg" alt="cubic" />
+      </div>
+    </div>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="up">up</button>
+    <button id="down">down</button>
+    <script>
+      let y = 0; //y = y-90 y-=90
+      document.getElementById("left").onclick = function () {
+        document.querySelector(".box").style.transform =
+          "rotateY(" + (y -= 90) + "deg)";
+      };
+      //계속 -값을 가져옴. y와 90은 변수기 때문에 따옴표 ㄴㄴ.
+      //y라는 변수를 먼저 선언할 것.y -= 90
+      document.getElementById("right").onclick = function () {
+        document.querySelector(".box").style.transform =
+          "rotateY(" + (y += 90) + "deg)";
+      };
+      document.getElementById("up").onclick = function () {
+        document.querySelector(".box").style.transform =
+          "rotateX(" + (x += 90) + "deg)";
+      };
+      document.getElementById("down").onclick = function () {
+        document.querySelector(".box").style.transform =
+          "rotateX(" + (x -= 90) + "deg)";
+      };
+      document.onkeydown = function (e) {
+        console.log(e.keyCode);
+        if (e.keyCode == 37) {
+          document.querySelector(".box").style.transform =
+            "rotateY(" + (y -= 90) + "deg)";
+        } else if (e.keyCode == 38) {
+          document.querySelector(".box").style.transform =
+            "rotateX(" + (x += 90) + "deg)";
+        } else if (e.keyCode == 39) {
+          document.querySelector(".box").style.transform =
+            "rotateY(" + (y += 90) + "deg)";
+        } else if (e.keyCode == 40) {
+          document.querySelector(".box").style.transform =
+            "rotateX(" + (x -= 90) + "deg)";
+        }
+      };
+      setInterval(function () {
+        document.querySelector(".box").style.transform =
+          "rotateY(" + (y += 90) + "deg)";
+      }, 1000);
+    </script>
+  </body>
+</html>

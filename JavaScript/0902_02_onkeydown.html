@@ -62,13 +62,12 @@
     <button id="up">up</button>
     <button id="down">down</button>
     <script>
-      let y = 0; //y = y-90 y-=90
+      let x = 0;
+      let y = 0; //y = y-90  y -= 90
       document.getElementById("left").onclick = function () {
         document.querySelector(".box").style.transform =
           "rotateY(" + (y -= 90) + "deg)";
       };
-      //계속 -값을 가져옴. y와 90은 변수기 때문에 따옴표 ㄴㄴ.
-      //y라는 변수를 먼저 선언할 것.y -= 90
       document.getElementById("right").onclick = function () {
         document.querySelector(".box").style.transform =
           "rotateY(" + (y += 90) + "deg)";
@@ -81,26 +80,51 @@
         document.querySelector(".box").style.transform =
           "rotateX(" + (x -= 90) + "deg)";
       };
+      let interval = "";
+      function myfnc() {
+        interval = setInterval(function () {
+          document.querySelector(".box").style.transform =
+            "rotateY(" + (y += 90) + "deg)";
+        }, 1000);
+      }
+      myfnc();
       document.onkeydown = function (e) {
+        clearInterval(interval);
         console.log(e.keyCode);
         if (e.keyCode == 37) {
+          //왼쪽화살표
           document.querySelector(".box").style.transform =
             "rotateY(" + (y -= 90) + "deg)";
         } else if (e.keyCode == 38) {
+          //위쪽화살표
           document.querySelector(".box").style.transform =
             "rotateX(" + (x += 90) + "deg)";
         } else if (e.keyCode == 39) {
+          //오른쪽화살표
           document.querySelector(".box").style.transform =
             "rotateY(" + (y += 90) + "deg)";
         } else if (e.keyCode == 40) {
+          //아래화살표
           document.querySelector(".box").style.transform =
             "rotateX(" + (x -= 90) + "deg)";
         }
+        setTimeout(myfnc, 100);
       };
-      setInterval(function () {
-        document.querySelector(".box").style.transform =
-          "rotateY(" + (y += 90) + "deg)";
-      }, 1000);
+
+      let btn = document.querySelectorAll("button");
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          clearInterval(interval);
+        };
+        v.onmouseleave = function () {
+          interval = setInterval(function () {
+            document.querySelector(".box").style.transform =
+              "rotateY(" + (y += 90) + "deg)";
+          }, 1000);
+        };
+      });
+
+      //하나의 구문이 아닌 건 foreach
     </script>
   </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/aos.css" />
+    <style>
+      section {
+        width: 100%;
+        max-width: 1200px;
+        margin: 300px auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+      }
+      section div {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section><div data-aos="fade-up">fade-up</div></section>
+    <section><div data-aos="fade-down">fade-up</div></section>
+    <section>
+      <div data-aos="fade-left" data-aos-delay="500">fade-up</div>
+      <div data-aos="fade-right" data-aos-delay="1000">fade-up</div>
+      <div data-aos="fade-up-left" data-aos-delay="1500>fade-up</div>
+      <div data-aos="fade-up-right" data-aos-delay="2000">fade-up</div>
+    
+      
+    </section>
+
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        easing:"ease"
+        duration:1000,
+        offset:120,
+        //스크롤에 얼마나 반응할지를 설정 해당요소가 스크롤링이 
+        //120픽셀이상 진행될 때 애니메이션이 시작되도록 지정.
+      });
+      
+    </script>
+  </body>
+</html>

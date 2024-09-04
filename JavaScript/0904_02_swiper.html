@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 50%;
+      height: 50%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .on{color: red;}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><h1>Slide 1</h1></div>
+      <div class="swiper-slide"><h1>Slide 2</h1></div>
+      <div class="swiper-slide"><h1>Slide 3</h1></div>
+    </div>
+		<div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+  </div>
+  <div class="con">
+    <ul>
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+    </ul>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    		let conLi = document.querySelectorAll(".con ul li");
+		conLi[0].classList.add("on");
+    var swiper = new Swiper(".mySwiper", {
+			navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+			pagination: {
+        el: ".swiper-pagination",
+      },
+			autoplay: {
+				delay: 2500,
+			},
+			on: {
+				slideChange: function(){
+					console.log(this.realIndex);
+					for(let i=0;i<3;i++){
+						conLi[i].classList.remove("on");
+					}
+					conLi[this.realIndex].classList.add("on");
+				}
+			},
+		});
+		conLi.forEach(function(v,k){
+      v.onmouseenter = function(){
+        swiper.slideTo(k);
+        swiper.autoplay.stop();
+      }
+      v.onmouseleave = function(){
+        swiper.autoplay.start();
+      }
+    })
+    //현재 슬라이드 번호를 알려고 할때 뜸 .
+  </script>
+</body>
+
+</html>
+
+
+</html>

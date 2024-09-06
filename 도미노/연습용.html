@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="당신의 인생에 완벽한 한끼! Life Food, Domino's"
+    />
+    
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"
+    />
+    
+  <style>
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;
+    color: #000;}
+    
+
+
+
+
+
+
+
+    #header {
+  background: #fff;
+  padding: 0 25px;
+  }
+  #header .header_inner {
+  height: 85px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+#header .header_inner .pc_logo {
+  width: 155px;
+  height: 34px;
+  float: left;
+  margin-top: 26px;
+  z-index: 10;
+}
+#header .header_inner .m_logo {
+  display: none;
+}
+#header .header_inner .util {
+  float: right;
+  position: relative;
+  background: #fff;
+  z-index: 10;
+  margin: 30px 0 0 0;
+}
+#header .header_inner .util li {
+  float: left;
+  margin-left: 10px;
+}
+#header .header_inner .util li a {
+  display: block;
+  font-size: 14px;
+}
+#header .header_inner .util li:last-child {
+  margin-top: -4px;
+}
+#header .header_inner .util li:last-child a {
+  border: 1px solid #bbb;
+  border-radius: 42px;
+  font-size: 12px;
+  color: #bbb;
+  padding: 5px 15px;
+}
+.cart {
+  display: none;
+}
+.m_cart {
+  display: none;
+}
+
+#header .gnb_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#header .gnb_wrap .gnb {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+#header .gnb_wrap .gnb li {
+  float: left;
+  line-height: 50px;
+  padding-right: 100px;
+}
+#header .gnb_wrap .gnb li a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+#header .gnb_wrap .menu_more {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 18px;
+  color: #111;
+  z-index: 10;
+  border: none;
+  background: #fff;
+}
+#header .gnb_wrap .menu_more:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: transparent #000 #000 transparent;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 66% 66%;
+  -ms-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  margin-left: 7px;
+  margin-right: 4px;
+  vertical-align: 4px;
+  transition: 0.3s;
+}
+/*서브메뉴*/
+#header .gnb_wrap2 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  padding: 29px 0 40px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: 5;
+}
+#header .gnb_wrap2.on {
+  transform: translateY(0%);
+}
+
+#header .gnb_wrap2 .inner_box {
+  position: relative;
+}
+
+#header .gnb_wrap2 .inner_box .menu_wrap {
+  display: inline-table;
+  table-layout: fixed;
+  width: 794px;
+  padding-right: 100px;
+  text-align: center;
+}
+
+#header .gnb_wrap2 .inner_box .menu_wrap .menu_box {
+  display: table-cell;
+  width: 178px;
+  vertical-align: top;
+}
+#header .gnb_wrap2 .inner_box .menu_wrap .menu_box a {
+  display: block;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #111;
+}
+
+#header .gnb_wrap2 .inner_box .menu_wrap .menu_box ul {
+  margin-top: 10px;
+}
+
+#header .gnb_wrap2 .inner_box .menu_wrap .menu_box li a {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  color: #555;
+}
+
+#header .gnb_wrap2 .inner_box .menu_wrap .menu_box li a:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: #888;
+  transform: translateX(-50%) scaleX(0);
+  transition: 0.3s;
+}
+
+#header .gnb_wrap2 .inner_box .notice_box {
+  display: inline-block;
+  width: 270px;
+  padding: 22px 0 23px 70px;
+  margin-top: 10px;
+  border-left: 1px solid #ddd;
+  vertical-align: top;
+}
+
+#header .gnb_wrap2 .inner_box .notice_box .notice {
+  display: block;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #111;
+}
+#header .gnb_wrap2 .inner_box .notice_box ul li a {
+  padding: 8px 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 270px;
+}
+#main .main_slider {
+  height: 495px;
+}
+#main .main_slider .swiper-slide a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main .main_slider .swiper-slide a .pc_img {
+  max-width: none;
+}
+#main .main_slider .swiper-slide a .m_img {
+  display: none;
+}
+#main .order_wrap {
+}
+#main .order_wrap .order_item {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+#main .order_wrap .order_item .item_rb {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+#main .order_wrap .order_item .item_rb a {
+  position: relative;
+}
+#main .order_wrap .order_item .item_rb .pc_order {
+  margin-left: 70px;
+}
+#main .order_wrap .order_item .item_rb h2 {
+  font-size: 50px;
+  display: flex;
+  color: #ff143c;
+  margin-left: 60px;
+  
+}
+#main .order_wrap .order_item .item_rb h2 span .pc_order {
+  position: absolute;
+  top: 58px;
+  left: 195px;
+}
+#main .order_wrap .order_item .item_rb:last-child h2 {
+  color: #376dab;
+}
+#main .order_wrap .order_item .item_rb p {
+  font-size: 16px;
+  margin-left: 60px;
+  color: #888888;
+}
+#main .order_wrap .order_item .item_rb .m_order {
+  display: none;
+}
+
+/***주문2***/
+#main .order_wrap {
+}
+#main .order_wrap .order_item2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+#main .order_wrap .order_item2 .item {
+  float: left;
+  width: 33.33%;
+}
+#main .order_wrap .order_item2 .item a {
+  display: block;
+  padding-left: 60px;
+}
+#main .order_wrap .order_item2 .item a img {
+}
+#main .order_wrap .order_item2 .item h2 {
+  font-size: 30px;
+  color: #111111;
+  padding-top: 20px;
+}
+#main .order_wrap .order_item2 .item h2:after {
+  content: "";
+  background: url(../images/clickicon3.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: -2px;
+}
+#main .order_wrap .order_item2 .item h2 span .icon1 {
+  position: absolute;
+  top: 51px;
+  left: 240px;
+}
+#main .order_wrap .order_item2 .item h2 span .icon2 {
+  position: absolute;
+  top: 51px;
+  left: 147px;
+}
+#main .order_wrap .order_item2 .item h2 span .icon3 {
+  position: absolute;
+  top: 51px;
+  left: 301px;
+}
+#main .order_wrap .order_item2 .item:last-child h2 {
+}
+#main .order_wrap .order_item2 .item p {
+  font-size: 16px;
+  color: #888888;
+  padding-top: 10px;
+}
+
+/**이벤트배너**/
+#main .event_wrap {
+  background: #e4e4e3;
+  margin-top: 30px;
+  padding: 110px 25px 60px;
+}
+#main .event_wrap .event_inner .event_box {
+  float: left;
+}
+#main .event_wrap .event_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#main .event_wrap .event_box .ev_tit {
+  font-size: 28px;
+  font-weight: 700;
+}
+#main .event_wrap .event_box .ev_tit strong {
+  color: #238ece;
+  height: 210px;
+}
+#main .event_wrap .event_box .login_wrap {
+  background: #222222;
+  width: 103px;
+  height: 43px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+#main .event_wrap .event_box .login_wrap a {
+  color: white;
+  line-height: 43px;
+  font-size: 16px;
+  margin-left: 30px;
+}
+#main .event_wrap .event_inner .event_box ul li {
+  float: left;
+  padding-left: 10px;
+}
+#main .event_wrap .event_box .login_wrap:hover {
+  background: #666;
+  color: black;
+}
+.m_tit {
+  display: none;
+}
+#main .event_wrap .event_inner .event_box .m_login {
+  display: none;
+}
+#main .event_wrap .event_box2 {
+  max-width: 756px;
+  float: right;
+  width: calc(100% - 221px);
+}
+#main .event_wrap .event_box2 .event_slider {
+  padding-bottom: 50px;
+}
+#main .event_wrap .event_box2 .event_slider .swiper-slide {
+  width: 204px;
+}
+#main .event_wrap .event_box2 .event_slider .swiper-slide a {
+  display: block;
+}
+
+/***서브배너***/
+#main .sub_banner {
+}
+#main .sub_banner .sub_bn_list {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#main .sub_banner .sub_bn_list li {
+  float: left;
+  padding: 70px 0 0 56px;
+}
+#main .sub_banner .sub_bn_list li a {
+}
+#main .sub_banner .sub_bn_list li a img {
+}
+.m_sub_img {
+  display: none;
+}
+
+/***푸터***/
+#footer {
+}
+#footer .footer_box {
+  height: 328px;
+  padding: 52px 20px;
+  border-top: 1px solid #ddd;
+  margin-top: 70px;
+}
+#footer .footer_box .footer_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#footer .footer_box .footer_inner .footer_order {
+  position: relative;
+}
+#footer .footer_box .footer_inner .footer_order .tel {
+  font-size: 30px;
+  color: #000000;
+  font-weight: 500;
+}
+#footer .footer_box .footer_inner .select_language {
+  position: absolute;
+  right: 49px;
+  bottom: 212px;
+  width: 150px;
+}
+#footer .footer_box .footer_inner .select_language select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #111;
+}
+#footer .footer_box .footer_inner .ft_contents {
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+}
+#footer .footer_box .footer_inner .ft_contents li {
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+#footer .footer_box .footer_inner .ft_content s li a {
+  font-size: 16px;
+  color: #888888;
+}
+#footer .footer_box .footer_inner .ft_contents li:nth-child(2) a {
+  font-weight: 500;
+  color: #111111;
+}
+#footer .footer_box .footer_inner .app_wrap {
+}
+#footer .footer_box .footer_inner .app_wrap .app_list {
+  position: absolute;
+  right: 7px;
+  bottom: 155px;
+}
+#footer .footer_box .footer_inner .app_wrap li {
+  float: left;
+}
+#footer .footer_box .footer_inner .app_wrap li:nth-child(3) a {
+  vertical-align: -3px;
+}
+#footer .footer_box .footer_inner .app_wrap a {
+  color: #000000;
+  font-size: 13px;
+  padding: 0 10px;
+}
+#footer .footer_box .footer_inner .ft_info {
+  margin: 20px 0;
+}
+#footer .footer_box .footer_inner .ft_info p {
+  font-size: 12px;
+  padding: 2px 0;
+  color: #888888;
+}
+#footer .footer_box .footer_inner .ft_info .notice {
+  margin: 20px 0;
+}
+
+#footer .footer_box .footer_inner .sns_wrap {
+}
+#footer .footer_box .footer_inner .sns_wrap .sns_list {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#footer .footer_box .footer_inner .sns_wrap .sns_list li {
+  float: left;
+  padding: 0 10px;
+}
+#footer .footer_box .footer_inner .sns_wrap .sns_list li a {
+}
+#footer .footer_box .footer_inner .sns_wrap .sns_list li a img {
+}
+
+#footer .awards_wrap .inner_awards {
+  background: #f5f5f5;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+#footer .awards_wrap .inner_awards ul {
+  text-align: center;
+}
+#footer .awards_wrap .inner_awards ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 44px;
+}
+#footer .awards_wrap .inner_awards ul li img {
+}
+#footer .awards_wrap .inner_awards ul li p {
+  display: inline-block;
+  font-size: 11px;
+  color: #888888;
+  padding: 0 7px;
+}
+
+.quick_wrap {
+  display: none;
+}
+
+.ft_btn {
+  display: none;
+}
+#footer .footer_box .footer_inner .m_info {
+  display: none;
+}
+#footer .footer_box .footer_inner .m_info_txt {
+  display: none;
+}
+
+
+/**
+ * Swiper 4.5.3
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * http://www.idangero.us/swiper/
+ *
+ * Copyright 2014-2019 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: October 16, 2019
+ */
+ .swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:100%;height:100%;position:relative;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-transition-property:height,-webkit-transform;transition-property:height,-webkit-transform;-o-transition-property:transform,height;transition-property:transform,height;transition-property:transform,height,-webkit-transform}.swiper-container-3d{-webkit-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-wp8-horizontal,.swiper-container-wp8-horizontal>.swiper-wrapper{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-container-wp8-vertical,.swiper-container-wp8-vertical>.swiper-wrapper{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s opacity;-o-transition:.3s opacity;transition:.3s opacity;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:10px;left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}button.swiper-pagination-bullet{border:none;margin:0;padding:0;-webkit-box-shadow:none;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;-webkit-transition:.2s top,.2s -webkit-transform;transition:.2s top,.2s -webkit-transform;-o-transition:.2s transform,.2s top;transition:.2s transform,.2s top;transition:.2s transform,.2s top,.2s -webkit-transform}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transition:.2s left,.2s -webkit-transform;transition:.2s left,.2s -webkit-transform;-o-transition:.2s transform,.2s left;transition:.2s transform,.2s left;transition:.2s transform,.2s left,.2s -webkit-transform}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transition:.2s right,.2s -webkit-transform;transition:.2s right,.2s -webkit-transform;-o-transition:.2s transform,.2s right;transition:.2s transform,.2s right;transition:.2s transform,.2s right,.2s -webkit-transform}.swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:#007aff;position:absolute;left:0;top:0;width:100%;height:100%;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{-webkit-transform-origin:right top;-ms-transform-origin:right top;transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-progressbar.swiper-pagination-white{background:rgba(255,255,255,.25)}.swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-pagination-progressbar.swiper-pagination-black{background:rgba(0,0,0,.25)}.swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill{background:#000}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}.swiper-slide-zoomed{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:'';width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;-webkit-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;width:100%;height:100%}.swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-container-flip{overflow:visible}.swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}
+  </style>
+
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header_inner">
+          <h1 class="pc_logo">
+            <a href="index.html"></a
+            ><img src="./images/logo.png" alt="도미노로고" />
+          </h1>
+          <h1 class="m_logo">
+            <a href="index.html"
+              ><img src="images/loading.png" alt="도미노로고"
+            /></a>
+          </h1>
+          <div class="m_cart">
+            <img src="images/cart.png" alt="모바이카트" />
+          </div>
+          <ul class="util">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">KOR</a></li>
+          </ul>
+          <div class="cart"></div>
+        </div>
+        <nav class="gnb_wrap">
+          <ul class="gnb">
+            <li>
+              <a href="#"><span>메뉴</span></a>
+            </li>
+            <li>
+              <a href="#"><span>e-쿠폰</span></a>
+            </li>
+            <li>
+              <a href="#"><span>상품권 선물</span></a>
+            </li>
+            <li>
+              <a href="#"><span>이벤트·제휴</span></a>
+            </li>
+            <li>
+              <a href="#"><span>매장검색</span></a>
+            </li>
+          </ul>
+          <button type="button" class="menu_more">더보기</button>
+          <div class="gnb_wrap2">
+            <div class="inner_box">
+              <div class="menu_wrap">
+                <div class="menu_box">
+                  <a href="#">도미노 서비스</a>
+                  <ul>
+                    <li><a href="#">매니아 혜택</a></li>
+                    <li><a href="#">도미노 모멘트</a></li>
+                    <li><a href="#">퀵 오더</a></li>
+                    <li><a href="#">단체주문 서비스</a></li>
+                  </ul>
+                </div>
+                <div class="menu_box">
+                  <a href="#">고객센터</a>
+                  <ul>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">온라인 신문고</a></li>
+                  </ul>
+                </div>
+                <div class="menu_box">
+                  <a href="#">회사소개</a>
+                  <ul>
+                    <li><a href="#">한국도미노피자</a></li>
+                    <li><a href="#">광고갤러리</a></li>
+                    <li><a href="#">사회공헌활동</a></li>
+                    <li><a href="#">가맹점 모집</a></li>
+                    <li><a href="#">인재채용</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="notice_box">
+                <a class="notice" href="#">공지사항</a>
+                <ul>
+                  <li><a href="#">도미노뉴스</a></li>
+                  <li><a href="#">보도자료</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main id="main">
+        <div class="main_banner">
+          <div class="swiper-container main_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="pc_img"
+                    src="./images/MZH0t.jpg"
+                    alt="메인베너"
+                  />
+                  <img
+                    class="m_img"
+                    src="images/20200601_zc81vomD.jpg"
+                    alt="모바일슬라이드이미지"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="pc_img"
+                    src="images/20200617_GWbWL2P8.jpg"
+                    alt="메인베너"
+                  />
+                  <img
+                    class="m_img"
+                    src="images/20200602_ymdfnFMb.jpg"
+                    alt="모바일타블렛슬라이드이미지"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="pc_img"
+                    src="images/20200605_1VL0Pr45.jpg"
+                    alt="메인베너"
+                  />
+                  <img
+                    class="m_img"
+                    src="images/20200615_CP8dGLTD.jpg"
+                    alt="모바일타블렛슬라이드이미지"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <section class="order_wrap">
+          <div class="order_item clearfx">
+            <div class="item_rb">
+              <a href="#">
+                <img
+                  class="m_order"
+                  src="images/ordericon.png"
+                  alt="모바일주문아이콘"
+                />
+                <img class="pc_order" src="images/icon4.png" alt="배달주문" />
+                <h2>
+                  배달 주문<span
+                    ><img src="images/clickicon.png" alt="클릭아이콘"
+                  /></span>
+                </h2>
+                <p>등급별 최대30%</p>
+              </a>
+            </div>
+            <div class="item_rb">
+              <a href="#">
+                <img
+                  class="m_order"
+                  src="images/ordericon2.png"
+                  alt="모바일주문아이콘"
+                />
+                <img class="pc_order" src="images/icon5.png" alt="포장주문" />
+                <h2>
+                  포장 주문<span
+                    ><img src="images/clickicon2.png" alt="클릭아이콘"
+                  /></span>
+                </h2>
+                <p>등급별 최대40%</p>
+              </a>
+            </div>
+          </div>
+          <div class="order_item2">
+            <div class="item">
+              <a href="#">
+                <img src="images/icon.png" alt="배달주문" />
+                <h2>도미노챗 주문해보세요</h2>
+                <p>빠르고 간편한 채팅 주문 서비스</p>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img src="images/icon2.png" alt="포장주문" />
+                <h2>퀵오더</h2>
+                <p>
+                  자주 이용하는 메뉴를 <br />
+                  더 빠르게 주문해보세요!
+                </p>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img src="images/icon3.png" alt="포장주문" />
+                <h2>드라이빙 픽업 주문</h2>
+                <p>
+                  고객님의 차로 직접 <br />
+                  피자를 가져다 드립니다~
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="event_wrap">
+          <div class="event_inner">
+            <div class="event_box">
+              <h2 class="ev_tit">
+                도미노피자의<br />
+                <strong>특별한 매니아 혜택</strong><br />
+                누려보세요 !
+              </h2>
+              <h2 class="m_tit">
+                도미노피자 매니아만의<br />
+                <strong>놀라운 혜택을 누려보세요</strong>
+              </h2>
+              <a class="m_login" href="#">로그인</a>
+              <div class="login_wrap">
+                <a href="#">로그인</a>
+              </div>
+            </div>
+            <div class="event_box2">
+              <div class="swiper-container event_slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/event.png" alt="" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/main_card1.png" alt="" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/event2.JPG" alt="" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/main_card3.png" alt="" /></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ul>
+                               <li><a href="#"><img src="images/event.JPG" alt=""></a></li>
+                               <li><a href="#"><img src="images/main_card1.png" alt=""></a></li>
+                               <li><a href="#"><img src="images/event2.JPG" alt=""></a></li>
+                               <li><a href="#"><img src="images/main_card3.png" alt=""></a></li>
+                           </ul> -->
+            </div>
+          </div>
+        </section>
+        <section class="sub_banner">
+          <ul class="sub_bn_list">
+            <li>
+              <a href="#"
+                ><img
+                  class="pc_sub_img"
+                  src="images/20200601_8DXR9DCA.jpg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="pc_sub_img"
+                  src="images/20200626_9PFh173Q.jpg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="pc_sub_img"
+                  src="images/20200120_KZ0ikrD9.jpg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="m_sub_img"
+                  src="images/20200601_QZ1ZH0Bd.jpg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="m_sub_img"
+                  src="images/20200501_JbXC40bB.jpg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="m_sub_img"
+                  src="images/20200120_250AhK9I.jpg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <div class="quick_wrap">
+        <ul class="quick_list">
+          <li>
+            <a href="#">
+              <img src="images/micon.png" alt="모바일아이콘" />
+              <h3>매장검색</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/micon2.png" alt="모바일아이콘" />
+              <h3>주문내역</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/micon3.png" alt="모바일아이콘" />
+              <h3>주문하기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/micon4.png" alt="모바일아이콘" />
+              <h3>나의정보</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/micon5.png" alt="모바일아이콘" />
+              <h3>더보기</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer id="footer">
+        <div class="footer_box">
+          <div class="footer_inner">
+            <div class="footer_order">
+              <a href="#"><img src="images/ftlogo.png" alt="푸터로고" /></a>
+              <span class="tel">1577-3082</span>
+            </div>
+            <div class="select_language">
+              <select name="language" id="select">
+                <option value="korean">KOR</option>
+                <option value="english">ENG</option>
+              </select>
+            </div>
+            <ul class="ft_contents">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">인재채용</a></li>
+              <li><a href="#">가맹점모집</a></li>
+              <li><a href="#">단체주문</a></li>
+            </ul>
+            <div class="m_info">
+              <button type="button" class="btn_info">
+                청오디피케이(주) 사업자 정보
+              </button>
+              <div class="m_info_txt">
+                <p class="m_txt">
+                  06229 서울특별시 강남구 언주로 315 청오디피케이㈜ |<br />
+                  대표이사 : 오광현 | 사업자 등록번호: 220-81-03371 <br />
+                  통신판매업신고: 강남 5064호 | 개인정보 보호책임자 : 이명윤<br />
+                  <br />
+                  청오디피케이㈜의 사전 서면동의 없이 도미노피자 사이트<br />
+                  (PC, 모바일, 앱)의 일체의 정보, 콘텐츠 및 UI 등을 상업적
+                  목적으로 전재, 전송, 스크래핑 등 무단 사용할 수 없습니다.
+                </p>
+                <br />
+              </div>
+              <p class="m_txt2">
+                Copyright ⓒ Domino’s Pizza. All rights reserved.
+              </p>
+            </div>
+            <div class="app_wrap">
+              <ul class="app_list">
+                <li><a href="#">DOWNLOAD APP</a></li>
+                <li>
+                  <a href="#"><img src="images/apple.png" alt="앱스토어" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/android.png" alt="안드로이드"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="ft_info">
+              <p>
+                06229 서울특별시 강남구 언주로 315 청오디피케이㈜｜대표이사 :
+                오광현
+              </p>
+              <p>
+                사업자 등록번호: 220-81-03371｜통신판매업신고: 강남
+                5064호｜개인정보 보호책임자 : 이명윤
+              </p>
+              <p>문의 : webmaster@dominos.co.kr</p>
+              <p>Copyright ⓒ Domino’s Pizza. All rights reserved.</p>
+              <p class="notice">
+                청오디피케이㈜의 사전 서면동의 없이 도미노피자 사이트(PC,
+                모바일, 앱)의 일체의 정보, 콘텐츠 및 UI 등을 상업적 목적으로
+                전재, 전송, 스크래핑 등 무단 사용할 수 없습니다.
+              </p>
+            </div>
+            <div class="sns_wrap">
+              <ul class="sns_list">
+                <li>
+                  <a href="#"><img src="images/sns.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns2.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns3.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns4.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns5.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="ft_btn">
+              <div class="btn_wrap">
+                <a href="#" class="down_btn">도미노피자 앱 다운로드</a>
+                <a href="#" class="down_btn">마이키친 앱 다운로드</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="awards_wrap">
+          <div class="inner_awards">
+            <ul>
+              <li>
+                <img src="images/list_awards.png" alt="" />
+                <p>
+                  식품안전<br />
+                  경영시스템 인증
+                </p>
+              </li>
+              <li>
+                <img src="images/list_awards2.png" alt="" />
+                <p>
+                  지식경제부<br />
+                  우수디자인 선정
+                </p>
+              </li>
+              <li>
+                <img src="images/list_awards3.png" alt="" />
+                <p>
+                  고객이 가장 추천하는 기업<br />
+                  피자전문점 부문 7년 연속 1위
+                </p>
+              </li>
+              <li>
+                <img src="images/list_awards4.png" alt="" />
+                <p>
+                  2019년 한국산업 고객만족도<br />
+                  피자전문점 부문 5년 연속 1위
+                </p>
+              </li>
+              <li>
+                <img src="images/list_awards5.png" alt="" />
+                <p>
+                  2019 프리미엄브랜드지수<br />
+                  피자전문점 부분 4년 연속 1위 수상
+                </p>
+              </li>
+              <li>
+                <img src="images/list_awards6.png" alt="" />
+                <p>
+                  대학생 1000명이 선택한<br />
+                  2019올해의 핫 브랜드 캠퍼스 잡앤조이 선정
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

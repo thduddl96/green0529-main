@@ -16,7 +16,7 @@
         $("a").click(function (e) {
           e.preventDefault();
           let imgsrc = $("p img").attr("src");
-          let imgsrc = $("p img").attr("src");
+          let imgalt = $("p img").attr("alt");
           let i = $(this).index();
           console.log(i);
           // imgsrc.slice(-5,-4)
@@ -35,6 +35,6 @@
     <a href="#">photo4</a>
     <a href="#">photo5</a>
     <a href="#">photo6</a>
-    <p><img src="../JavaScript/images/photo1.jpg" alt="" /></p>
+    <p><img src="../JavaScript/images/photo1.jpg" alt="photo1.jpg" /></p>
   </body>
 </html>

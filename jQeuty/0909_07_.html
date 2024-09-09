@@ -15,18 +15,16 @@
       $(function () {
         $("img").hide();
         let bool = true;
-        $("p:first").click(function)(){
-          if(bool){
-          $("img").show();
-          $(this).text("이미지숨기기");
-        }
-        else{
-          $("img").hide();
-          $(this).text("이미지보이기");
-        }
-        bool = !bool;
+        $("p:first").click(function () {
+          if (bool) {
+            $("img").show();
+            $(this).text("이미지숨기기");
+          } else {
+            $("img").hide();
+            $(this).text("이미지보이기");
+          }
+          bool = !bool;
         });
-
       });
     </script>
   </head>

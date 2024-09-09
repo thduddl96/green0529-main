@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        /*$("p:first").mouseenter(function () {
+          $("p:last").text("moseenter");
+        });
+        .mouseleave(function () {
+          $("p:last").text("moseenter");
+        });*/
+        let txt = $("p:last").text();
+        //오른쪽에 있는 값을 왼쪽에 할당하는 것.
+        $("p:first").hover(
+          function () {
+            //마우스 올렸을 때 실행문
+            $("p:last").text("hover");
+          },
+          function () {
+            //마우스가 이탈시 실행문
+            $("p:last").text(txt);
+          }
+        );
+        //호버(로 마우스를 올렸을 때,떼어냈을 때 두가지 한꺼번에 쓸 수 있음.위에 예시문과 다르게, 실행문만 쓸 것. )
+      });
+    </script>
+  </head>
+  <body>
+    <p>마우스오버</p>
+    <p>마우스를 올렸습니다.</p>
+  </body>
+</html>

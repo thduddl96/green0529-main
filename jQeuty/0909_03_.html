@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+    </style>
+  
+    </script>
+  </head>
+  <body>
+    <p id="demo">jQeury</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <script>
+      let pele=document.querySelectorAll("P")
+      pele.forEach(function(v,k){
+        v.style.color = "red"
+        v.style.fontSize = "32px"
+      })
+    </script>
+  </body>
+</html>

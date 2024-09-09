@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function () {
+          $(this).text("변경함");
+        });
+        $('a[target="_blank"]').css("color", "red");
+        $('a[target!="_blank"]')
+          .css("color", "black")
+          .css("textDecoration", "none");
+        //중첩해서 따옴표 같이 쓸 수 없음.
+        $(":button").css("background", "pink");
+        $("input:even").css("background", "orange");
+        //버튼에서 짝수인 애들을 오렌지로
+        $("input:odd").css("background", "green");
+        //버튼에서 홀수인 애들을 그린 색상으로
+        $("input:first-of-type").css("background", "red");
+        //인풋이라는 태그를 가진 것 중에 첫 번째야. first-chlid 하면 못 찾음.
+        $("p:only-child").css("border", "1px solid");
+        $("p:only-of-type").css("border", "1px solid");
+        //오로지 p요소 하나만 갖고 있는 것.
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" target="_blank">링크태그</a>
+    <a href="#" target="_new">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <input type="button" value="01" />
+    <input type="button" value="02" />
+    <input type="button" value="03" />
+    <input type="button" value="04" />
+    <input type="button" value="05" />
+    <div><p>문단태그</p></div>
+    <div>
+      <p>문단태그</p>
+      <a href="#">링크태그</a>
+    </div>
+  </body>
+</html>

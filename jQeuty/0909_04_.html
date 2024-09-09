@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("p:nth-child(2)").css("color", "red");
+        $("p:nth-child(3)").css("display", "none");
+        $("p:nth-child(4)").hide();
+        $("p:nth-child(3)").css("display", "");
+        $("p:nth-child(4)").show();
+        $("p:nth-child(5)").remove();
+        let node = $("#demo").parents().prop("nodeName");
+        console.log(node);
+      });
+      //1번부터 시작함. 0번부터가 아니고
+    </script>
+  </head>
+  <body>
+    <p id="demo">jQeury</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+  </body>
+</html>

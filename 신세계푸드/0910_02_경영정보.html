@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .info {
+        width: 95%;
+        max-width: 940px;
+        margin: 50px auto;
+      }
+      .info ul {
+        display: flex;
+        justify-content: space-between;
+        /* 사이사이 간격을 너가 알아서 가져라,7px 나옴 311이 3개니까 940- = 7*/
+      }
+      .info ul li {
+        width: 311px;
+        height: 400px;
+        background-size: cover;
+        display: flex;
+        /* 수직정렬하겠다는 뜻. */
+        flex-direction: column;
+        /* 세로로 할 거니까 */
+        justify-content: center;
+        position: relative;
+        color: #fff;
+      }
+
+      .info ul li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-color: rgba(0, 0, 0, 0.5);
+      }
+      .info ul li h1 {
+        position: relative;
+        z-index: 1;
+      }
+      .info ul li:hover::after {
+        background-color: rgba((0), 0, 0, 0.8);
+      }
+      /* 호버했을 때 글씨 */
+      /* 앱솔루트는 항상 기준 값(li,311에400)이 있어야함. */
+      .info ul li:hover h1 {
+        color: red;
+      }
+      .info .bottom {
+        padding: 50px 0;
+        display: flex;
+      }
+      /* 왼오 0임 */
+      .info ul li:first-child {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+      }
+      .info ul li:nth-child(2) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+      }
+      .info ul li:nth-child(3) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+      }
+      /* 높이값을 줘야 백그라운드 넣을 수 있음. */
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <ul>
+        <li>
+          <h1>경영정보</h1>
+          <p>주주 및 이사회 구성을<br />안내해 드립니다.</p>
+        </li>
+        <li>
+          <p>재무정보</p>
+          <p>주주 및 이사회 구성을<br />안내해 드립니다.</p>
+        </li>
+        <li>
+          <p>주식정보</p>
+          <p>주주 및 이사회 구성을<br />안내해 드립니다.</p>
+        </li>
+      </ul>
+      <div class="bottom">
+        <p></p>
+        <div class="text">
+          <h1>공시 및 공고</h1>
+          <p>결산 공고 및 주주총회 결과를<br />안내해드립니다</p>
+        </div>
+        <!-- div는 그룹.하나가 아닐 때 묶는 거임. -->
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

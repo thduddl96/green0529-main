@@ -41,9 +41,10 @@
         object-fit: cover;
         transform: scale(1.2);
         transition: 3s;
-
       }
-      .swiper-slide img.on{transform: scale(1);}
+      .swiper-slide img.on {
+        transform: scale(1);
+      }
       .autoplay-progress {
         position: absolute;
         right: 16px;
@@ -55,7 +56,7 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        color: #fff
+        color: #fff;
       }
 
       .autoplay-progress svg:first-child {
@@ -66,10 +67,8 @@
         width: 100%;
         height: 100%;
         stroke-width: 4px;
-        stroke:rgba(255,255, 255, 0.5)
+        stroke: rgba(255, 255, 255, 0.5);
         fill: none;
-        
-        
       }
       .autoplay-progress svg:nth-child(2) {
         --progress: 0;
@@ -80,13 +79,22 @@
         width: 100%;
         height: 100%;
         stroke-width: 4px;
-        stroke:#fff 
+        stroke: #fff;
         fill: none;
         stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
         stroke-dasharray: 125.6;
         transform: rotate(-90deg);
       }
-      span{position: relative;z-index: 1px;cursor: pointer;display: block;width: 100%;height: 100%;text-align: center;}
+      span {
+        position: relative;
+        z-index: 9999;
+        cursor: pointer;
+        display: block;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+      }
     </style>
   </head>
 
@@ -95,22 +103,37 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-         <img src="https://sustainability.coway.co.kr/images/main/visual-slide-1.jpg" alt=""> 
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-3.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-4.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-5.jpg"
+            alt=""
+          />
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-2.jpg" alt=""> 
-     </div>
-     <div class="swiper-slide">
-      <img src="https://sustainability.coway.co.kr/images/main/visual-slide-3.jpg" alt=""> 
-   </div>
-   <div class="swiper-slide">
-    <img src="https://sustainability.coway.co.kr/images/main/visual-slide-4.jpg" alt=""> 
- </div>
- <div class="swiper-slide">
-  <img src="https://sustainability.coway.co.kr/images/main/visual-slide-5.jpg" alt=""> 
-</div>
-   
-     
+
       <div class="autoplay-progress">
         <svg viewBox="0 0 48 48">
           <circle cx="24" cy="24" r="20"></circle>
@@ -118,7 +141,11 @@
         <svg viewBox="0 0 48 48">
           <circle cx="24" cy="24" r="20"></circle>
         </svg>
-        <span></span>
+        <span
+          ><img
+            src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png"
+            alt=""
+        /></span>
       </div>
     </div>
 
@@ -127,48 +154,53 @@
 
     <!-- Initialize Swiper -->
     <script>
-      const Slide = document.querySelectorAll(".swiper-slide")
-      const progressCircle = document.querySelectorAll(".autoplay-progress svg");
+      const slide = document.querySelectorAll(".swiper-slide");
+      const progressCircle = document.querySelectorAll(
+        ".autoplay-progress svg"
+      );
       const progressContent = document.querySelector(".autoplay-progress span");
-      const bool = true;
-      progressContent.onclick=function(){
-       if(bool){
-         swiper.autoplay.stop();
-         this.innerHTML='<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt=""> 
-       }else{
-        swiper.autoplay.start();
-        this.innerHTML='<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt=""> 
-       }
-       bool = !bool;
-      }
+      let bool = true;
 
-      setTimeout(function(){
+      setTimeout(function () {
         slide[0].querySelector("img").classList.add("on");
-      }1000);
-      //딱 한 번만 실행하라는 뜻. 
+      }, 1000);
       var swiper = new Swiper(".mySwiper", {
-        effect:"fade",
-        loop:true,
-       
+        effect: "fade",
+        loop: true,
         autoplay: {
           delay: 4000,
           disableOnInteraction: false,
         },
-       
+        //https://sustainability.coway.co.kr/images/main/visual-icon-pause.png
+        //https://sustainability.coway.co.kr/images/main/visual-icon-play.png
         on: {
-          slideChange:function(){
-            for(let i=0;i<5;i++){
-              slide[i].querySelector("img").classList.remove("on")
+          slideChange: function () {
+            for (let i = 0; i < 5; i++) {
+              slide[i].querySelector("img").classList.remove("on");
             }
-            slide[this.realIndex].classList.add("on")
+            slide[this.realIndex].querySelector("img").classList.add("on");
           },
           autoplayTimeLeft(s, time, progress) {
             progressCircle[1].style.setProperty("--progress", 1 - progress);
             //progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-            progressContent.innerHTML= '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt=""> 
+            //progressContent.innerHTML = '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">'
           },
         },
       });
+
+      progressContent.onclick = function () {
+        if (bool) {
+          swiper.autoplay.stop();
+          this.innerHTML =
+            '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-play.png" alt="">';
+        } else {
+          swiper.autoplay.start();
+          this.innerHTML =
+            '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">';
+        }
+        bool = !bool;
+        console.log(bool);
+      };
     </script>
   </body>
 </html>

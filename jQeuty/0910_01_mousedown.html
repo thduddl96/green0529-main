@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="http://code.jquery-3.7.1.js"></script>
+  <script>
+          // $(document).ready(function(){
+          /*$(function () {
+            $("#demo").hover(
+              function () {
+                $(this).text("마우스올림");
+                //호버 했을 때 나오는 구문.
+              },
+              function () {
+                $(this).text("마우스나감");
+              }
+            );
+          });*/
+          //호버하지 않았을 때 나오는 구문.
+          $("#demo").mouseup(function () {
+            console.log("mouseup");
+          });
+          $("input").focus(function(){
+            $(this).css("background-color", "#cccccc");
+           }).blur(function(){
+          $(this).css("background-color", "#ffffff");
+    });
+
+          });
+  </script>
+  <body>
+    <p id="demo">제이쿼리</p>
+    <input type="text" />
+    <input type="text" />
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+        position: relative;
+      }
+    </style>
+
+    <script src="http://code.jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $(documen).keydown(function (e) {
+          //$(documen).keyup(function (e) {
+          //$(documen).keypress(function (e) {
+          console.log(e.keyCode);
+          if (e.keyCode == 39) {
+            $("P").css("left", "+=10px");
+            //오른쪽 방향 키 누를 때
+          } else if (e.keyCode == 37) {
+            $("P").css("left", "-=10px");
+            //왼쪽 방향 키 누를 때
+          } else if (e.keyCode == 38) {
+            $("P").css("top", "-=10px");
+            //위쪽 방향 키 누를 때
+          } else if (e.keyCode == 40) {
+            $("P").css("top", "+=10px");
+          } //아래쪽 방향 키 누를 때
+          //조건이 또 있을 때 else 조건 들어가고 실행문 쓰면 됨.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>

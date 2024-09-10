@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .list {
+        width: 95%;
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .list li {
+        flex: 1;
+        position: relative;
+      }
+      .list li img {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0;
+        transition: 1s;
+      }
+      .list li img.default {
+        opacity: 1;
+      }
+      .list li img.hidden {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <img src="./images/img_sustain_pc_1.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_1_1.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_2_1.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_3_1.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_4_1.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_5_1.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_2.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_1_2.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_2_2.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_3_2.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_4_2.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_5_2.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_3.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_1_3.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_2_3.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_3_3.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_4_3.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_5_3.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_4.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_1_4.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_2_4.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_3_4.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_4_4.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_5_4.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./images/img_sustain_pc_5.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_1_5.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_2_5.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_3_5.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_4_5.jpg" alt="" />
+        <img src="./images/img_sustain_pc_hover_5_5.jpg" alt="" />
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      function myfnc(k) {
+        btn.forEach(function (item, index) {
+          let imgs = item.querySelectorAll("img");
+          imgs.forEach(function (value, key) {
+            value.classList.add("hidden");
+            if (key == k + 1) {
+              value.classList.add("default");
+              value.classList.add("hidden");
+            }
+          });
+        });
+      }
+      //그룹{}이 다르니까 value,key 중복 되게 써도 됨.
+      //k는 인덱스 번호임. 0부터 시작.
+      function myfnc1() {
+        btn.forEach(function (item, index) {
+          let imgs = item.querySelectorAll("img");
+          imgs.forEach(function (value, key) {
+            imgs[0].classList.add("default");
+            value.classList.remove("default");
+            value.classList.remove("hidden");
+          });
+        });
+      }
+      //li 제일 처음에 있는 거에 default 를 준 거임.opacity 0을 줘서
+      myfnc1();
+      //item이름이 위 아래 모두 다 같아야함.
+
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          myfnc(k);
+        };
+        v.onmouseleave = function () {
+          myfnc1();
+        };
+      });
+    </script>
+  </body>
+</html>

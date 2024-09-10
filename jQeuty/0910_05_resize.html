@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="http://code.jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        $(window).resize(function () {
+          $("p").text(i++);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>0</p>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+        margin-top: 1000px;
+      }
+    </style>
+
+    <script src="http://code.jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $(document).mousemove(function (e) {
+          $(".cx").text(e.clientX);
+          $(".cy").text(e.clientX);
+          $(".py").text(e.pageX);
+          $(".py").text(e.pageY);
+          $(".sx").text(e.screenX);
+          $(".sy").text(e.screenY);
+        });
+      });
+      //e는 매개변수임.
+    </script>
+  </head>
+  <body>
+    <p>clientx : <span class="cx">0</span></p>
+    <p>clientx : <span class="cy">0</span></p>
+    <p>pagex : <span class="px">0</span></p>
+    <p>pagey : <span class="py">0</span></p>
+    <p>screenx : <span class="sx">0</span></p>
+    <p>screeny : <span class="sy">0</span></p>
+  </body>
+</html>

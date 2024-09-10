@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="http://code.jquery-3.7.1.js"></script>
+  <script>
+    // $(document).ready(function(){
+    $(function () {
+      $("#demo");
+      /* .dblclick(function () {
+          $(this).text("더블클릭");
+        })
+        .mouseenter(function () {
+          $(this).text("마우스올림");
+        })
+        .mouseenter(function () {
+          $(this).text("마우스나감");
+        });*/
+      /*$("#demo").on({
+          dbclick:function()($(this).text("더블클릭");})
+          mouseenter:function(){$(this).text("마우스올림");
+          mouseleave:function(){$(this).text("마우스나감");
+        })*/
+      /*$("#demo").click(function () {
+        $(this).text("클릭");
+      });*/
+      let i = 0;
+      $("#demo").on("click", function () {
+        console.log(i++);
+        if (i >= 5) {
+          $(this).off("click");
+        }
+        //크거나 같을 때. on,off는 클릭이벤트
+      });
+      $("demo1").one("click", function () {
+        console.log(i++);
+      });
+      //딱 한 번만 실행됨.
+    });
+  </script>
+  <body>
+    <p id="demo">제이쿼리</p>
+    <p id="demo">one이벤트</p>
+  </body>
+</html>

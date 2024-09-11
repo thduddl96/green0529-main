@@ -1,1 +1,39 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
 
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.swiper-slide {
+  width: 700px;
+  height: 700px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-text {
+  align-self: flex-start;
+  margin-top: 50px;
+}
+.swiper-text h2 {
+}
+.con ul li h1 {
+  font-size: 70px;
+}
+.con ul li h2 {
+  font-size: 30px;
+}

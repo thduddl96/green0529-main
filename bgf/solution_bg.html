@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      .solution {
+        width: 100%;
+        min-width: 1440px;
+        margin: 0 auto;
+        border: 1px solid;
+        padding-bottom: 100px;
+        position: relative;
+      }
+      .solution .inner {
+        width: 1200px;
+      }
+      .solution .inner > h1 {
+        font-size: 100px;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        position: static;
+      }
+
+      .swiper-slide {
+        text-align: center;
+
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide:first-child {
+        background: url("https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img01.jpg");
+      }
+      .swiper-slide:nth-child(2) {
+        background: url("https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img01.jpg");
+      }
+      .swiper-slide:nth-child(3) {
+        background: url("https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img01.jpg");
+      }
+      ///
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-slide .txtbox {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: left !important;
+      }
+      /
+      /* 사진 위에 글씨 겹쳐야하니까, 포지션 앱솔루트 준 거임. */
+      #btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        height: 40px;
+      }
+      /* 부모 */
+      #btn .swiper-pagination {
+        width: 60%;
+
+        left: 50%;
+        z-index: 9;
+        transform: translateX(-50%);
+      }
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 1em;
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="solution">
+      <div class="inner">
+        <h1>solution</h1>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <img
+                src="https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img01.jpg"
+                alt=""
+              /> -->
+              <div class="txtbox">
+                <h1>자동차</h1>
+                <p>
+                  탄소저감과 지속가능성을 고려하여 혁신적인 자동차 소재를
+                  개발하는데 주력하고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <!-- <img
+                  src="https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img02.jpg"
+                  alt=""
+                /> -->
+                <div class="txtbox">
+                  <h1>전기전자</h1>
+                  <p>
+                    내충격성과 전기절연, 단열성, 화학적 기능을 강화하여
+                    전기·전자 제품의 신뢰성과 안전성을 향상시키는 것을 목표로
+                    합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <!-- <img
+                  src="https://www.bgfecomaterials.com/resources/kr/images/main/sec03_img03.jpg"
+                  alt=""
+                /> -->
+                <div class="txtbox">
+                  <h1>산업재</h1>
+                  <p>
+                    가구, 공구, 기타 산업재 등의 외장 및 부품 등 다양한 산업재
+                    분야에서의 고기능성 소재 라인업을 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="btn">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop:true
+        autoplay:{
+          delay:100
+        }
+        //사용자가 버튼을 눌러서 가는 게 아니라 알아서 넘어감.
+        spaceBetween: 50,
+        //슬라이스와 슬라이스 사이 간격이 50
+        speed:1000
+        //스피드 1000 (시간)
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesOffsetAfter: -240,
+        //애프터는 마지막 슬라이드의 간격
+        //비포는 가장 첫번째의 슬라이드 간격
+      });
+    </script>
+  </body>
+</html>

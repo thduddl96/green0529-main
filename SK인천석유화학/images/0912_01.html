@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인천석유화학</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      /* 클래스 이름은 .점 찍기 */
+      .sec {
+        padding: 100px 0;
+        text-align: center;
+        background-color: #ddefc8;
+      }
+      .sec .content {
+        position: relative;
+        height: 540px;
+      }
+      .sec .content li {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+      .sec .btn {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .sec .btn li {
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 1px solid #828282;
+        font-size: 20px;
+        text-align: center;
+      }
+      .inner h1 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 1s;
+      }
+      .inner h1.on {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      /* 글씨 올라오는 거 */
+      .inner .txt {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 1s;
+      }
+      .inner .txt.on {
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sec">
+      <ul class="content">
+        <li>
+          <div class="inner">
+            <p>
+              <img
+                src="https://www.skincheonpetrochem.com/resources/images/main/esg_E.gif"
+                alt=""
+              />
+            </p>
+            <h1>ENVIRONMENT</h1>
+            <div class="txt">
+              <p>
+                SK인천석유화학은 저탄소 기반 에너지 전환을 위한 사업을 새로운
+                성장 동력으로 추진하고 있습니다.
+              </p>
+              <p>
+                오랜 기간 정유,석유화학 분야에서 쌓아온 기술역량을 바탕으로
+                탄소중립을 실현하는 그린 에너지 기업으로 도약하고자 합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="inner">
+            <p>
+              <img
+                src="https://www.skincheonpetrochem.com/resources/images/main/esg_S.gif"
+                alt=""
+              />
+            </p>
+            <h1>SOCIAL</h1>
+            <div class="txt">
+              <p>
+                구성원, 지역사회, 협력회사 등 SK인천석유화학을 둘러싼 다양한
+                이해관계자의 행복을 확대하고,
+              </p>
+              <p>
+                우리사회 전반에 ESG 중심의 문화가 확산/구축될 수 있도록
+                노력하겠습니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="inner">
+            <p>
+              <img
+                src="https://www.skincheonpetrochem.com/resources/images/main/esg_G.gif"
+                alt=""
+              />
+            </p>
+            <h1>GOVERNANCE</h1>
+            <div class="txt">
+              <p>
+                투명하고 선진화된 Governance 체계를 구축하고 실질적 이사회 중심
+                경영을 통해
+              </p>
+              <p>
+                오랜 기간 정유,석유화학 분야에서 쌓아온 기술역량을 바탕으로
+                탄소중립을 실현하는 그린 에너지 기업으로 도약하고자 합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="btn">
+        <li>E</li>
+        <li>S</li>
+        <li>G</li>
+      </ul>
+    </div>
+    <script>
+      let conLi = document.querySelectorAll(".content li");
+      let btnLi = document.querySelectorAll(".btn li");
+      let Htxt = document.querySelectorAll(".inner h1");
+      let txt = document.querySelectorAll(".inner .txt");
+      let bg = ["#ddefc8", "#d6ebf5", "#cef6e9"];
+      let bgcolor = ["#16873e", "#0072c6", "#009a93"];
+      con();
+      //리무브 한다는 뜻
+      //리무브를 하고 나서
+      Htxt[0].classList.add("on");
+
+      txt[0].classList.add("on");
+      btnLi[0].style.backgroundColor = bgcolor[0];
+      //0번째 해당하는 거에 백그라운드 컬러를 입히라는 뜻(초록이 나옴)
+      btnLi[0].style.color = "#fff";
+      //0번째 초록으로 색을 아예 고정하겠다는 뜻
+
+      function con() {
+        conLi.forEach(function (v, k) {
+          v.style.opacity = "0";
+        });
+        btnLi.forEach(function (v, k) {
+          v.style.backgroundColor = "transparent";
+          v.style.color = "#828282";
+          //하나씩만 선택해서 눌려서 색 바뀌게
+        });
+        Htxt.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        txt.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      conLi[0].style.opacity = "1";
+      btnLi.forEach(function (v, k) {
+        v.onclick = function () {
+          con();
+          conLi[k].style.opacity = "1";
+          document.querySelector(".sec").style.backgroundColor = bg[k];
+          this.style.backgroundColor = bgcolor[k];
+          this.style.color = "#fff";
+          //버튼 색 바뀜
+          conLi[k].querySelector(".inner h1").classList.add("on");
+          conLi[k].querySelector(".inner .txt").classList.add("on");
+        };
+      });
+      //클릭한 애는 1
+      //k는 인덱스 번호임 btn에서의 0 1 2번.foreach 구문에서는 0번부터 시작.
+      // v는 value
+    </script>
+  </body>
+</html>

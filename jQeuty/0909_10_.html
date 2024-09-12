@@ -18,9 +18,9 @@
           let imgsrc = $("p img").attr("src");
           let imgalt = $("p img").attr("alt");
           let i = $(this).index();
-          console.log(i);
+          console.log(i)
           // imgsrc.slice(-5,-4)
-          //imgsrc.replace(imgsrc.slice(-5,-4),i+1));
+          //imgsrc.replace(imgsrc.slice(-5,-4),i+1);
           $("p img").attr("src", imgsrc.replace(imgsrc.slice(-5, -4), i + 1));
           .attr("alt", imgalt.replace(imgalt.slice(-1), i + 1));
 

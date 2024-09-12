@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #ccc;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        width: 684px;
+        height: 430px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-pagination {
+        position: static;
+      }
+      #btn {
+        width: 850px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      /* 겹쳐있으니까 absolute 가운데니까 left 50 top 50주고 translate -50,-50을 줘서 가운데로 보냄. 앱솔루트는 margin 0 auto 못씀. */
+      #btn .swiper-button-next,
+      #btn .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      #btn .swiper-button-next::after,
+      #btn .swiper-buttin-prev::after {
+        font-size: 1em;
+        color: #fff;
+      }
+      .swiper-pagination {
+        position: static;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/image01.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image02.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image03.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image04.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image05.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image06.png" alt="img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/image07.png" alt="img" />
+        </div>
+      </div>
+      <div id="btn">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <!-- 부모를 따로 더 만듦. -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        //얘는 아래에 centeredSlides가 있으니까 auto 써줘야함. 문자니까""따옴표 안에다가. 보여지는 화면이 자동으로 보여져라 뜻.
+        spaceBetween: 118,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

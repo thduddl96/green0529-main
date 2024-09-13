@@ -17,22 +17,23 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script>
-        $(function () {
-          $("#btn").click(function () {
-            $(".ball").animate({left: "500px"},2000);
-                      .animate({top: "500px"},2000);
-          });
-          $("#stop1").click(function(){
-            $(".ball").stop(true,true);
-          })
-          $("#stop2").click(function(){
-            $(".ball").stop(true,false);
-          })
-          $("#stop3").click(function(){
-            $(".ball").stop(false,true);
+      $(function () {
+        $("#btn").click(function () {
+          $(".ball")
+            .animate({ left: "500px" }, 2000)
+            .animate({ top: "500px" }, 2000);
         });
-        $("#stop4").click(function(){
-            $(".ball").stop(false,false);
+        $("#stop1").click(function () {
+          $(".ball").stop(true, true);
+        });
+        $("#stop2").click(function () {
+          $(".ball").stop(true, false);
+        });
+        $("#stop3").click(function () {
+          $(".ball").stop(false, true);
+        });
+        $("#stop4").click(function () {
+          $(".ball").stop(false, false);
         });
       });
     </script>

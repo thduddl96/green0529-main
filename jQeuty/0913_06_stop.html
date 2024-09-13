@@ -19,17 +19,23 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script>
-        $(function () {
-          $(".first li").hover(function(){
-            $(this).animate({width:"200px"},500)
-          },function{
-            $(this).animate({width:"50px"},500)
-          })
-          $(".second li").hover(function(){
-            $(this).stop(false,false).animate({width:"200px"},500)
-          },function{
-            $(this).stop().animate({width:"50px"},500)
-        });
+      $(function () {
+        $(".first li").hover(
+          function () {
+            $(this).animate({ width: "200px" }, 500);
+          },
+          function () {
+            $(this).animate({ width: "50px" }, 500);
+          }
+        );
+        $(".second li").hover(
+          function () {
+            $(this).stop(false, false).animate({ width: "200px" }, 500);
+          },
+          function () {
+            $(this).stop().animate({ width: "50px" }, 500);
+          }
+        );
       });
     </script>
   </head>

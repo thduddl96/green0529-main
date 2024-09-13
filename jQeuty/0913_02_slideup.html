@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+      }
+      .box {
+        height: 300px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#up").click(function () {
+          $("p").slideUp(1000, "linear");
+        });
+        //liner는 일정한 속도
+        $("#down").click(function () {
+          $("p").slideDown(1000, "linear", function () {
+            $("#down").text("slideup");
+            //다운 누를때 슬라이드 업 문구가 생김.
+          });
+        });
+        $("#toggle").click(function () {
+          $("p").slideToggle(1000, "easeOutBounce");
+          //p라는 개체를 선택해서 토글하겠다는 뜻
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <p></p>
+    </div>
+    <button id="up">slideup</button>
+    <button id="down">slidedown</button>
+    <button id="toggle">slidetoggle</button>
+  </body>
+</html>

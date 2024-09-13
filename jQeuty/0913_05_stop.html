@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ccc;
+        position: relative;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+          $("#btn").click(function () {
+            $(".ball").animate({left: "500px"},2000);
+                      .animate({top: "500px"},2000);
+          });
+          $("#stop1").click(function(){
+            $(".ball").stop(true,true);
+          })
+          $("#stop2").click(function(){
+            $(".ball").stop(true,false);
+          })
+          $("#stop3").click(function(){
+            $(".ball").stop(false,true);
+        });
+        $("#stop4").click(function(){
+            $(".ball").stop(false,false);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="ball"></div>
+    <button id="btn">클릭</button>
+    <button id="stop1">truetrue</button>
+    <button id="stop2">truefalse</button>
+    <button id="stop3">falsetrue</button>
+    <button id="stop3">falsefalse</button>
+  </body>
+</html>

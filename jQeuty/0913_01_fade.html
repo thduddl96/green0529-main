@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#fadein").click(function () {
+          $("p").fadeIn(1000, "swing", function () {
+            alert("콜백함수실행");
+            //1000,(1초동안 실행하고), swing (나타나서)콜백함수 실행됨.
+          });
+        });
+        $("#fadeout").click(function () {
+          $("p").fadeOut(1000, "swing", function () {
+            alert("콜백함수실행");
+            //저절로 천천히 없어짐.
+          });
+        });
+        $("#fadetoggle").click(function () {
+          $("p").fadeToggle(1000, "swing", function () {
+            alert("콜백함수실행");
+          });
+        });
+        $("#fadeto").click(function () {
+          $("p").fadeTo(1000, 0, "swing");
+          //반만 투명하게 실행.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <button id="fadeTo">fadeTo</button>
+  </body>
+</html>

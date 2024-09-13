@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+      }
+      .ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ccc;
+        position: relative;
+      }
+      .box {
+        height: 300px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+          $("p").animate(
+            { width: "0", backgroundColor: "red" },
+            1000,
+            "linear"
+          );
+          //btn을 클릭할 때
+          //속성의 값은 ""따옴표 안에 넣어줘야함.
+          //변수는 따옴표 안됨.
+          //회색에서 빨강, 위드가 300에서 0으로 1초동안 바뀜.
+        });
+        $("#move").click(function () {
+          $(".ball")
+            .animate({ left: "300px" }, 1000)
+            .animate({ top: "300px" }, 1000)
+            .animate({ left: "0" }, 1000)
+            .animate({ top: "0" }, 1000);
+        });
+        $("#move").trigger("click");
+        let inteval = setInterval(function () {
+          $("#move").click();
+        }, 4000);
+        //자기가 알아서 4초마다 움직이게 실행.
+        //메서드니까 여는 괄호 닫는 괄호 () 필요함.
+      });
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <p></p>
+    </div>
+    <button id="btn">클릭</button>
+    <div class="ball"></div>
+    <button id="move">move</button>
+  </body>
+</html>

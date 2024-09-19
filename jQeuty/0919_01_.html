@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".list")
+          .append("<li>리스트5</li>")
+          //append는 선택한 대상의 차일드 뒤에
+          .prepend("<li>리스트0</li>");
+        //prepend는 선택한 대상의 차일드 앞에
+        $("body").append($(".list").clone());
+        $("<p>문단태그</p>").appendTo("body");
+        $("<p>문단태그</p>").prependTo("body");
+        $(".list").wrap("<section></section>");
+        //섹션이란 태그로 시작했으면 섹션으로 닫아줘야함. ul의 부모를 만들어준 것.
+        $(".list li").wrapInner("<div></div>");
+        //div 로 묶어준 것.
+        $(".list li").wrapAll("<div></div>");
+        //html 구조는 그대로인데 부모로 묶어주는 것임.
+        /*$(".new").after("<p>문단태그</p>");
+        $(".new").before("<p>문단태그</p>");*/
+        $("<p>문단태그</p>").wrapAll("<div></div>");
+        $("<p>문단태그</p>").wrapAll("<div></div>");
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="new">리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ul>
+  </body>
+</html>

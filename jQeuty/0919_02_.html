@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("P").remove("#demo");
+        //demo라는 이름의 아이디만 제거하라는 뜻
+        $("p").empty();
+        //p태그 내용을 비어있게 하는 뜻,(아무것도 안 나옴)
+        //console.log($("#demo").data("num"));
+        console.log($(".test").attr("aaa", "ccc"));
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo" data-num="first">문단태그</p>
+    <p class="test" aaa="bbb">p태그입니다</p>
+  </body>
+</html>

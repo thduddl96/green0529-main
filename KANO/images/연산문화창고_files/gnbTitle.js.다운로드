@@ -1,0 +1,35 @@
+$(function(){
+	$(window).load(function(){
+		var _at_type =$("#gnb_layout").attr("class").indexOf("at_type");
+		var _ct_type =$("#gnb_layout").attr("class").indexOf("ct_type");
+		var _dt_type =$("#gnb_layout").attr("class").indexOf("dt_type");
+		//console.log(">>>>>> gnbType:"+gnbType);
+		//타이틀 시작
+		if(_at_type != -1){ 
+			var tit = "논산 선샤인랜드";
+			var txt = "국내 최대 규모 병역테마파크";
+			$("#gnb_layout .title_wrap").html("<p>"+txt+"</p><strong>"+tit+"</strong>");
+		}else if(_ct_type != -1 || _dt_type != -1){
+			var tit1 = $("#gnb_layout .depth1_ul > .n1 > a > span").html();
+			var tit2 = $("#gnb_layout .depth1_ul > .n2 > a > span").html();
+			var tit3 = $("#gnb_layout .depth1_ul > .n3 > a > span").html();
+			var tit4 = $("#gnb_layout .depth1_ul > .n4 > a > span").html();
+			var tit5 = $("#gnb_layout .depth1_ul > .n5 > a > span").html();
+			var tit6 = $("#gnb_layout .depth1_ul > .n6 > a > span").html();
+			var tit7 = $("#gnb_layout .depth1_ul > .n7 > a > span").html();
+			var tit8 = $("#gnb_layout .depth1_ul > .n8 > a > span").html();
+			var tit9 = $("#gnb_layout .depth1_ul > .n9 > a > span").html();
+			var txt = "사람중심 행복공동체 논산";
+			$("#gnb_layout #gnbTit1").html("<p>"+txt+"</p><strong>"+tit1+"</strong>");
+			$("#gnb_layout #gnbTit2").html("<p>"+txt+"</p><strong>"+tit2+"</strong>");
+			$("#gnb_layout #gnbTit3").html("<p>"+txt+"</p><strong>"+tit3+"</strong>");
+			$("#gnb_layout #gnbTit4").html("<p>"+txt+"</p><strong>"+tit4+"</strong>");
+			$("#gnb_layout #gnbTit5").html("<p>"+txt+"</p><strong>"+tit5+"</strong>");
+			$("#gnb_layout #gnbTit6").html("<p>"+txt+"</p><strong>"+tit6+"</strong>");
+			$("#gnb_layout #gnbTit7").html("<p>"+txt+"</p><strong>"+tit7+"</strong>");
+			$("#gnb_layout #gnbTit8").html("<p>"+txt+"</p><strong>"+tit8+"</strong>");
+			$("#gnb_layout #gnbTit9").html("<p>"+txt+"</p><strong>"+tit9+"</strong>");
+		}
+		//타이틀 끝
+	});
+});

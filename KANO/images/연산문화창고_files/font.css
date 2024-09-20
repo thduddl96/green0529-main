@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketSansM';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/goyeonsan/font/gmarketsans/gmarketSansM.woff') format('woff');
+  
+}
+@font-face {
+    font-family: 'GmarketSansB';
+    src: url('/goyeonsan/font/gmarketsans/gmarketSansB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansL';
+    src: url('/goyeonsan/font/gmarketsans/gmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont-ex';
+    src: url('/goyeonsan/font/mont/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

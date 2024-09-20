@@ -1,0 +1,68 @@
+function accordion(nodes){
+
+    var variable = {}
+
+    variable.nodes = $(nodes+' .item');
+    variable.height = function(t,display){
+        if(display === "none"){
+            return t.outerHeight(true)+t.next().outerHeight(true);
+        }else{
+            return t.outerHeight(true);
+        }
+    }
+    variable.du = 300;
+    variable.mat = "easeInOutCubic";
+
+    // -----
+
+    for(var i=0; i<variable.nodes.size(); i++){
+        if(variable.nodes.eq(i).attr("class").match("ov")){
+        	variable.nodes.not(variable.nodes.eq(i)).next().hide();
+
+            variable.nodes.eq(i).parent()
+                .height(
+                    variable
+                        .height(
+                            variable.nodes.eq(i),"none"
+                        )
+                )
+                .next()
+                    .show();
+            break;
+        }
+    }
+
+    // -----
+
+    function _in(event){
+        var t = $(this);
+        var tParent = t.parent();
+        var nt = variable.nodes.not(t);
+        var nParent = nt.parent().not(tParent);
+        var display = t.next().css("display");
+        
+        if(display === "none"){
+            t.addClass("ov").next().stop(true,true).show();
+
+            nParent
+            	.stop(true,true)
+                	.animate({height:variable.height(t,"block")},variable.du,variable.mat);
+
+            nt.removeClass("ov").next().stop(true,true).fadeOut(variable.du);
+
+        }else{
+            t.next().stop(true,true).fadeOut(variable.du);
+        }
+
+        tParent
+        	.stop(true,true)
+                .animate({height:variable.height(t,display)},variable.du,variable.mat);
+ 
+        event.preventDefault(); 
+    }
+
+    // -----
+
+    variable.nodes.on("click",_in);
+
+}

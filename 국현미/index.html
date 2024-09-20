@@ -1,94 +1,92 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>국립현대미술관</title>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .voiceWrap {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .voiceWrap .voice {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 40px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        box-sizing: border-box;
+      }
+      .voiceWrap .voice div:first-child {
+        width: 460px;
+      }
+      .voiceWrap .voice div p img {
+        width: 650px;
+        position: ;
+      }
+      .voiceWrap .voice div p.t1 {
+        font-size: 45px;
+        font-weight: bold;
+      }
+      .voiceWrap .voice div p.t2 {
+        font-size: 14px;
+        position: absolute;
+      }
+      .voiceWrap .voice div a {
+        display: flex;
+        border: 1px solid rgba(17, 17, 17, 0.6);
+        padding: 0 24px;
+        color: #666;
+        height: 55px;
+        align-items: center;
+        width: 120px;
+        margin-top: 85px;
+        border-radius: 20px;
+      }
+      .voiceWrap .voice div a span {
+        margin-right: 20px;
+      }
+      .voiceWrap .voice > p {
+        width: calc(100% - 460px);
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="head">
-        <div class="top">
-          <div class="logo"><img src="./images/logo.png" alt="logo" /></div>
-          <ul class="menu">
-            <li>
-              <a href="#">관람참여전시</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="서울"></a></li>
-                  <li><a href="과천"></a></li>
-                  <li><a href="덕수궁"></a></li>
-                  <li><a href="청주"></a></li>
-                  <li><a href="어린이미술관"></a></li>
-                  <li><a href="이벤트"></a></li>
-                  <li><a href="통합예약"></a></li>
-                  <li><a href="전시해설"></a></li>
-                  <li><a href="레지던시"></a></li>
-                  <li><a href="미술은행"></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">전시</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="현재전시"></a></li>
-                  <li><a href="예정전시"></a></li>
-                  <li><a href="과거전시"></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">교육</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="미술관교육소개"></a></li>
-                  <li><a href="어린이"></a></li>
-                  <li><a href="청소년"></a></li>
-                  <li><a href="교사"></a></li>
-                  <li><a href="성인"></a></li>
-                  <li><a href="교육자료실"></a></li>
-                  <li><a href="참여신청"></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">소장품</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="소장품검색"></a></li>
-                  <li><a href="소장품탐색"></a></li>
-                  <li><a href="소장품대여"></a></li>
-                  <li><a href="보존과학"></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">미술연구</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="도서와 아카이브"></a></li>
-                  <li><a href="연구"></a></li>
-                  <li><a href="발간자료"></a></li>
-                  <li><a href="MMCA 리서치랩"></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">디지털미술관</a>
-              <div class="sub">
-                <ul>
-                  <li><a href="메인"></a></li>
-                  <li><a href="맞춤검색"></a></li>
-                  <li><a href="오디오가이드"></a></li>
-                  <li><a href="이용자갤러리"></a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+    <div class="voiceWrap">
+      <div class="voice">
+        <div>
+          <p><img src="./images/culture.png" alt="" /></p>
+          <p class="t1">교육예술정보</p>
+          <p class="t2">
+            국립 현대미술관에서 진행하는<br />다양한 프로그램을 쉽게 찾아볼 수
+            있습니다.
+          </p>
+          <a href="#"
+            ><span>자세히 보기</span><img src="images/main_arrow_ov.png" alt=""
+          /></a>
         </div>
+        <p>
+          <img src="./images/2024080801170738411017.gif" alt="" />
+        </p>
       </div>
-    </header>
+    </div>
+    <div class="right"></div>
   </body>
 </html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+html{overflow:hidden;} 
+html.iEndvideo{overflow:inherit;}
+
+.gnb_right{display:none;}
+.side-menu ul li a,
+.sub-slide #photo-grap2 .obj .item > a,
+.section4 .list.bottom-list li a{transition:all 1s;}
+.section4 .list.bottom-list li a:hover{box-shadow:5px 6px 13px 1px rgb(0, 0, 0, 0.1);}
+
+
+.main.section2 .board--card--list .thm--box .badge{left:20px;top:20px;}
+.main.section2 .board--card--list .item:hover .thm--box .badge, 
+.main.section2 .board--card--list .item:focus .thm--box .badge{left:10px;top:10px;}
+
+
+.main.section2 .board--card--list .obj.col4 .col{transform:translate(0,50px);opacity:0;transition:all 0.8s;}
+.main.section2 .board--card--list .spot_arrow .arrow{transform:translate(0,50px);opacity:0;transition:all 0.8s;}
+.main.section2.active .board--card--list .obj.col4 .col{transform:translate(0,0px);opacity:1;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(1){transition-delay:0s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(2){transition-delay:0.3s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(3){transition-delay:0.6s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(4){transition-delay:0.9s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(5){transition-delay:1.2s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(6){transition-delay:1.5s;}
+.main.section2.active .board--card--list .obj.col4 .col:nth-child(7){transition-delay:1.7s;}
+
+.main.section2.active .board--card--list .spot_arrow .arrow{transform:translate(0,0px);opacity:1;}
+
+
+.main.section3 .main-title,
+.main.section3 .sub-text{transform:translate(0,50px);opacity:0;transition:all 0.8s;}
+.main.section3.active .main-title,
+.main.section3.active .sub-text{transform:translate(0,0px);opacity:1;}
+
+.main.section3.active .main-title{transition-delay:0s;}
+.main.section3.active .sub-text{transition-delay:0.2s;}
+
+.main.section4 .main-title{transform:translate(0,50px);opacity:0;transition:all 0.8s;}
+.main.section4.active .main-title{transform:translate(0,0px);opacity:1;}
+.main.section4 .section-btn.more-btn{transform:translate(0,50px);opacity:0;transition:all 0.8s;}
+.main.section4.active .section-btn.more-btn{transform:translate(0,0px);opacity:1;}
+
+.main.section4 .sub-slide #photo-grap2 .obj .slick-slide{transform:translate(0,50px);opacity:0;transition:all 0.7s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide{transform:translate(0,0px);opacity:1;}
+
+
+.main.section4.active .main-title{transition-delay:0s;}
+.main.section4.active .section-btn.more-btn{transition-delay:0.1s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(1){transition-delay:0.1s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(2){transition-delay:0.3s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(3){transition-delay:0.6s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(4){transition-delay:0.9s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(5){transition-delay:1.2s;}
+.main.section4.active .sub-slide #photo-grap2 .obj .slick-slide:nth-child(6){transition-delay:1.5s;}
+
+.control-grap button{transition:all 1s;}
+
+.section4 .list.bottom-list li a,
+.section3 .sub-slide .photo-grap .obj .item .figcaption strong,
+.section3 .main-title,
+.section4 .main-title{font-family:'GmarketSansM';}
+
+
+/* 색상조정 */
+.control-grap button:hover,
+.section3 .tab ul li.on:before,
+.side-menu ul li a.ico4 .img,
+.section2 .board--card--list .thm--box .badge,
+.section2 .main-title:before,
+.section3 .sub-slide:before{background-color:#c79a6a;}
+.sub-slide #photo-grap2 .obj .item:hover a,
+.section2 .board--card--list .item:hover .thm--box .inner, .section2 .board--card--list .item:focus .thm--box .inner,
+.section-btn:hover,
+.side-menu ul li a:hover .img{border-color:#c79a6a;}
+
+.images_fade.img2 .fade-inner > .lotti,
+.images_fade.img3 .fade-inner > .lotti,
+.images_fade.img4 .fade-inner > .lotti{}
+
+.slick-autoplay-toggle-button{display:none;}
+
+#foot_layout{margin-top:0;}
+#foot_layout:before{background-position:50% top;}
+@media screen and (max-width:1310px){
+	
+}
+
+
+@media screen and (max-width:1024px){
+	
+  html{overflow:inherit;}
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        $(".cart_btn").click(function () {
+          $(".cart")
+            .find("span")
+            .text((i = i + 1));
+          let txt = $(this).parent().find(".title").text();
+          $(".popup").append("<p>" + txt + "<p>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="cart">장바구니<span>0</span></div>
+    <div class="product">
+      <p>
+        <span class="title">스킨</span
+        ><span class="cart_btn">장바구니담기</span>
+      </p>
+      <p>
+        <span class="title">로션</span
+        ><span class="cart_btn">장바구니담기</span>
+      </p>
+    </div>
+    <div class="popup">
+      <h2>장바구니</h2>
+    </div>
+  </body>
+</html>

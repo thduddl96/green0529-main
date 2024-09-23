@@ -87,6 +87,76 @@
         </p>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/photo1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/photo2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/photo3.jpg" alt="" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/photo1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/photo2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/photo3.jpg" alt="" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        //slidesPerView: 3,
+        //spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+      swiper.on("slideChange", function () {
+        console.log("slide changed");
+      });
+      var swiper1 = new Swiper(".mySwiper1", {
+        //direction: "vertical",
+        effect: "fade",
+        speed: 1000,
+        //세로로 가는 방향임. 스크롤도 세로
+        //mySwiper 이 위에 있어서 mySwiper1 뒤에 1 붙이기.
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        on: {
+          slidechanged: function () {
+            console.log("swiper initialized");
+          },
+        },
+      });
+    </script>
+      
+    </div>
   </body>
 </html>

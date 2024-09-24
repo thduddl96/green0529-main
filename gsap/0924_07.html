@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flair {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+      .flair--3 {
+        background-image: url("http://assets.codepen.io/16327/flair-3.png");
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- /제이쿼리 할려면 제이쿼리 라이브 얘가 필요함. -->
+  </head>
+  <body>
+    <div class="flair flair--3"></div>
+    <script>
+      gsap.set(".flair", { xPercent: -50, yPercent: -50 });
+
+      let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
+        yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
+
+      /*window.addEventListener("mousemove", (e) => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+      });*/
+      window.addEventListener("mousemove", function (e) {
+        xTo(e.clientX);
+        yTo(e.clientY);
+      });
+      //위에 있는 화살표 대신 함수로 쓸 때
+    </script>
+  </body>
+</html>

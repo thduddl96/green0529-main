@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+
+        justify-content: space-around;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .gradient-green {
+        background: linear-gradient(#fff, green);
+      }
+      .gradient-purple {
+        background: linear-gradient(#fff, purple);
+      }
+      .gradient-blue {
+        background: linear-gradient(#fff, blue);
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="box gradient-green green"></div>
+    <div class="box gradient-purple purple"></div>
+    <div class="box gradient-blue blue"></div>
+
+    <script>
+      function myFunction() {
+        alert("애니메이션끝");
+      }
+      gsap.to(".green", { x: 500, duration: 5, onComplete: myFunction });
+      //특정 애니메이션이 끝나고 실행문(애니메이션 끝)이 필요하면 onComplete 쓰면 됨.
+      //단 위에랑 myFunction 문구 같아야 함.
+    </script>
+  </body>
+</html>

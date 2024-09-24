@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .cnb {
+        width: 1300px;
+        min-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .cnb h1 {
+        font-size: 40px;
+        padding: 30px 0;
+        position: relative;
+        font-weight: bold;
+      }
+      .cnb h1:first-child:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #333;
+      }
+      .cnb ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .cnb ul li {
+        flex: 1 0 30%;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .cnb > ul li a {
+        position: relative;
+      }
+      .cnb > ul li a p {
+        position: absolute;
+      }
+      .cnb ul li img {
+        width: 100%;
+        height: 100%;
+      }
+      .cnb > ul li a:first-child {
+        transition: 0.3s;
+      }
+      .cnb > ul li a:hover img {
+        width: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cnb">
+      <h1>세상과 함께하는<br />이야기를 나누고자 합니다.</h1>
+      <p>오뚜기 뉴스룸</p>
+      <img src="./images/btn_more_pc.svg" alt="" />
+      <ul>
+        <li>
+          <a href="#"><img src="./images/images01.jpg" alt="" /></a>
+          <p>㈜오뚜기,건강간편식 브랜드 '가뿐한끼'X 7979 서울 러닝크루 협업</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/images02.jpg" alt="" /></a>
+          <p>
+            ㈜오뚜기,당 함량 30% 저감해 더 가볍게 즐기는 '가벼운 황도·백도'출시
+          </p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/images03.jpg" alt="" /></a>
+          <p>㈜오뚜기,건강간편식 브랜드 '가뿐한끼'X 7979 서울 러닝크루 협업</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/images04.jpg" alt="" /></a>
+          <p>㈜오뚜기,육향이 가득한 냉동 국물요리 신제품 3종 출시</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/images05.png" alt="" /></a>
+          <p>"깊고 진한 감칠맛"㈜오뚜기,'청담 미역 소갈비미역국' RMR 출시</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/images06.jpg" alt="" /></a>
+          <p>㈜오뚜기,'롤리폴리 꼬또 X 아시아나 항공' 컬래버레이션 진행</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

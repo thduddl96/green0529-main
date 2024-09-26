@@ -317,6 +317,7 @@ a {
   width: 120px;
   margin-top: 85px;
   border-radius: 20px;
+  white-space: nowrap;
 }
 .voiceWrap .voice div a span {
   margin-right: 20px;
@@ -325,6 +326,11 @@ a {
   width: calc(100% - 460px);
   text-align: center;
   border-bottom: 1px solid #b5b5b5;
+}
+.voiceWrap .voice > p img {
+  width: 700px;
+  border-radius: 20px;
+  border: 1px solid;
 }
 /* 갤러리 모음 시작 */
 ul.gallery {

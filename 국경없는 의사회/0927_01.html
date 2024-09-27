@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .text {
+        margin: 100px 0;
+        height: 100px;
+        position: relative;
+      }
+      .text li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        opacity: 0;
+      }
+      .text li.on {
+        opacity: 1;
+      }
+      .desc {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .desc li {
+        display: flex;
+        align-items: center;
+      }
+      .desc li.on {
+        opacity: 0;
+      }
+      .desc li > p {
+        width: 132px;
+        height: 132px;
+        line-height: 132px;
+        position: relative;
+      }
+      .desc li > p.on::after {
+        content: "";
+        position: absolute;
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid red;
+        box-sizing: border-box;
+      }
+      /* on을 넣어서 빨간색 테두리 사라짐. */
+      .desc li > p img {
+        width: 96px;
+        border: 10px solid #fff;
+        box-sizing: border-box;
+        vertical-align: middle;
+      }
+      .desc li > p img.on {
+        width: 128px;
+      }
+      .desc li .people {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+
+        transition: width 0.65s ease-out;
+      }
+      .desc li .people.on {
+        width: 120px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".text li").eq(0).addClass("on");
+        $(".desc li").eq(0).find("p").addClass("on");
+        $(".desc li").eq(0).find("img").addClass("on");
+        $(".desc li").eq(0).find(".people").addClass("on");
+        $(".desc li").click(function () {
+          let i = $(this).index();
+          $(".text li").removeClass("on");
+          $(".text li").eq(i).addClass("on");
+          $(".desc li p").removeClass("on");
+          $(".desc li").eq(i).find("p").addClass("on");
+          $(".desc li img").removeClass("on");
+          $(".desc li").eq(i).find("img").addClass("on");
+          $(".desc li people").removeClass("on");
+          $(".desc li").eq(i).find(".people").addClass("on");
+        });
+        let num = 1;
+        setTimeout(function () {
+          $(".desc li").eq(0).trigger("click");
+        });
+        //num의 숫자를 바꿔줘야하고 settimeout도 한 번만 해야함.
+
+        setInterval(function () {
+          $(".desc li").eq(num).trigger("click"); //0,1,2,3
+          num = (num + 1) % $(".desc li").length;
+        }, 2000);
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <ul class="text">
+        <li>
+          현장에 나갈 때마다 새로운 경험을 하게 됩니다. 새로운 환경에서 나
+          자신을 발견하고, 다른 이들을 보면서 배우게 되는데요. 매번 새로운
+          사람들과 색다른 환경을 마주하며 긍정적인 영향을 받기 때문에 이
+          ‘새로움’이 다음 활동을 가게 만드는 원동력이 돼요.
+        </li>
+        <li>
+          국경없는의사회에서 일하면 온전히 환자만 생각할 수 있는 환경에 놓이게
+          됩니다. 사기업에서 일하는 것보다 자유로운 점이 있다고 할 수 있죠. 저는
+          일에 있어 흥미와 보람을 매우 중요하게 여기는데, 이를 유지할 수 있어
+          감사하게 생각해요.
+        </li>
+        <li>
+          제가 가진 전문성과 역량으로 구호활동에 참여할 수 있다는 사실이 큰
+          보람이 됐습니다. 현장 생활을 하며 국경없는의사회가 실제로 가장 멀고,
+          가장 험하고, 가장 필요한 곳에서 일하고 있다는 걸 느낄 수 있었습니다.
+        </li>
+        <li>
+          의사로서 사는 삶이 재미가 없어 (웃음) 국경없는의사회 활동을 시작하게
+          되었어요. 활동가로서의 삶이 이전의 삶보다 훨씬 더 만족스럽기에 벌써
+          10년도 더 넘게 계속하고 있어요. 저마다 다른 이유와 동기를 가지고
+          계시겠지만 꼭 한 번 참여해 보시면 좋겠습니다.
+        </li>
+      </ul>
+      <ul class="desc">
+        <li>
+          <p>
+            <img
+              src="https://msf.or.kr/tothefield/static/media/sec4-slide1.57aa91f4c39f344a1736.png"
+              alt=""
+            />
+          </p>
+          <div class="people on">
+            <p class="mb">봉선아 활동가</p>
+            <span class="mb_text">기술직 활동가</span>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://msf.or.kr//tothefield/static/media/sec4-slide5.e1d428debcae3dfb5d31.png"
+              alt=""
+            />
+          </p>
+          <div class="people">
+            <p class="mb">최정윤 활동가</p>
+            <span class="mb_text">약사</span>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://msf.or.kr/tothefield/static/media/sec4-slide3.61852d534666f7e586cb.png"
+              alt=""
+            />
+          </p>
+          <div class="people">
+            <p class="mb-2">황선미 활동가</p>
+            <span class="mb_text">수송행정직</span>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://msf.or.kr/tothefield/static/media/sec4-slide4.706831b4f40763c59111.png"
+              alt=""
+            />
+          </p>
+          <div class="people">
+            <p class="mb">이효민 활동가</p>
+            <span class="mb_text">마취통증의학과 전문의</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

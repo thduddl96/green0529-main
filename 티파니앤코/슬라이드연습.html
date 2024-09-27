@@ -1,10 +1,461 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BOUCHERON - Paris depuis 1858</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/logo-footer.png"
+      type="image/x-icon"
+    />
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/custom.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <div class="wrap">
+      <header id="header">
+        <div class="header_wrap">
+          <h1>
+            <a href="">
+              <img src="./images/logo.svg" alt="" />
+            </a>
+          </h1>
+          <nav class="gnb">
+            <ul class="menu">
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> lists </span></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    location_on
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> search </span></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> public </span></a
+                >
+              </li>
+            </ul>
+            <ul class="util">
+              <li>
+                <a href="">
+                  <span class="material-symbols-outlined"> room_service </span>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined"> person </span></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span class="material-symbols-outlined">
+                    local_mall
+                  </span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button class="m_open">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+        </div>
+      </header>
+      <main id="main">
+        <section class="main_visual">
+          <div class="visual_video">
+            <video playsinline autoplay muted loop class="video_case">
+              <source
+                src="./images/720-mp4-boucheron-eoy-mashup-dinner-blind-16-9-157263.mp4"
+                type=""
+              />
+            </video>
+          </div>
+          <div class="visual_text">
+            <span>MIRACLE Of</span>
+            <strong>EMERALD</strong>
+            <p>
+              이번 시즌, 메종 부쉐론은 각 게스트만의 특별한 터치와 마법 같은
+              저녁을 통해 홀리데이 시즌을 기념합니다.<br />
+              다채로운 영감을 얻어보세요!
+            </p>
+          </div>
+          <div class="scroll">scroll</div>
+        </section>
+        <section class="main_category sec">
+          <div class="title">
+            <h2>Categories</h2>
+          </div>
+          <div class="inner category_con">
+            <ul class="category_name">
+              <li class="on"><a href="">Ring</a></li>
+              <li><a href="">Necklace &amp; Pendant</a></li>
+              <li><a href="">Earing</a></li>
+              <li><a href="">Bracelet</a></li>
+              <li><a href="">Hair Jewerly</a></li>
+              <li><a href="">Brooch</a></li>
+            </ul>
+            <div class="category_itm">
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category01.png" alt="" />
+                  </div>
+                  <strong>Ring</strong>
+                </figure>
+              </div>
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category02.png" alt="" />
+                  </div>
+                  <strong>Necklace &amp; Pendant</strong>
+                </figure>
+              </div>
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category03.png" alt="" />
+                  </div>
+                  <strong>Earing</strong>
+                </figure>
+              </div>
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category04.png" alt="" />
+                  </div>
+                  <strong>Bracelet</strong>
+                </figure>
+              </div>
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category05.png" alt="" />
+                  </div>
+                  <strong>Hair Jewerly</strong>
+                </figure>
+              </div>
+              <div class="itm">
+                <figure>
+                  <div class="img_box">
+                    <img src="./images/category06.png" alt="" />
+                  </div>
+                  <strong>Brooch</strong>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main_event sec">
+          <div class="inner event_con">
+            <div class="top_con">
+              <div class="event_text">
+                <div class="title">
+                  <h2>Holiday Collection</h2>
+                </div>
+                <strong>탁월한 선택</strong>
+                <p>
+                  연말이 다가오고 있습니다. 선물은 준비하셨나요?<br />
+                  홀리데이 시즌을 맞아, 부쉐론이 메종의 앰버서더인<br
+                    class="R_remove"
+                  />
+                  알렉사 청, 밀라 알 자라니, 한소희, 로라에게<br
+                    class="R_remove"
+                  />
+                  위시 리스트를 작성해 달라고 요청했습니다.
+                </p>
+                <p>
+                  아직 망설이고 있다면, 당신과 당신이 사랑하는 이들을 기쁘게
+                  해줄<br class="R_remove" />
+                  선물에 대한 영감을 얻어보세요!
+                </p>
+                <button class="more_btn">컬렉션 보기</button>
+              </div>
+              <div class="event_video">
+                <div class="video_box">
+                  <video
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                    src="./images/main_event_video.mp4"
+                  ></video>
+                </div>
+                <svg
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 559.68 662.14"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: transparent;
+                        stroke: #014841;
+                        stroke-miterlimit: 10;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="cls-1"
+                    d="M565.49,396.87c-9.17,164.56-222.86,309.6-442.7,281.75-93-11.79-144.44-192.86-96-395.24C65.1,123.09,194-27.66,411.68,35.76,512.48,65.13,577.4,183.38,565.49,396.87Z"
+                    transform="translate(-7.72 -20.43)"
+                  />
+                </svg>
+                <svg
+                  id="Layer_2"
+                  data-name="Layer 2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 560.49 667.03"
+                >
+                  <defs>
+                    <style>
+                      .cls-2 {
+                        fill: rgba(1, 72, 65, 0.5);
+                        stroke: none;
+                        stroke-miterlimit: 10;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="cls-2"
+                    d="M558.51,507.19C549.33,671.74,342.8,710.1,141.84,616.71,6.92,554-26.41,372.27,22,169.89,60.34,9.6,220.18-45.49,429.38,42,528.35,83.38,570.41,293.7,558.51,507.19Z"
+                    transform="translate(-0.49 -0.08)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="bottom_con">
+              <div class="itm">
+                <span class="material-symbols-outlined"> favorite </span>
+                <figure>
+                  <img src="./images/event_itm01.png" alt="" />
+                </figure>
+                <strong>콰트로 클래식 스몰 링</strong>
+                <p>₩‌5,770,000</p>
+              </div>
+              <div class="itm">
+                <span class="material-symbols-outlined"> favorite </span>
+                <figure>
+                  <img src="./images/event_itm02.png" alt="" />
+                </figure>
+                <strong>콰트로 클래식 스몰 링</strong>
+                <p>₩‌5,770,000</p>
+              </div>
+              <div class="itm">
+                <span class="material-symbols-outlined"> favorite </span>
+                <figure>
+                  <img src="./images/event_itm03.png" alt="" />
+                </figure>
+                <strong>콰트로 클래식 스몰 링</strong>
+                <p>₩‌5,770,000</p>
+              </div>
+              <div class="itm">
+                <span class="material-symbols-outlined"> favorite </span>
+                <figure>
+                  <img src="./images/event_itm04.png" alt="" />
+                </figure>
+                <strong>콰트로 클래식 스몰 링</strong>
+                <p>₩‌5,770,000</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main_history sec">
+          <div class="history_wrap">
+            <div class="H_inner">
+              <h2 class="blind">main history</h2>
+              <div class="text_box">
+                <strong>방돔 광장 26번가</strong>
+                <p>
+                  메종 부쉐론을 방돔 광장 26번가로 이전하기 위해서는 대담한
+                  선견지명이 필요했습니다.<br />
+                  창작의 혁신을 멈추지 않았던 메종의 설립자, 프레데릭 부쉐론은
+                  과감하게 이전 결정을 내렸고,<br class="R_remove" />
+                  1893년 오뗄 드 노세를 부쉐론을 위한 보금자리로 선택했습니다.
+                </p>
+                <button class="more_btn">부쉐론의 역사</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main_store sec">
+          <h2 class="blind">visit reservation</h2>
+          <div class="inner">
+            <div class="grid_container">
+              <div class="grid_itm itm01">
+                <div class="text_box">
+                  <strong>방문 예약</strong>
+                  <p>
+                    마음에 드시는 제품을<br />부티크에서 만나보실 수 있습니다.
+                  </p>
+                  <button class="more_btn">방문 예약신청</button>
+                </div>
+              </div>
+              <div class="grid_itm itm02"></div>
+              <div class="grid_itm itm03">
+                <video
+                  playsinline
+                  autoplay
+                  muted
+                  loop
+                  src="https://www.boucheron.com/media/wysiwyg/cms-hj-2024-5289/720-mp4-hj2024hj-202404-20231025-bhj24-dentelle-maquette-04-16x9-162738.mp4"
+                ></video>
+              </div>
+              <div class="grid_itm itm04">
+                <video
+                  playsinline
+                  autoplay
+                  muted
+                  loop
+                  src="https://www.boucheron.com/media/wysiwyg/high-jewelry/like-a-queen/vf/20221202_B-QUEEN_FILM05_EMERAUDE_15s07i_16x9_DW04--Apple_ProRes422HQ.mp4"
+                ></video>
+              </div>
+              <div class="grid_itm itm05"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="inner footer_wrap">
+          <div class="footer_top">
+            <figure>
+              <img src="./images/logo-footer.png" alt="" />
+            </figure>
+            <div class="right_con">
+              <div class="sns">
+                <a href=""><i class="xi-facebook"></i></a>
+                <a href=""><i class="xi-instagram"></i></a>
+                <a href=""><i class="xi-twitter"></i></a>
+                <a href=""><i class="xi-youtube-play"></i></a>
+              </div>
+              <p>South Korea (KO)</p>
+              <button class="more_btn">Change country / region</button>
+              <div class="country_box">
+                <strong>CHANGE COUNTRY/REGION</strong>
+                <button class="close">close</button>
+                <div class="countries">
+                  <dl>
+                    <dt>europe</dt>
+                    <dd><a href="">Austria</a></dd>
+                    <dd><a href="">Belgium</a></dd>
+                    <dd><a href="">Cyprus</a></dd>
+                    <dd><a href="">Estonia</a></dd>
+                    <dd><a href="">France</a></dd>
+                    <dd><a href="">German</a></dd>
+                    <dd><a href="">Italy</a></dd>
+                    <dd><a href="">Latvia</a></dd>
+                    <dd><a href="">Lithuania</a></dd>
+                    <dd><a href="">Luxembourg</a></dd>
+                    <dd><a href="">Monaco</a></dd>
+                    <dd><a href="">Netherlands</a></dd>
+                    <dd><a href="">Spain</a></dd>
+                    <dd><a href="">Switzerland</a></dd>
+                    <dd><a href="">United Kingdom</a></dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="">asia</a></dt>
+                    <dd><a href="">Chinese Mainland</a></dd>
+                    <dd><a href="">Hong Kong SAR, China</a></dd>
+                    <dd><a href="">Taiwan, China</a></dd>
+                    <dd><a href="">Japan</a></dd>
+                    <dd><a href="">South Korea</a></dd>
+                    <dd><a href="">Singapore</a></dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="">middle east</a></dt>
+                    <dd><a href="">Kuwait</a></dd>
+                    <dd><a href="">Qatar</a></dd>
+                    <dd><a href="">Saudi Arabia</a></dd>
+                    <dd><a href="">United Arab Emirates</a></dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="">americas</a></dt>
+                    <dd><a href="">United States</a></dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="">international</a></dt>
+                    <dd><a href="">Other Countries/Regions</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <dl>
+              <dt>도움이 필요하신가요?</dt>
+              <dd>FAQ</dd>
+              <dd>배송</dd>
+              <dd>문의하기</dd>
+              <dd>노하우와 가이드</dd>
+              <dd>인증</dd>
+              <dd>방문 예약</dd>
+              <dd>내 즐겨찾기</dd>
+              <dd>사이즈 가이드</dd>
+            </dl>
+            <dl>
+              <dt>정보</dt>
+              <dd>채용</dd>
+              <dd>보도자료</dd>
+              <dd>이용약관</dd>
+              <dd>판매 약관</dd>
+              <dd>법적 고지</dd>
+              <dd>개인정보 보호정책</dd>
+              <dd>쿠키 정책</dd>
+              <dd>쿠키 설정</dd>
+              <dd>윤리 규범</dd>
+              <dd>사이트 맵</dd>
+            </dl>
+            <dl>
+              <dt>하이 주얼리</dt>
+              <dd>까르뜨 블랑슈 컬렉션</dd>
+              <dd>스타일의 역사 컬렉션</dd>
+              <dd>특별 주문</dd>
+            </dl>
+            <dl>
+              <dt>주얼리</dt>
+              <dd>콰트로</dd>
+              <dd>쎄뻥 보헴</dd>
+              <dd>잭 드 부쉐론</dd>
+              <dd>애니멀 컬렉션</dd>
+              <dd>네이처</dd>
+              <dd>꾸뛰르</dd>
+              <dd>아키텍처</dd>
+              <dd>앙떵포렐</dd>
+            </dl>
+            <dl>
+              <dt>워치메이킹</dt>
+              <dd>리플레</dd>
+              <dd>쎄뻥 보헴</dd>
+              <dd>오뜨 올로제리</dd>
+            </dl>
+            <dl>
+              <dt>웨딩</dt>
+              <dd>웨딩 밴드</dd>
+              <dd>인게이지먼트 링</dd>
+            </dl>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

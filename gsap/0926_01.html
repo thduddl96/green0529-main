@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      .item {
+        display: flex;
+        height: 100vh;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+      }
+      .num {
+        position: absolute;
+        font-size: 5vw;
+        right: 20px;
+        bottom: 20px;
+      }
+      .item:nth-child(2n) {
+        background: #222;
+      }
+      .con {
+        width: 10vw;
+        height: 10vw;
+        background: #fff;
+        border-radius: 20px;
+      }
+      .active {
+        filter: invert();
+      }
+    </style>
+  </head>
+  <body>
+    <!-- parallax효과 : 웹페이지의 스크롤과 해당요소의 애니메이션의 속도를 통해 깊이에 대한 착시를 이끌어내어 입체적으로 보이게 하는 효과 -->
+    <main id="parallax">
+      <section id="section1" class="item">
+        <span class="num">01</span>
+        <div class="con"></div>
+      </section>
+      <section id="section2" class="item">
+        <span class="num">02</span>
+        <div class="con"></div>
+      </section>
+      <section id="section3" class="item">
+        <span class="num">03</span>
+        <div class="con"></div>
+      </section>
+      <section id="section4" class="item">
+        <span class="num">04</span>
+        <div class="con"></div>
+      </section>
+      <section id="section5" class="item">
+        <span class="num">05</span>
+        <div class="con"></div>
+      </section>
+      <section id="section6" class="item">
+        <span class="num">06</span>
+        <div class="con"></div>
+      </section>
+      <section id="section7" class="item">
+        <span class="num">07</span>
+        <div class="con"></div>
+      </section>
+      <section id="section8" class="item">
+        <span class="num">08</span>
+        <div class="con"></div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.to("#section1 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 2,
+      });
+      gsap.to("#section2 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360, //위치
+        duration: 2, //실행되는 시간
+        scrollTrigger: {
+          trigger: "#section2 .con",
+          //markers:true,
+          start: "top 50%",
+          end: "bottom 80%",
+        },
+      });
+      gsap.to("#section3 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section3 .con",
+          //markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+          toggleActions: "play pause resume reverse",
+          //onEnter: 스크롤 위치가 "시작"을 지나 앞으로 이동하는 경우
+          //onLeave:스크롤 위치가 "끝"을 지나 앞으로 이동하는 경우
+          //onEnterBack: 스크롤 위치가 "끝"을 지나 뒤로 이동하는 경우
+          //onLeaveBack: 스크롤 위치가 "시작"을 지나 뒤로 이동하는 경우
+        },
+      });
+      gsap.to("#section4 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section4 .con",
+          //markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+          scrub: 10,
+        },
+      });
+      gsap.to("#section5 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section5",
+          //markers:true,
+          //start:"top 50%",
+          //end: "bottom 20%",
+          scrub: 10,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+      gsap.to("#section6 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section6 .con",
+          //markers:true,
+          start: "50% 50%",
+          end: "+=1000",
+          scrub: 10,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+      gsap.to("#section7 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section7 .con",
+          //markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+          scrub: 10,
+          pin: true,
+          anticipatePin: 1,
+          toggleClass: "active",
+        },
+      });
+      gsap.to("#section8 .con", {
+        x: 500,
+        borderRadius: 200,
+        rotation: 360,
+        duration: 20,
+        scrollTrigger: {
+          trigger: "#section8 .con",
+          markers: true,
+          start: "top 60%",
+          //end: "+=1000",
+          scrub: 10,
+          // pin:true,
+          // anticipatePin: 1,
+          toggleClass: "active",
+        },
+      });
+    </script>
+  </body>
+</html>

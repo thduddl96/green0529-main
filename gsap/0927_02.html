@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      .item {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section:nth-child(2n) {
+        background: #222;
+      }
+      .num {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 5vw;
+      }
+      .item_img {
+        width: 10vw;
+        height: 10vw;
+        background-size: cover;
+        background-position: center;
+        margin: 1vw;
+      }
+      #section1 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+      }
+      #section2 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+      }
+      #section3 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+      }
+      #section4 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/03/21/14/36/forest-8647829_1280.jpg);
+      }
+      #section8 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+      }
+      #section9 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);
+      }
+      .item_text {
+        font-size: 5vw;
+      }
+      #section7 .item_text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #111;
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+      }
+      #section5,
+      #section8 {
+        flex-direction: column;
+      }
+      #section9 .item {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="parallax">
+      <section id="section1" class="item">
+        <div class="num">01</div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section2" class="item">
+        <div class="num">02</div>
+        <div class="item_img i1"></div>
+        <div class="item_img i2"></div>
+        <div class="item_img i3"></div>
+      </section>
+      <section id="section3" class="item">
+        <div class="num">03</div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section4" class="item">
+        <div class="num">04</div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section5" class="item">
+        <div class="num">05</div>
+        <div class="item_text t1">section5</div>
+        <div class="item_text t2">section5</div>
+        <div class="item_text t3">section5</div>
+        <div class="item_text t4">section5</div>
+      </section>
+      <section id="section6" class="item">
+        <div class="num">06</div>
+        <div class="item_text">section6</div>
+      </section>
+      <section id="section7" class="item">
+        <div class="num">07</div>
+        <div class="item_text t1">코딩이란</div>
+        <div class="item_text t2">프로그래밍 코드를</div>
+        <div class="item_text t3">어딘가에</div>
+        <div class="item_text t4">적는것을 말한다</div>
+        <div class="item_text t5">코딩은</div>
+        <div class="item_text t6">누구라</div>
+        <div class="item_text t7">할 수 있다</div>
+      </section>
+      <section id="section8" class="item">
+        <div class="num">08</div>
+        <div class="item_text t1">section8 title1</div>
+        <div class="item_text t2">section8 title2</div>
+        <div class="item_text t3">section8 title3</div>
+        <div class="item_img i1"></div>
+      </section>
+      <section id="section9" class="item">
+        <div class="num">09</div>
+        <div class="item_img i1"></div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      const ani1 = gsap.timeline();
+      ani1
+        .to("#section1 .item_img", {
+          rotation: 720,
+          scale: 0,
+          borderRadius: 200,
+        })
+        .to("#section1 .item_img", {
+          rotation: 0,
+          scale: 1,
+          borderRadius: 20,
+        });
+      ScrollTrigger.create({
+        //스크롤을 내릴 때 애니메이션을 실행해줘
+        animation: ani1,
+        trigger: "#section1", //trigger는 누구를 고정할 거냐
+        //markers: true,
+        start: "top top",
+        end: "+=2000",
+        pin: true, //pin은 고정(position pixed랑 동일함.)
+        scrub: true, // 숫자도 넣을 수 있음 10을 넣으면 10초동안. true값은 한칸한칸 애니메이션이 적용되는 것임.
+        id: "box1",
+        anticipatePin: 1,
+      });
+      //타임라인에 가져다 넣었을 때는 s가 대문자여야함. 어제랑은 다름
+      // 2번 시작
+      const ani2 = gsap.timeline({
+        defaults: { autoAlpha: 0, borderRadius: 200 },
+      });
+      ani2
+        .from("#section2 .i1", {
+          y: -100,
+        })
+        .from("#section2 .i2", {
+          y: 100,
+        })
+        .from("#section2 .i3", {
+          y: -100,
+        });
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: "#section2",
+        //markers:true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: true,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      //3번 시작
+      const ani3 = gsap.timeline();
+      ani3.from("#section3 .item_img", {
+        y: -100,
+        opacity: 0,
+        stagger: {
+          amount: 3,
+          from: "random",
+        },
+      });
+      ScrollTrigger.create({
+        animation: ani3,
+        trigger: "#section3",
+        //markers:true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      //4번 시작
+      const ani4 = gsap.timeline();
+      ani4.from("#section4 .item_img", {
+        opacity: 0,
+        scale: 5,
+        width: "100vw",
+        height: "100vh",
+      });
+      ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#section4",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani5 = gsap.timeline();
+      ani5
+        .to(
+          "#section5 .t1",
+          {
+            xPercent: 300,
+          },
+          "txt5"
+        )
+        //to는 고정된 값에서 왼쪽으로 움직여지는 것.
+        .to(
+          "#section5 .t2",
+          {
+            xPercent: -300,
+          },
+          "txt4"
+        )
+        .to(
+          "#section5 .t3",
+          {
+            xPercent: 300,
+          },
+          "txt5"
+        )
+        .to(
+          "#section5 .t4",
+          {
+            xPercent: -300,
+          },
+          "txt4"
+        );
+      //같은 txt 문자 애들끼리 동시에 감
+      ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section5",
+        markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani6 = gsap.timeline();
+      ani6
+        .to("#section6 .item_text", {
+          scale: 60,
+        })
+        .to("#section6 .item_text", {
+          opacity: 0,
+        });
+      ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section6",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani7 = gsap.timeline({
+        defaults: { scale: 0, opacity: 1 },
+      });
+      //중복되는 건 default를 쓰고 괄호 안에 중복되는 것 넣기
+      ani7
+        .from("#section7 .t1", {})
+        .from("#section7 .t2", {})
+        .from("#section7 .t3", {})
+        .from("#section7 .t4", {})
+        .from("#section7 .t5", {})
+        .from("#section7 .t6", {})
+        .from("#section7 .t7", {});
+      ScrollTrigger.create({
+        animation: ani7,
+        trigger: "#section7",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani8 = gsap.timeline();
+      ani8
+        .from("#section8 .t1", { x: innerWidth * 1 })
+        .from("#section8 .t2", { x: innerWidth * -1 })
+        .from("#section8 .t3", { x: innerWidth * 1 })
+        .from("#section8 .i1", { x: innerWidth * 1, rotation: 360, scale: 5 });
+      //from이랑 to 개념 잘 알아두기
+      ScrollTrigger.create({
+        animation: ani8,
+        trigger: "#section8",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani9 = gsap.timeline();
+      ani9
+        .to("#section9 .i1", {
+          //있는 상태에서 커지면 from이 아니라 to를 써야함.
+          scale: 20,
+        })
+        .to("#section9 .i1", { scale: 1 });
+      //from이랑 to 개념 잘 알아두기
+
+      ScrollTrigger.create({
+        animation: ani9,
+        trigger: "#section9",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+    </script>
+  </body>
+</html>

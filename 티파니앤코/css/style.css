@@ -731,7 +731,7 @@
   padding: 0 0 120px 0;
   background: #ffffff;
 }
-
+/* 커플링 웨딩 이미지 수정하기 */
 .main_history .history_wrap {
   position: relative;
   min-height: 350px;
@@ -747,8 +747,9 @@
   right: 0;
 
   background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(https://media.tiffany.com/is/image/tco/WOT-Timeline-50-50-2001TBlue-Desktop);
 }
-
+/* 커플링 웨딩 이미지 배너 */
 .main_history .history_wrap .H_inner {
   position: relative;
   max-width: 1440px;
@@ -767,7 +768,7 @@
   padding: 80px 80px;
   text-align: center;
 
-  background: #09e6cf;
+  background: #2eb7b5;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 /* 맨 아래 텍스트 색깔 */

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+#wrap header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  background: #ddd;
+}
+
+#wrap header ul {
+  display: flex;
+  gap: 40px;
+}
+#wrap section {
+  display: flex;
+  height: 500px;
+}
+#wrap section .left {
+  background: #eee;
+  width: 200px;
+  /* 넓이줘서 왼쪽 고정됨. */
+}
+#wrap section .right {
+  background: #f5f5f5;
+  flex: 1;
+}
+#wrap footer {
+  height: 100px;
+  background: #ccc;
+}

@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+p{text-transform: uppercase;}
+
+html{scroll-behavior: smooth;}
+
+ul.popup{width: 1600px; position: relative;z-index: 999;}
+ul.popup li{width: 500px; height: 500px; font-size: 0;}
+ul.popup li{position: absolute; left: 0; top: 137px; }
+ul.popup li:nth-child(2){position: absolute; left: 540px; top: 137px; z-index: 1;}
+ul.popup li:nth-child(3){position: absolute; left: 1080px; top: 137px; z-index: 1;}
+ul.popup li.on{display: none;}
+ul.popup li img{width: 100%; height: 100%;}
+ul.popup li .btn{width: 100%;height: 35px;background: #000000b3; display: flex; justify-content: space-between;}
+ul.popup li .btn button{background: transparent; color: #fff; cursor: pointer; padding: 0 10px; border: none;font-size: 11.5px;}
+ul.popup li .btn button:nth-child(2){background: #000;}
+
+
+@font-face {
+  font-family: 'MaruBuri';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'MaruBuriBold';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'MaruBuriLight';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.ttf) format("truetype");
+}
+
+.title{margin: 0 auto; line-height: 68px;}
+
+
+/* <!--header--!> */
+header{background: #111111; transition: 0.3s; position: fixed; left: 0; top: 0; z-index: 2; width: 100%; height: 137px;}
+header.on{transform: translateY(-137px); }
+.headerbg{width: 100%; height: 137px; background-color: #111;}
+.top{height: 95px;padding: 35px 75px;margin: 0 auto; display: flex; justify-content: flex-end; position: relative; border-bottom: 1px solid #444; align-items: center; box-sizing: border-box;}
+.top>a{color: #fff; font-size: 14px; display: block; padding: 0 25px; font-weight: 500; font-family: "Noto Sans kr"; position: relative; letter-spacing: -1px;}
+.top>a::after{position: absolute; content: "";height: 20px; width: 1px; left: 0; top: 50%; transform: translateY(-50%); background: #ddd;}
+.top .logo{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);width: 160px;height: 64px;}
+.top .logo img{width: 100%; height: 100%; object-fit: cover;}
+
+.top .icon {display: flex; flex-direction: row; padding-right: 20px; }
+.top .icon a{display: block;width: 17px;height: 18px;  font-size: 16px; color: #fff; padding: 0 10px; display: flex; align-items: center; justify-content: center;}
+
+
+
+
+ul.menu{width: 1140px; margin: 0 auto;display: flex; flex-direction: row; }
+ul.menu>li{flex: 0 0 20%; position: relative; text-align: center; }
+ul.menu>li>a{font-size: 18px; display:inline-block;font-family: Montserrat; font-weight: bold; color: #fff;line-height: 42px; position: relative;}
+ul.menu>li>a:after{position: absolute; content: ""; width: 100%; height: 3px; background-color: #dbab72; left: 0; bottom: -1px; transition: 0.5s; transform-origin: center;transform: scale(0);}
+ul.menu>li>a:hover:after{transform: scale(100%);}
+
+
+.top .mall{display: flex; flex-direction: row;}
+.top .mall .shop{width: 21px;height: 18px;}
+.top .mall .shop img{width: 100%; height: 100%; object-fit: cover; position: relative;}
+
+.top .mall p:nth-child(2){padding-left: 10px;}
+
+
+ul.menu>li .sub{position: absolute; left: 0; top: 0;width: 100%; top: 42px; transform: translateY(-8px); opacity: 0; transition: 0.3s;z-index: 2;}
+ul.menu>li .sub a{display: block; line-height: 50px;background: #fff;  color: #555; font-family: "Noto Sans kr";text-align: center;font-weight: 500; letter-spacing: -1px;}
+
+ul.menu>li:hover >a{color: #dbab72;}
+ul.menu>li:hover .sub{opacity: 1; transform: translateY(0);}
+ul.menu>li .sub a:hover{background: #dbab72; color: #fff;}
+
+/* main */
+
+.mySwiper{width: 100%; height: 100%; position: relative; }
+.bgswipe {text-align: center;display: flex;align-items: center;}
+
+  .bgswipe img {display: block;width: 100%;height: 100%;object-fit: cover;}
+
+  .mySwiper .swiper-pagination-bullet {width: 12px;height: 12px;text-align: center;line-height: 20px;font-size: 12px;color: #000;opacity: 1;background: rgba(0, 0, 0, 0.2);transform: translateY(-40px);}
+
+  .mySwiper .swiper-pagination-bullet-active {color: #fff;background: #fff;
+  }
+
+
+.culture{background: url(https://www.sungsimdang.co.kr/theme/responsive_sungsimdang/include/img/m_about_bg.jpg); background-size: cover; background-repeat: no-repeat; font-size: 0;}
+.culturewrap{width: 1390px; height: 532px; margin: 0 auto; padding: 70px 0; display: flex; flex-direction: row; align-items: center;}
+.culturewrap>div:first-child{width: 45%; height: 100%;}
+.culturewrap>div img{width: 100%; height: 100%; object-fit: cover;}
+.culturewrap .text{width: 55%;color: #111111;letter-spacing: -1px; padding-left: 70px;}
+.culturewrap .text .title{font-size: 42px; font-family: Maruburi;font-weight: bold;}
+.culturewrap .text p{font-size: 17px; font-family: NotoSansKr; line-height: 30px;font-weight: 400; }
+.culturewrap .text p:nth-child(2){padding: 80px 0 40px;}
+
+.fix .bg{width: 100%; height: 710px; background: url(https://www.sungsimdang.co.kr/theme/responsive_sungsimdang/include/img/main_banner.jpg) no-repeat fixed; background-size: cover; display: flex; justify-content: center; align-items: center;}
+.fix .bg h1{width: 920px;height: 55px;font-family: MaruBuri; font-size: 42px; color: #fff; text-shadow: 5px 5px 5px #333; text-align: center; }
+
+.best{width: 100%; background: #f8f0e5;  padding: 100px 0;}
+.best .title{font-size: 38px; color: #161616; }
+.best .title span{font-weight: bold;}
+.best>p{text-align: center; font-family: "Noto Sans Kr";font-size: 18px; color: #4f2700;}
+.best>p:nth-child(2){margin-bottom: 50px;}
+
+.bestlist{width: 100%;max-width: 1390px; margin: 0 auto;position: relative;}
+.best .inner{width: 100%;display: flex; overflow-x: hidden; }
+
+.best .inner .swiper {overflow: visible;width: 25%;transform: translateX(521px); }
+
+.best .swiper-slide {text-align: center;font-size: 18px;
+  display: flex; flex-direction: column;width: 90% ;justify-content: right;align-items: center;  position: relative; }
+
+.best .swiper-slide img {display: block;object-fit: cover;}
+.best .swiper-slide .txt{width: 100%;}
+.best .swiper-slide .txt h2{font-size: 20px; padding: 25px 0 10px; color: #161616;}
+.best .swiper-slide .txt p{font-size: 14px; color: #434343; letter-spacing: -1.2px; width: 318px; margin: 0 auto;}
+
+#btn{position: absolute; width: 1470px; left: -40px; top: 50%; }
+
+.swiper-button-next, .swiper-button-prev{color: #aaa; z-index: 1;transform: scale(0.4)translateY(-50%)}
+
+.media{width: 100%;background: #fff;padding: 130px 0;}
+.media .title{font-size: 38px; color: #161616;margin-top: 0;}
+.media .title span{font-weight: bold;}
+.media>p{text-align: center; font-family: "Noto Sans Kr";font-size: 18px; color: #4f2700; position: relative;}
+.media>p a{position: absolute; display: inline-block; font-size: 12px; padding: 3px 15px; border: 2px solid rgba(79,39,0,0.2); background: #fff; color: #4f2700; transition: 0.3s; border-radius: 30px; font-weight: bold; font-family: "Noto Sans Kr"; left: 82%;}
+.media>p a:hover{background:#4f2700; color: #fff;}
+
+.media .list{width: 90%; max-width: 1390px; display: flex; flex-direction: row; gap: 30px; margin: 50px auto 0; padding-left: 0;}
+.media .list li{flex: 1 1 30%; position: relative;}
+.media .list li::before{position: absolute; content: ""; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 72px;height: 72px; background-color: #fff; border-radius: 50%;opacity: 0; transition: 0.3s; box-shadow: 2px 2px 12px rgba(0,0,0,0.6);}
+.media .list li::after{position: absolute; content: "▶"; left: 50%; top: 50%; transform: translate(-50%,-50%);color: #000; font-size: 20px; line-height: 20px;opacity: 0;transition: 0.3s;}
+.media .list li:hover::before{opacity: 1;}
+.media .list li:hover::after{opacity: 1;}
+
+.media .list li img{width: 100%;object-fit: cover;}
+
+.media .list li p{margin: 0; font-size: 0;}
+.media .list li p:last-child{font-size: 22px; padding: 25px 0 10px; font-weight: bold; font-family: "Noto Sans Kr"; text-align: center; letter-spacing: -1px;}
+
+.family{background: #f8f0e5;padding: 130px 0 80px; } 
+.family .title{font-size: 38px; color: #161616; margin-top: 0;}
+.family>p:nth-child(2){padding-bottom: 50px;}
+.family .title span{font-weight: bold;}
+.family>p{text-align: center; font-family: "Noto Sans Kr";font-size: 18px; color: #4f2700;}
+
+.family .grid{display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr);width: 90%; max-width: 1390px; margin: 0 auto; column-gap: 38px; row-gap: 57px; }
+
+.family .grid li{width: 319px; height: 319px;position: relative;}
+.family .grid li p{height: 100%; height: 100%;}
+.family .grid li img{width: 100%;height: 100%;object-fit: cover; }
+.family .grid li .name{position: absolute;bottom: 0; background: rgba(0,0,0,0.4); width: 100%; height: 20px; text-align: center; padding: 10px 0; color: #fff;font-family: "Noto Sans Kr"; line-height: 16px; letter-spacing: -1px; font-weight: 500;} 
+
+footer{background-color: #151515;}
+.foot{width: 90%; max-width: 1390px; margin: 0 auto; color: #888888; padding: 60px 0;}
+
+.foot>a{display: block;width: 174px;height: 70px;}
+.foot>a img{width: 100%;height: 100%;object-fit: cover;}
+
+div.info{display: flex; flex-direction: row; justify-content: space-between; line-height: 30px;font-family: "Noto Sans Kr"; margin-top: 40px;}
+
+.foot .info .left>a{color: #888888;font-family: "Noto Sans Kr"; }
+.foot .info .left>a span{color: #dbab72;}
+.foot .info .left>p span{display: inline-block; padding-right: 20px; letter-spacing: -1.2px;}
+
+.foot .info .right{text-align: right; letter-spacing: -1.3px;}
+.foot .info .right h1{font-size: 34px; color: #dbab72; line-height: 45px;}
+.foot .info .right .icon{display: flex; flex-direction: row; margin-top: 20px; justify-content: right;}
+.foot .info .right .icon a{display: block;width: 17px;height: 18px;  font-size: 13px; color:#dbab72;padding: 0 10px; display: flex; align-items: center; justify-content: center;}
+.foot .info .right .icon a:last-child{padding-right: 0;}
+
+
+.upbtn{width: 51px; height: 51px; position: fixed; right: 10px; bottom: 10px; z-index: 999;}
+.upbtn a{display: block; width: 100%; height: 100%; background: #111111}
+.upbtn a img{width: 100%; height: 100%; object-fit: cover; object-position: 0 -51px;}

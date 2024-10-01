@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let con = document.querySelectorAll(".con");
+        $(con[0]).addClass("on");
+        $(".nav li").click(function () {
+          let i = $(this).index();
+          //   console.log(i);
+          $(con).removeClass("on");
+          $(con[i]).addClass("on");
+        });
+        $(".con li").hover(
+          function () {
+            let img = $(this).index();
+            console.log(img);
+            $(".con li").eq(img).find("img").addClass("on");
+          },
+          function () {
+            $(".con li img").removeClass("on");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>오뚜기 SNS</h1>
+
+      <ul class="nav">
+        <li>
+          <p><img src="images/ico_sns1.svg" alt="ico_sns1" /></p>
+          <h2>데일리</h2>
+        </li>
+        <li>
+          <p><img src="images/ico_sns2.svg" alt="ico_sns2" /></p>
+          <h2>플레이트</h2>
+        </li>
+        <li>
+          <p><img src="images/ico_sns3.svg" alt="ico_sns3" /></p>
+          <h2>글로벌</h2>
+        </li>
+      </ul>
+      <div class="box">
+        <ul class="con">
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <p><img src="./images/insta_26x26.png" alt="" /></p>
+                <h4>ottogi_daily</h4>
+              </div>
+              <p><img src="images/n01.jpg" alt="con1" /></p>
+              <h3>‘진’짜 제대로 업그레이드된 더 맛있어진 진라면‼🍜</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_daily</h4>
+              </div>
+              <p><img src="images/n02.jpg" alt="con2" /></p>
+              <h3>
+                재출시❌ 미리 쟁여 두는 자가 승자😎 한정판 ❣오뚜기
+                카레크림볶음면❣
+              </h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_daily</h4>
+              </div>
+              <p><img src="images/n03.jpg" alt="n03" /></p>
+              <h3>
+                전 세계 2억 개 이상 판매된 치즈라면의 최신작! 보들보들
+                치즈볶음면 매운맛 등장🔥
+              </h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="con">
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_plate</h4>
+              </div>
+              <p><img src="images/n04.png" alt="n04" /></p>
+              <h3>
+                송편만 먹기엔 아쉬울 때 #이색메뉴 로 활용하기 좋은 송편
+                소떡소떡을 소개합니다🙌🏻
+              </h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_plate</h4>
+              </div>
+              <p><img src="images/n05.png" alt="n05" /></p>
+              <h3>
+                풍부한 단백질, 간단한 핑거푸드! 이색 카나페를 소개합니다🙌🏻
+                #멘보타코김치카나페
+              </h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_plate</h4>
+              </div>
+              <p><img src="images/n06.png" alt="n06" /></p>
+              <h3>
+                다시 뜨는 메뉴, 어렸을 적 우리의 간식을 책임지던 #김치피자탕수육
+                !
+              </h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="con">
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_global</h4>
+              </div>
+              <p><img src="images/n07.jpg" alt="n07" /></p>
+              <h3>K-FOOD COOKING CLASS🧑‍🍳💛🍽️</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_global</h4>
+              </div>
+              <p><img src="images/n08.jpg" alt="n08" /></p>
+              <h3>🥳 Everyone's Favorite Crunchy Snack: PPUSHU PPUSHU! 🍜✨</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="gnb">
+                <div class="logo"></div>
+                <img src="./images/insta_26x26.png" alt="" />
+                <h4>ottogi_global</h4>
+              </div>
+              <p><img src="images/n09.jpg" alt="n09" /></p>
+              <h3>
+                👩: I failed my diet because of ramen 👦: It is what it is
+              </h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

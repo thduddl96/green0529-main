@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      let con = document.querySelectorAll(".cnb li");
+      btn[0].querySelector("a").classList.add("on");
+      con[0].classList.add("on");
+      con[0].querySelector("div h1").classList.add("on");
+      con[0].querySelector("div p").classList.add("on");
+
+      con.forEach(function (value, key) {
+        value.style.background =
+          "url(https://www.lotternd.com/kor/research/better__food.html?bmain=view&uid=98&search=%26page%3D1" +
+          (key + 1) +
+          ".jpg)";
+      });
+      function my() {
+        btn.forEach(function (value, key) {
+          value.querySelector("a").classList.remove("on");
+        });
+      }
+      btn.forEach(function (value, key) {
+        value.onclick = function (e) {
+          e.preventDefault();
+          my();
+          console.log(key);
+          con.forEach(function (value, key) {
+            value.classList.remove("on");
+            value.querySelector("div h1").classList.remove("on");
+            value.querySelector("div p").classList.remove("on");
+          });
+          btn[key].querySelector("a").classList.add("on");
+          con[key].classList.add("on");
+          con[key].querySelector("div h1").classList.add("on");
+          con[key].querySelector("div p").classList.add("on");
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">Better Food</a></li>
+      <li><a href="#">Better Life</a></li>
+    </ul>
+
+    <div class="cnb">
+      <h1>
+        롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다.<br />
+        개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+      </h1>
+      <ul>
+        <li>
+          <a href="#"><img src="./images/image01.jpg" alt="" /></a>
+          <p>클라우드 크러시(KRUSH)</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/image02.jpg" alt="" /></a>
+          <p>Chefood 요리킥</p>
+        </li>
+        <li>
+          <a href="#"><img src="./images/image03.jpg" alt="" /></a>
+          <p>오잉 노가리칩 청양마요맛</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

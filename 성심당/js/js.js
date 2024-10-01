@@ -4,55 +4,52 @@ let popup = document.querySelectorAll(".popup li");
 let close = document.querySelectorAll(".close");
 let nomore = document.querySelectorAll(".nomore");
 
-close.forEach(function(v,k){
-  v.onclick = function(){
-    popup[k].classList.add("on")
-  }
+close.forEach(function (v, k) {
+  v.onclick = function () {
+    popup[k].classList.add("on");
+  };
 });
 
-nomore.forEach(function(v,k){
-  v.onclick = function(){
-    popup[k].classList.add("on")
-  }
+nomore.forEach(function (v, k) {
+  v.onclick = function () {
+    popup[k].classList.add("on");
+  };
 });
-
 
 //슬라이드
 
 var swiper = new Swiper(".mySwiper", {
-  speed:1500,
+  speed: 1500,
   loop: true,
-  transition:1000,
+  transition: 1000,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-
   },
   autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      
+    delay: 3500,
+    disableOnInteraction: false,
+  },
 });
 
 //헤더 숨김
 
-let header = document.querySelector("header")
-window.onscroll = function(){
-  if(window.scrollY > 200){
+let header = document.querySelector("header");
+window.onscroll = function () {
+  if (window.scrollY > 200) {
     header.classList.add("on");
-  }else if(window.scrollY < 200){
+  } else if (window.scrollY < 200) {
     header.classList.remove("on");
   }
-}
+};
 
 //업 버튼
 
 let upbtn = document.querySelector(".upbtn");
-upbtn.getElementsByClassName("a").onclick = function(e){
-e.preventDefault;
-window.scrollTo({top: 0, behavior: 'smooth'})
-}
+upbtn.getElementsByClassName("a").onclick = function (e) {
+  e.preventDefault;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 //명예의 전당
 
@@ -62,7 +59,7 @@ var swiper = new Swiper(".mySwiper1", {
   slidesOffsetBefore: -1042,
   autoplay: {
     loop: true,
-    dalay:1000,
+    dalay: 1000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -71,5 +68,4 @@ var swiper = new Swiper(".mySwiper1", {
   },
 });
 
-
-AOS.init({ offset:200 });
+AOS.init({ offset: 200 });

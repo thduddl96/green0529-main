@@ -887,15 +887,14 @@
 
   grid-column: 1 /2;
   grid-row: 1/4;
-
+  /* 바텀 1 아래 이미지랑 겹침 */
   background: url(../images/main_store.jpg) no-repeat center center;
 }
 
 .main_store .grid_container .itm02 {
   grid-column: 2 /3;
   grid-row: 1/3;
-  background: url(../images/main_store_itm02.jpeg) no-repeat center center /
-    cover;
+  background: url(../images/bottom01.png) no-repeat center center / cover;
 }
 
 .main_store .grid_container .itm03 {
@@ -925,7 +924,7 @@
 .main_store .grid_container .itm05 {
   grid-column: 3/4;
   grid-row: 2/4;
-  background: url(../images/main_store_itm04.jpeg) no-repeat center center /
+  background: url(../images/232351_236565_150.jpg) no-repeat center center /
     cover;
 }
 
@@ -971,7 +970,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  /* 바텀01 방문예약 안에부분 사진  */
   background: url(../images/main_store.jpg) no-repeat center center;
   clip-path: polygon(
     20% 0,

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .slide {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 50px;
+        height: 500px;
+      }
+      .scroller,
+      .scroller1 {
+        display: flex;
+        gap: 50px;
+      }
+      .scroller li,
+      .scroller1 li {
+        width: 500px;
+      }
+      .scroller1 li {
+        flex-shrink: 0;
+      }
+      .scroller li img,
+      .scroller1 li img {
+        width: 100%;
+      }
+      #scrollRight .simply-scroll {
+        width: 100%;
+      }
+      #scrollRight simply-scroll-clip {
+        width: 100%;
+        height: 500px;
+      }
+      #scrollRight .simply-scroll-list li {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+    <link rel="stylesheet" href="jquery.simplyscroll.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="jquery.simplyscroll.js"></script>
+  </head>
+  <body>
+    <div class="slide">
+      <ul class="scroller">
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2023/11/01/11/16/lake-8357182_1280.jpg"
+            alt="01"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2024/02/17/13/38/huts-8579309_1280.jpg"
+            alt="02"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2018/01/21/01/19/tree-3095683_1280.jpg"
+            alt="03"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2022/11/01/17/46/candle-7562931_1280.jpg"
+            alt="04"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="slide1" id="scrollRight">
+      <ul class="scroller1" id="scroll">
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2023/11/01/11/16/lake-8357182_1280.jpg"
+            alt="01"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2024/02/17/13/38/huts-8579309_1280.jpg"
+            alt="02"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2018/01/21/01/19/tree-3095683_1280.jpg"
+            alt="03"
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2022/11/01/17/46/candle-7562931_1280.jpg"
+            alt="04"
+          />
+        </li>
+      </ul>
+    </div>
+    <script>
+      let wd = $(".scroller").width() * $(".scroller").length;
+      $(".slide").append($(".scroller").eq(0).clone());
+      const tl = gsap.timeline({ repeat: -1 });
+      tl.to(".scroller", {
+        x: -wd,
+        duration: 6,
+        ease: "linear",
+      });
+      //tl.play();
+      $(".slide").hover(
+        function () {
+          t1.pause();
+        },
+        function () {
+          t1.play();
+        }
+      );
+
+      $("#scroll").simplyScroll({ direction: "backwards", frameRate: 60 });
+    </script>
+  </body>
+</html>

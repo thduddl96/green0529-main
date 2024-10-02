@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="논산도서관" />
+    <meta name="description" content="논산도서관" />
+    <title>논산도서관</title>
+    <link
+      rel="shortcut icon"
+      href="./images/android-icon-192x192.png"
+      type="image/png"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/fullpage.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/custom.js"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header id="Header" class="Header">
+        <div class="header_wrap">
+          <h1>
+            <a href="/">
+              <img id="H_logo" src="./images/logo.png" alt="논산도서관" />
+            </a>
+          </h1>
+          <nav class="gnb">
+            <ul>
+              <li><a href="">도서관소개</a></li>
+              <li><a href="">이용안내</a></li>
+              <li><a href="">도서관서비스</a></li>
+              <li><a href="">온라인신청</a></li>
+              <li><a href="">열린공간</a></li>
+              <li><a href="">나만의도서관</a></li>
+            </ul>
+          </nav>
+          <div class="util">
+            <ul>
+              <li><a href="">로그인</a></li>
+              <li><a href="">회원가입</a></li>
+              <li><a href="">내서재</a></li>
+              <li><a href="">통합회원인증</a></li>
+            </ul>
+          </div>
+          <button class="mopen">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </header>
+      <main id="content" class="main">
+        <section class="MainVisual section fp-auto-height-responsive">
+          <h2 class="blind">main visual</h2>
+          <div class="inner visual_con">
+            <div class="slogan">
+              <p>
+                논산의 미래를 담는<br />
+                독서ㆍ문화ㆍ지식정보의 보고
+              </p>
+              <strong>NOSAN LIBRARY</strong>
+            </div>
+            <form id="search" name="search" method="get">
+              <div class="input">
+                <input
+                  placeholder="찾으시는 도서의 정보를 입력하세요"
+                  type="text"
+                  name="book_name"
+                  class="book_name"
+                />
+              </div>
+              <button>
+                <i data-feather="search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="scroll">
+            <span>scroll down</span>
+          </div>
+        </section>
+        <section class="MainNotice section fp-auto-height-responsive">
+          <div class="title">
+            <h2>도서관 소식</h2>
+            <ul class="tab_menu">
+              <li class="on">
+                <a href=""> 공지사항 </a>
+              </li>
+              <li>
+                <a href=""> 문화행사 </a>
+              </li>
+              <li>
+                <a href=""> 강좌안내 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner main_notice">
+            <div class="tab_content">
+              <div class="swiper main_notice_slide on">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니 많은 관심과 참여
+                      바랍니다. 1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      논산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong
+                      >자료관리 기능개선 패치 후속작업으로 인한 통합 웹서비스
+                      일시중단 알림</strong
+                    >
+                    <p>
+                      자료관리시스템 기능개선 패치 후속 작업을 위하여 부산시
+                      도서관 통합 웹서비스(K.LAS, 홈페이지) 서비스가 일시
+                      중단됨을 알려드립니다. 1. 중단일시 : 2023.1.24.(수) 22:00
+                      ~ 1.25.(목) 08:00 2. 중단사유 : 자료관리시스템 기능개선
+                      패치 후속작업 3. 중단대상 : 부산시 도서관 통합
+                      웹서비스(K.LAS, 홈페이지 )
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>신나는 동화놀이 교실 신청 안내</strong>
+                    <p>전문 동화구연 강사와 함께하는 동화놀이 교실</p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니 많은 관심과 참여
+                      바랍니다. 1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      논산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper main_notice_slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「정보활용교육(코딩)」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 10. 19.(토) 10:00~12:00 2. 장소:
+                      연무도서관
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper main_notice_slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong
+                      >자료관리 기능개선 패치 후속작업으로 인한 통합 웹서비스
+                      일시중단 알림</strong
+                    >
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <span>공지사항</span>
+                    <strong>「강원국의 진짜 공부」 강연 안내</strong>
+                    <p>
+                      「강원국의 진짜 공부」 강연을 개최하오니많은 관심과 참여
+                      바랍니다.1. 일시: 2024. 2. 24.(토) 14:00~16:002. 장소:
+                      부산
+                    </p>
+                    <div class="more_btn">더 알아보기</div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="slide_arrows">
+                <button class="left">
+                  <i data-feather="arrow-left"></i>
+                </button>
+                <button class="right">
+                  <i data-feather="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            <ul class="user_menu">
+              <li>
+                <a href="">
+                  이용안내
+                  <i data-feather="bell"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  행사신청
+                  <i data-feather="log-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  비치희망도서
+                  <i data-feather="heart"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  기증·납본
+                  <i data-feather="gift"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  도서관견학
+                  <i data-feather="home"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  부산자료
+                  <i data-feather="file-text"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="MainCategory section fp-auto-height-responsive">
+          <div class="title">
+            <h2>BOOKS</h2>
+            <ul class="tab_menu">
+              <li class="on">
+                <a href=""> 추천도서 </a>
+              </li>
+              <li>
+                <a href=""> 신작도서 </a>
+              </li>
+              <li>
+                <a href=""> 인기도서 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner">
+            <div class="tab_content">
+              <div class="swiper con on">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate01_01.jpg" alt="" />
+                    </figure>
+                    <strong>트랜드 코리아 2025<br />김난도·미래의 창</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate01_02.jpg" alt="" />
+                    </figure>
+                    <strong>대온실 수리 보고서<br />김금희·창비</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate01_03.jpg" alt="" />
+                    </figure>
+                    <strong>그리다가,뭉클<br />이기주·터닝페이지</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate01_04.jpg" alt="" />
+                    </figure>
+                    <strong>예술 도둑<br />마이클핀클·생각의 힘 </strong>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper con">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate02_01.jpg" alt="" />
+                    </figure>
+                    <strong>반려 요괴1:천잠<br />김영주·위즈덤</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate02_02.jpg" alt="" />
+                    </figure>
+                    <strong>시티 뷰<br />우신영·다산책방</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate02_03.jpg" alt="" />
+                    </figure>
+                    <strong
+                      >노스탤지어, 어느 위험한 감정의 연대기<br />애그니스
+                      아널드포스터·어크로스</strong
+                    >
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate02_04.jpg" alt="" />
+                    </figure>
+                    <strong
+                      >당신이 누군가를 죽였다<br />히가시노 게이고·북다</strong
+                    >
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate02_05.jpg" alt="" />
+                    </figure>
+                    <strong>엄마 아닌 여자들<br />헤핑턴·북다</strong>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper con">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_01.jpg" alt="" />
+                    </figure>
+                    <strong
+                      >벌거벗은 세계사<br />tvn<벌거벗은세계사>제작팀</strong
+                    >
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_02.jpg" alt="" />
+                    </figure>
+                    <strong>시대예보:호명사회<br />송길영 </strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_03.jpg" alt="" />
+                    </figure>
+                    <strong>은하계 환승터미널 구멍가게<br />배인경</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_04.jpg" alt="" />
+                    </figure>
+                    <strong>개를 데리고 다니는 남자<br />김화진</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_05.jpg" alt="" />
+                    </figure>
+                    <strong>A4 한 장을 쓰는 힘<br />안광복</strong>
+                  </div>
+                  <div class="swiper-slide itm">
+                    <figure>
+                      <img src="./images/main_cate03_06.jpg" alt="" />
+                    </figure>
+                    <strong>나는 개발자로 살기로 했다<br />이창윤</strong>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="slide_arrows">
+                <button class="left">
+                  <i data-feather="arrow-left"></i>
+                </button>
+                <button class="right">
+                  <i data-feather="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="MainCuration section fp-auto-height-responsive">
+          <div class="title_area">
+            <div class="title">
+              <h2>CURATION</h2>
+              <p>다양한 카테고리와 컨텐츠를 제공해 드리는맞춤형 서비스</p>
+              <div class="more_btn">더 알아보기</div>
+            </div>
+          </div>
+          <div class="content_area">
+            <div class="inner">
+              <div class="itm">
+                <a href="">
+                  <i data-feather="home"></i>
+                  <strong>북카페</strong>
+                  <p>
+                    책 한잔, 커피 한잔<br />
+                    동네 곳곳의 숨은 북카페를 알아보자
+                  </p>
+                </a>
+              </div>
+              <div class="itm">
+                <a href="">
+                  <i data-feather="map"></i>
+                  <strong>여행지</strong>
+                  <p>
+                    낭만이 있는 도시!<br />
+                    논산의 다양한 여행코스를 소개합니다.
+                  </p>
+                </a>
+              </div>
+              <div class="itm">
+                <a href="">
+                  <i data-feather="message-circle"></i>
+                  <strong>독서동아리</strong>
+                  <p>
+                    독서와 토론을 즐기는<br />
+                    논산지역 독서동아리를 소개합니다.
+                  </p>
+                </a>
+              </div>
+              <div class="itm">
+                <a href="">
+                  <i data-feather="grid"></i>
+                  <strong>구독서비스</strong>
+                  <p>
+                    고민하는 사람들을 위한<br />
+                    책 처방 알림으로 받아보세요.
+                  </p>
+                </a>
+              </div>
+              <div class="itm">
+                <a href="">
+                  <i data-feather="pen-tool"></i>
+                  <strong>출판사</strong>
+                  <p>
+                    우리지역에는 어떤 출판사가 있을까<br />
+                    출판사에 관한 다양한 내용을 소개합니다.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="MainContent section fp-auto-height-responsive">
+          <h2 class="blind">online content and book culture</h2>
+          <div class="top_content">
+            <div class="word_animation">
+              <div class="track">
+                <span>ONLINE CONTENT & READING CULTURE</span>
+                <span>ONLINE CONTENT & READING CULTURE</span>
+                <span>ONLINE CONTENT & READING CULTURE</span>
+                <span>ONLINE CONTENT & READING CULTURE</span>
+              </div>
+            </div>
+            <div class="inner">
+              <div class="online_content">
+                <div class="left_con">
+                  <h3>온라인 콘텐츠</h3>
+                </div>
+                <div class="right_con">
+                  <div class="swiper online_content_slide">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide itm">
+                        <figure>
+                          <img
+                            src="./images/main_online_content01.png"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="text_box">
+                          <span>전자잡지</span>
+                          <strong>moazine</strong>
+                          <p>
+                            국내 최대 규모의 전자잡지 포털 사이트로 매월
+                            215여종, 20,000여권의 과월호,<br />
+                            70만 건의 잡지기사가 제공되는 국내 No.1 디지털
+                            매거진 서비스입니다.
+                          </p>
+                          <div class="more_btn">더 알아보기</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide itm">
+                        <figure>
+                          <img
+                            src="./images/main_online_content02.png"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="text_box">
+                          <span>국외 신문·잡지</span>
+                          <strong>pressreader</strong>
+                          <p>
+                            프레스리더는 전세계 약 7,000종 이상의 신문과 잡지를
+                            한 플랫폼 안에서<br />
+                            PC,모바일 기기 등에서 자유롭게 보실 수 있는 구독
+                            서비스를 제공합니다.
+                          </p>
+                          <div class="more_btn">더 알아보기</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide itm">
+                        <figure>
+                          <img
+                            src="./images/main_online_content03.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="text_box">
+                          <span>클래식 공연</span>
+                          <strong>medici.tv</strong>
+                          <p>
+                            2,000편 이상의
+                            오페라,댄스,콘서트,발레,다큐멘터리,아카이브자료,예술가
+                            프로필과<br />
+                            매년 약 150편 이상의 실시간 실황 공연을 제공하는
+                            클래식 음악 데이터베이스
+                          </p>
+                          <div class="more_btn">더 알아보기</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide itm">
+                        <figure>
+                          <img
+                            src="./images/main_online_content04.png"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="text_box">
+                          <span>어린이 영어독서</span>
+                          <strong>highlights library</strong>
+                          <p>
+                            동서양의 민화, 설화, 음식 등 문화의 다양성을 경험할
+                            수 있는 컨텐츠와 다양한 정보를<br />
+                            주제로한 컨텐츠로 구성되어있어 지적 호기심을
+                            자극하고 비판적 사고력을 키워줍니다.
+                          </p>
+                          <div class="more_btn">더 알아보기</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="slide_arrows">
+                    <button class="left">
+                      <i data-feather="arrow-left"></i>
+                    </button>
+                    <button class="right">
+                      <i data-feather="arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_content">
+            <div class="inner">
+              <div class="book_culture">
+                <div class="left_con">
+                  <h3>독서문화</h3>
+                  <i data-feather="book-open"></i>
+                </div>
+                <div class="right_con">
+                  <div class="itm" data-num="01">
+                    <strong>독서의달</strong>
+                    <p>
+                      매년 9월을 독서의 달로 정하고 독서문화 진흥을 위한 행사를
+                      진행합니다.
+                    </p>
+                  </div>
+                  <div class="itm" data-num="02">
+                    <strong>독서회</strong>
+                    <p>
+                      독서의 즐거움을 통해 독서공동체 문화 활성화 및 책읽는
+                      사회분위기를 조성합니다.
+                    </p>
+                  </div>
+                  <div class="itm" data-num="03">
+                    <strong>도서관주간</strong>
+                    <p>
+                      매년 4월 12일부터 18일까지 진행하는 도서관과 독서문화
+                      캠페인입니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer id="Footer" class="footer section fp-auto-height">
+          <div class="inner">
+            <div class="footer_top">
+              <ul class="left_con">
+                <li><a href="">이용약관</a></li>
+                <li class="b"><a href="">개인정보처리방침</a></li>
+                <li><a href="">저작권보호정책</a></li>
+                <li><a href="">키보드보안프로그램설치안내</a></li>
+              </ul>
+              <div class="right_con">
+                <a href="">
+                  논산공공도서관
+                  <i data-feather="chevron-right"></i>
+                </a>
+                <a href="">
+                  타지역 도서관
+                  <i data-feather="chevron-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footer_bottom">
+              <ul class="info">
+                <li>(46949) 충남 논산시 취암동 33(덕포동)</li>
+                <li>TEL 051-310-5400</li>
+                <li>FAX 051-310-5429</li>
+                <li>E-MAIL busanlibrary@korea.kr</li>
+              </ul>
+              <address class="copy">
+                COPYRIGHT &copy; BUSAN METROPOLITAN LIBRARY. ALL RIGHTS
+                RESERVED.
+              </address>
+            </div>
+          </div>
+        </footer>
+      </main>
+      <div class="side_nav on">
+        <ul>
+          <li class="on">
+            <a href="#page01">
+              <strong>01</strong>
+              <p>INTRODUCE</p>
+            </a>
+          </li>
+          <li>
+            <a href="#page02">
+              <strong>02</strong>
+              <p>NOTICE</p>
+            </a>
+          </li>
+          <li>
+            <a href="#page03">
+              <strong>03</strong>
+              <p>BOOKS</p>
+            </a>
+          </li>
+          <li>
+            <a href="#page04">
+              <strong>04</strong>
+              <p>CURATION</p>
+            </a>
+          </li>
+          <li>
+            <a href="#page05">
+              <strong>05</strong>
+              <p>CONTENT & CULTURE</p>
+            </a>
+          </li>
+          <li>
+            <a href="#footer">
+              <strong>06</strong>
+              <p>논산도서관</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

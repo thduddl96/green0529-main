@@ -604,7 +604,10 @@
   position: relative;
   background: var(--deco-color);
 }
-
+/* .MainCategory img {
+  border-radius: 20px;
+} */
+/* 벌거벗은 세계사 밑에 깔려있는 거 둥글게 주기 위해서 */
 .MainCategory::before {
   content: "";
   position: absolute;
@@ -618,7 +621,7 @@
   background: var(--primary-color);
   border-radius: 200px 0 0 0;
 }
-
+/* 뒤에 글자 깔려있는 book 말하는 거 */
 .MainCategory::after {
   content: "BOOKS";
   position: absolute;
@@ -773,7 +776,7 @@
 
   cursor: pointer;
 }
-
+/* 벌거벗은 세계사 슬라이드 남색 버튼 */
 .MainCategory .tab_content .slide_arrows button .feather {
   width: 24px;
   height: 24px;

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      body {
+        background-color: antiquewhite;
+      }
+      #wrap {
+      }
+      #wrap header {
+        height: 100px;
+      }
+      /* #wrap header:hover{background-color: #fff;} */
+      #wrap header .top {
+        width: 1480px;
+        margin: 0 auto;
+      }
+
+      #wrap .logo {
+        float: left;
+        width: 134px;
+        height: 100px;
+        position: relative;
+      }
+      #wrap .logo a {
+        display: block;
+        width: 100%;
+        height: 38px;
+        background-image: url(images/logo_yellow.png);
+        background-repeat: no-repeat;
+        background-size: 134px 85px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      /* #wrap header:hover .logo a{background-position: 0 -47px;} */
+
+      #wrap .menu {
+        float: right;
+      }
+      #wrap .menu > ul {
+        height: 100px;
+      }
+      #wrap .menu > ul > li {
+        float: left;
+        position: relative;
+        width: 142px;
+      }
+      #wrap .menu > ul > li > a {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        position: relative;
+        color: #fff;
+      }
+      #wrap .menu > ul:hover > li > a {
+        color: #333;
+      }
+      #wrap .menu > ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #ffc72c;
+        transform: scaleX(0);
+        transition: 0.5s;
+      }
+      #wrap .menu > ul > li:hover > a::after {
+        transform: scaleX(1);
+      }
+      #wrap .menu > ul .sub {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        z-index: 1;
+      }
+      /* #wrap .menu > ul:hover .sub{height: 320px;padding: 20px 0;} */
+      #wrap .menu > ul .sub.on {
+        height: 320px;
+        padding: 20px 0;
+      }
+      #wrap .menu > ul .sub li {
+        line-height: 40px;
+        text-align: center;
+      }
+      #wrap .menu > ul > li:hover > a {
+      }
+      #wrap .menu > ul .sub li:hover a {
+        color: #ffc72c;
+        display: block;
+      }
+      #wrap .menu .bg {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 0;
+        transition: 0.4s;
+        border-top: 1px solid transparent;
+      }
+      /* #wrap .menu > ul:hover ~ .bg{height: 320px;border-color: #ccc;background-color: #fff;} */
+      #wrap .menu .bg.on {
+        height: 320px;
+        border-color: #ccc;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="logo"><a href="#"></a></div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#">도서관소개</a>
+                <ul class="sub">
+                  <li><a href="#">인사말/a></li>
+                  <li><a href="#">조직도 및 안내</a></li>
+                  <li><a href="#">논산열린도서관</a></li>
+                  <li><a href="#">강경도서관</a></li>
+                  <li><a href="#">연무도서관</a></li>
+                  <li><a href="#">작은도서관</a></li>
+                  <li><a href="#">스마트도서관</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">이용안내</a>
+                <ul class="sub">
+                  <li><a href="#">이용시간</a></li>
+                  <li><a href="#">이용방법</a></li>
+                  <li><a href="#">회원증 발급 안내</a></li>
+                  <li><a href="#">모바일도서관안내</a></li>
+                  <li><a href="#">책나래서비스</a></li>
+                  <li><a href="#">책바다서비스</a></li>
+                  <li><a href="#">책이음서비스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">도서관서비스</a>
+                <ul class="sub">
+                  <li><a href="#">통합도서검색</a></li>
+                  <li><a href="#">새로들어온책</a></li>
+                  <li><a href="#">추천도서목록</a></li>
+                  <li><a href="#">도서대출베스트</a></li>
+                  <li><a href="#">전자책서비스</a></li>
+                  <li><a href="#">오디오북서비스</a></li>
+                  <li><a href="#">원문DB서비스</a></li>
+                  
+
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">온라인신청</a>
+                <ul class="sub">
+                  <li><a href="#">독서문화프로그램 신청 </a></li>
+                  <li><a href="#">도서관 견학신청</a></li>
+                  <li><a href="#">자원봉사신청</a></li>
+                  <li><a href="#">희망도서신청</a></li>
+                  <li><a href="#">서점바로대출 신청</a></li>
+                  <li><a href="#">도서관 대관 신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">열린공간</a>
+                <ul class="sub">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">자주 묻는 질문</a></li>
+                  <li><a href="#">이달의 교육/행사</a></li>
+                  <li><a href="#">사진갤러리</a></li>
+                  <li><a href="#">도서 기증</a></li>
+                  <li><a href="#">독서 동아리</a></li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">나만의도서관</a>
+                <ul class="sub">
+                  <li><a href="#">대출중인 도서</a></li>
+                  <li><a href="#">예약도서</a></li>
+                  <li><a href="#">상호대차 신청현황</a></li>
+                  <li><a href="#">관심도서</a></li>
+                  <li><a href="#">서점바로대출 신청현황</a></li>
+                  <li><a href="#">책나들이 신청현황</a></li>
+                  
+
+                </ul>
+              </li>
+            </ul>
+            <div class="bg"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script>
+      let gnb = document.querySelectorAll("#wrap .menu > ul > li");
+      let sub = document.querySelectorAll("#wrap .menu > ul .sub");
+      gnb.forEach(function (value, key) {
+        value.onmouseenter = function () {
+          document.querySelector("#wrap header").style.backgroundColor = "#fff";
+          document.querySelector(
+            "#wrap header .logo a"
+          ).style.backgroundPosition = "0 -47px";
+          sub.forEach(function (value, key) {
+            value.classList.add("on");
+          });
+          document.querySelector("#wrap .menu .bg").classList.add("on");
+        };
+
+        value.onmouseleave = function () {
+          document.querySelector("#wrap header").style.backgroundColor =
+            "transparent";
+          document.querySelector(
+            "#wrap header .logo a"
+          ).style.backgroundPosition = "0 0";
+          sub.forEach(function (value, key) {
+            value.classList.remove("on");
+          });
+          document.querySelector("#wrap .menu .bg").classList.remove("on");
+        };
+      });
+    </script>
+  </body>
+</html>

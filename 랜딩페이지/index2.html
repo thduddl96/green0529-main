@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: rgb(0, 0, 0);
+        background: rgb(241, 233, 233);
+      }
+      #parallax {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+      .item {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section:nth-child(2n) {
+        background: #222;
+        border-radius: 200px 0 0 0;
+      }
+      .num {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 5vw;
+      }
+      .item_img {
+        width: 10vw;
+        height: 10vw;
+        background-size: cover;
+        background-position: center;
+        margin: 1vw;
+      }
+
+      /* #section8 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+      } */
+
+      .item_text {
+        font-size: 12vw;
+      }
+
+      #section8 {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="parallax">
+      <section id="section8" class="item">
+        <div class="num"></div>
+        <div class="item_text t1">Long run</div>
+        <div class="item_text t2">Successful</div>
+        <div class="item_text t3">Youth</div>
+        <div class="item_img i1"></div>
+      </section>
+    </main>
+    <div class="slogan">
+      <strong>publisher</strong>
+      <div class="box">box</div>
+    </div>
+    <section class="MainPortfolio">
+      <h2 class="blind">portfolio</h2>
+      <div class="slide_wrap">
+        <div class="slide">
+          <span>circle</span>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>01 <span>이마트24</span></h3>
+              <p>
+                브랜드의 컬러를 돋보이게 하여 브랜드 이미지를 각인시키고자
+                디자인하였습니다. 원사이트의 내용은 최대한 유지하되 리듬감을 줄
+                수 있도록 레이아웃을 재배치 하였습니다.
+                <span
+                  class="kakao_map_api feature"
+                  style="background: #f6aa1c; color: #202123"
+                  >카카오맵 API</span
+                >를 활용하여 지도를 사용할 수 있게 하였고, 모바일에서도 확인이
+                가능하도록 반응형으로 제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>
+                        HTML5, CSS3, javaScript, jQuery, swiper-slide,
+                        Hamburgers, Kakao map Developer
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>Pretendard, Google Material Icons, Feather Icons</td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #f9bb00">#f9bb00</span>
+                        <span style="background-color: #dc2f34">#DC2F34</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a
+                  href="https://wwwoojung.github.io/emart24_web/"
+                  target="_blank"
+                  >WEB SITE</a
+                >
+                <a href="https://www.emart24.co.kr/" target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/8DO828PqyksSi3dBFpKkCV/emart24?type=design&node-id=0%3A1&mode=dev&t=dkH2SMzSPSe9EZOV-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img src="./images/p01.png" alt="" />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_emart24.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>02 <span>경희대학교</span></h3>
+              <p>
+                <span class="gnuboard feature" style="background: #990e17"
+                  >그누보드</span
+                >를 활용하여 서브페이지 조립 및 게시판을 사용할 수 있도록
+                하였습니다.<br />
+                대학교 홈페이지의 특성상 명확한 정보전달과 깔끔한 느낌을 줄 수
+                있도록 그리드를 활용하여 내용을 정렬하고, 아이콘을
+                활용하였습니다. 모바일에서도 확인이 가능하도록 반응형으로
+                제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>
+                        HTML5, CSS3, javaScript, jQuery, PHP, 그누보드,
+                        swiper-slide, Hamburgers
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>Pretendard, Google Material Icons</td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #990e17">#990E17</span>
+                        <span style="background-color: #243971">#243971</span>
+                        <span style="background-color: #b49759">#b49759</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a href="http://woojiportfolio1.dothome.co.kr/" target="_blank"
+                  >WEB SITE</a
+                >
+                <a
+                  href="https://www.khu.ac.kr/kor/main/index.do"
+                  target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/cmevsBPFynXnZrq7iEdLF5/KHU?type=design&mode=dev&t=dkH2SMzSPSe9EZOV-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img src="./images/p02.png" alt="" />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_KHU.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>03 <span>Le Labo</span></h3>
+              <p>
+                <span
+                  class="gnuboard feature"
+                  style="background-color: #ffffff; color: #202123"
+                  >그누보드</span
+                >를 활용하여 서브페이지 조립 및 게시판을 사용할 수 있도록
+                하였으며, 유저에게 필요한 정보와 브랜드의 특색이 잘 드러나는
+                이미지를 위주로 배치했습니다. 모바일에서도 확인이 가능하도록
+                반응형으로 제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>
+                        HTML5, CSS3, javaScript, jQuery, PHP, 그누보드,
+                        swiper-slide, Hamburgers
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>Pretendard, Noto Serif, Google Material Icons</td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #f6f8f6">#F6F8F6</span>
+                        <span
+                          style="
+                            background-color: #202123;
+                            border: 1px solid rgba(255, 255, 255, 0.25);
+                          "
+                          >#202123</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a href="http://helloworld.dothome.co.kr/" target="_blank"
+                  >WEB SITE</a
+                >
+                <a href="https://www.lelabofragrances.co.kr/" target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/EED8bFGGea3thzwMQqdIK9/%EB%A5%B4%EB%9D%BC%EB%B3%B4?type=design&node-id=0%3A1&mode=dev&t=IDxCMKAwRYlexULl-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img src="./images/p03.png" alt="" />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_Lelabo.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>04 <span>부산도서관</span></h3>
+              <p>
+                <span
+                  class="fullpage feature"
+                  style="background: #66c6f0; color: #202123"
+                  >풀페이지</span
+                >의 특성을 살리기 위해 1440px 그리드 시스템을 사용했으며, 탭
+                메뉴와 슬라이드를 활용하여 정보를 효율적으로 전달할 수 있도록
+                디자인 했습니다.<br />
+                흐르는 텍스트 애니메이션과 그림자를 활용하여 역동성을 주었고,
+                모바일에서도 확인이 가능한 반응형으로 제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>HTML5, CSS3, jQuery, FullPage, swiper-slide</td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>Pretendard, Google Material Icons, Feather Icons</td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #123a6e">#123a6e</span>
+                        <span style="background-color: #66c6f0">#66C6F0</span>
+                        <span style="background-color: #f1f7fe">#F1F7FE</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a
+                  href="https://wwwoojung.github.io/BUSAN-library/"
+                  target="_blank"
+                  >WEB SITE</a
+                >
+                <a
+                  href="https://library.busan.go.kr/busanlibrary/index.do"
+                  target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/oF21boYjahkxm6Ln0pzpcr/%EB%B6%80%EC%82%B0%EB%8F%84%EC%84%9C%EA%B4%80?type=design&node-id=0%3A1&mode=dev&t=nwqbVl9rnYnVNZEO-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img src="./images/p04.png" alt="" />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_Busan_library.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>05 <span>청담우리동물병원</span></h3>
+              <p>
+                <span class="gnuboard feature" style="background: #2455c5"
+                  >그누보드</span
+                >를 활용하여 서브페이지 조립 및 게시판을 사용할 수 있도록
+                하였으며,
+                <span class="kakao_map_api feature" style="background: #2455c5"
+                  >카카오맵 API</span
+                >를 사용하여 지도를 이용할 수 있도록 하였습니다.<br />
+                다양한 정보를 보기쉽게 전달하기 위하여 1440px 그리드 시스템으로
+                넓게 디자인 하였고, 모바일에서도 확인이 가능하도록 반응형으로
+                제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>
+                        HTML5, CSS3, javaScript, jQuery, swiper-slide, PHP,
+                        그누보드, Kakao map Developer
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>Noto Sans KR, Google Material Icons</td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #2455c5">#2455C5</span>
+                        <span style="background-color: #a4d1ff">#A4D1FF</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a href="http://woojiportfolio3.dothome.co.kr/" target="_blank"
+                  >WEB SITE</a
+                >
+                <a href="http://www.chungdamah.co.kr/" target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/licMk8i4k8p6qsgP1Cg1Zd/%EC%B2%AD%EB%8B%B4%EC%9A%B0%EB%A6%AC%EB%8F%99%EB%AC%BC%EB%B3%91%EC%9B%90?type=design&node-id=0%3A1&mode=dev&t=UhPPOegvMdzcb4P3-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img
+                    src="./images/screencapture-woojiportfolio3-dothome-co-kr-2024-03-17-22_16_44.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_animal_hospi.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide con">
+          <div class="inner">
+            <div class="desc">
+              <h3>06 <span>BOUCHERON</span></h3>
+              <p>
+                유저에게 필요한 정보들로 홈페이지를 재구성하고,
+                <span class="feature" style="background: #014841"
+                  >SVG 애니메이션</span
+                >을 활용하여 유연한 느낌으로 리뉴얼하였습니다. 모바일에서도
+                확인할 수 있도록 반응형으로 제작되었습니다.
+              </p>
+              <div class="table">
+                <table class="desc_table">
+                  <caption class="blind">
+                    option
+                  </caption>
+                  <colgroup>
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>TYPE</th>
+                      <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                    </tr>
+                    <tr>
+                      <th>TOOLS</th>
+                      <td>HTML5, CSS3, jQuery, slick-slide</td>
+                    </tr>
+                    <tr>
+                      <th>FONT</th>
+                      <td>
+                        Noto Sans KR, DM Serif Text<br />
+                        Google Material Icons, xeicon
+                      </td>
+                    </tr>
+                    <tr class="color">
+                      <th>COLOR</th>
+                      <td>
+                        <span style="background-color: #014841">#014841</span>
+                        <span style="background-color: #ffffff">#FFFFFF</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="link">
+                <a href="https://wwwoojung.github.io/Boucheron/" target="_blank"
+                  >WEB SITE</a
+                >
+                <a href="https://www.boucheron.com/ko/" target="_blank"
+                  >ORIGINAL</a
+                >
+                <a
+                  href="https://www.figma.com/file/4vjJdSpiN1fKFA0zb8pE7M/BOUCHERON?type=design&node-id=0%3A1&mode=dev&t=zC86sp9MsYqSfYNa-1"
+                  target="_blank"
+                  >DESIGN : FIGMA</a
+                >
+              </div>
+            </div>
+            <div class="mokup">
+              <div class="main_mokup">
+                <div class="line">
+                  <img src="./images/mokup.png" alt="" />
+                </div>
+                <div class="pof">
+                  <img src="./images/p06.png" alt="" />
+                </div>
+              </div>
+              <div class="web_mokup">
+                <img src="./images/web_mock_up_Boucheron.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      const ani8 = gsap.timeline();
+      ani8
+        .from("#section8 .t1", { x: innerWidth * 1 })
+        .from("#section8 .t2", { x: innerWidth * -1 })
+        .from("#section8 .t3", { x: innerWidth * 1 })
+        .from("#section8 .i1", { x: innerWidth * 1, rotation: 360, scale: 5 });
+      //from이랑 to 개념 잘 알아두기
+      ScrollTrigger.create({
+        animation: ani8,
+        trigger: "#section8",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+      const ani9 = gsap.timeline();
+      ani9
+        .to("#section9 .i1", {
+          //있는 상태에서 커지면 from이 아니라 to를 써야함.
+          scale: 20,
+        })
+        .to("#section9 .i1", { scale: 1 });
+      //from이랑 to 개념 잘 알아두기
+
+      ScrollTrigger.create({
+        animation: ani9,
+        trigger: "#section9",
+        //markers: true,
+        start: "top top",
+        //end:"+=2000",
+        pin: true,
+        scrub: 1,
+        id: "box1",
+        anticipatePin: 1,
+      });
+    </script>
+  </body>
+</html>

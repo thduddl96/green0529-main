@@ -3,7 +3,7 @@
   --white-color: #ffffff;
   --black-color: #202123;
   --gray-color: #999999;
-  --primary-color: #123a6e;
+  --primary-color: #0d7f72;
   --secondary-color: #f1f7fe;
   --third-color: #66c6f0;
   --deco-color: #ecf0f3;
@@ -870,8 +870,9 @@
 
   background: var(--primary-color);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 0 200px 200px 0;
 }
-
+/* 카테고리 부분 둥글게 하는 것 */
 .MainCuration .title_area .title {
   position: relative;
   z-index: 1;

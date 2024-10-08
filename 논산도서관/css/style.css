@@ -76,41 +76,7 @@
 #Header.on .util > ul > li > a {
   color: var(--black-color);
 }
-/* 여기서부터 메뉴 시작 */
-ul.menu > li .sub {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  top: 42px;
-  transform: translateY(-8px);
-  opacity: 0;
-  transition: 0.3s;
-  z-index: 2;
-}
-ul.menu > li .sub a {
-  display: block;
-  line-height: 50px;
-  background: #fff;
-  color: #555;
-  font-family: "Noto Sans kr";
-  text-align: center;
-  font-weight: 500;
-  letter-spacing: -1px;
-}
 
-ul.menu > li:hover > a {
-  color: #dbab72;
-}
-ul.menu > li:hover .sub {
-  opacity: 1;
-  transform: translateY(0);
-}
-ul.menu > li .sub a:hover {
-  background: #dbab72;
-  color: #fff;
-}
-/* 메뉴 끝. 삭제할 거면 여기까지 삭제하기 */
 #Header .header_wrap .mopen {
   display: none;
 

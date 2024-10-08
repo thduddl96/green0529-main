@@ -1,0 +1,107 @@
+canvas {
+  display: block;
+  margin: 2em;
+}
+.bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-image: linear-gradient(to top, #d7dde6 40%, #97a8c0 80%);
+  background-size: cover;
+  width: 400vw;
+  height: 400vh;
+}
+.con h1 {
+  color: blue;
+  margin: 0 auto;
+}
+.MainTitle .title_wrap .inner {
+  position: relative;
+  height: 100%;
+}
+
+.MainTitle .title_wrap .inner .key_box {
+  width: 100%;
+  height: 100%;
+}
+
+.MainTitle .title_wrap .inner .keyword {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+  display: block;
+
+  font-family: "Pretendard Variable";
+  font-size: 900px;
+  font-weight: 900;
+
+  text-shadow: 6px 6px 10px rgba(11, 0, 97, 0.5),
+    -6px -6px 10px rgba(255, 255, 255, 0.1);
+
+  color: var(--bg_color);
+  user-select: none;
+}
+
+.MainTitle .title_wrap .inner .word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -75%);
+  z-index: 2;
+}
+
+.MainTitle .title_wrap .inner .word span {
+  display: block;
+  color: var(--white_color);
+
+  margin: 0 0 8px 0;
+  font-size: 60px;
+  font-weight: 800;
+
+  user-select: none;
+}
+
+.MainTitle .title_wrap .slogan {
+  position: absolute;
+  bottom: 300px;
+  left: 50%;
+  transform: translate(-30%, 0);
+}
+
+.MainTitle .title_wrap .slogan > strong {
+  display: block;
+
+  font-size: 100px;
+  font-weight: 800;
+  -webkit-text-stroke: 1px var(--white_color);
+  color: transparent;
+
+  display: inline-block;
+
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.MainTitle .title_wrap .slogan .box {
+  position: absolute;
+  margin: 0 auto 0 0;
+
+  bottom: 20px;
+  left: 750px;
+  /* right: 0; */
+
+  width: 0;
+  height: 1px;
+  background: var(--white_color);
+
+  font-size: 0;
+}

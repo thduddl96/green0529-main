@@ -330,7 +330,7 @@ a {
 .voiceWrap .voice > p img {
   width: 700px;
   border-radius: 20px;
-  border: 1px solid;
+  /
 }
 /* 갤러리 모음 시작 */
 ul.gallery {

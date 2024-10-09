@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logitech</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./library/reset.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/animation.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- js -->
+    <script src="./library/jquery-3.7.1.min.js"></script>
+    <script src="./javascript/index.js" defer></script>
+    <script src="./common/header.js" defer></script>
+    <!-- plugin css -->
+    <link rel="stylesheet" href="./library/jquery.fullPage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- plugin js -->
+    <script src="./library/jquery.fullPage.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html"><img src="./images/Logitech_logo_white.png" alt="logitech"></a></h1>
+        <nav>
+            <a href="./pages/intro.html">회사소개<span><img src="./images/Forward.png" alt="회사소개"></span></a>
+            <a href="./pages/product.html">제품<span><img src="./images/Forward.png" alt="제품"></span></a>
+            <a href="./pages/support.html">지원<span><img src="./images/Forward.png" alt="지원"></span></a>
+        </nav>
+        <ul class="side_menu">
+            <li><a href="#"><img src="./images/email.png" alt="email"></a></li>
+            <li>
+                <a href="#"><img src="./images/search.png" alt="search"></a>
+                <div class="search_box">
+                    <div class="txt">
+                        <h3>검색하기</h3>
+                        <a href="#" class="close_search"></a>
+                    </div>
+                    <form method="get" id="user_search_form">
+                        <input type="text" name="" id="">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            </li>
+            <li><a href="#"><img src="./images/myProfile.png" alt="my profile"></a></li>
+        </ul>
+        <div class="m-menu_btn">
+            <a href="#"><img src="./images/m-menu.png" alt="전체메뉴"></a>
+        </div>
+        <div id="header_clone_area">
+            <a href="#" class="close_btn"><img src="./images/close_menu.svg" alt="메뉴닫기"></a>
+        </div>
+        <div class="m_bg"></div>
+    </header>
+    <main id="fullPage_wrap">
+        <div class="sec01 section">
+            <div class="sec01_wrap">
+                <div class="txt">
+                    <div class="image"><img src="./images/logo_icon.png" alt="logitech"></div>
+                    <p>
+                        <span>연결의 주역, 로지텍이 이끄는 디지털 세상</span>
+                        <span>로지텍은 디지털 시대를 선도하는 혁신과 디자인의 새로운 기준을 제시합니다</span>
+                    </p>
+                </div>
+                <video src="./video/videoplayback.mp4" data-autoplay muted loop></video>
+            </div>
+        </div>
+        <div class="sec02 section">
+            <div class="txt">
+                <div class="top">
+                    <span>They Offer high-performance</span>
+                    <span>Gaming peripherals</span>
+                </div>
+                <p>고성능 제품과 함께</p>
+            </div>
+            <div class="images">
+                <img src="./images/sec02_keycap4.png" alt="">
+                <img src="./images/sec02_keycap.png" alt="">
+                <img src="./images/sec02_keycap5.png" alt="">
+                <img src="./images/sec02_keycap.png" alt="">
+                <img src="./images/sec02_keyboard.png" alt="">
+            </div>
+        </div> 
+        <div class="sec03 section">
+            <div class="sec03_wrap">
+                <div class="txt">
+                    <h2>CHECKING ORDER STATUS</h2>
+                    <p>제품의 자세한 사양을 알아보세요</p>
+                    <a href="./pages/product.html" class="move_btn">Move<span></span></a>
+                </div>
+                <div class="swiper-container images_list">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"><a href="#"><img src="./images/sec03_item01.png" alt=""></a></div>
+                        <div class="swiper-slide slide2"><a href="#"><img src="./images/sec03_item02.png" alt=""></a></div>
+                        <div class="swiper-slide slide3"><a href="#"><img src="./images/sec03_item03.png" alt=""></a></div>
+                        <div class="swiper-slide slide3"><a href="#"><img src="./images/sec03_item04.png" alt=""></a></div>
+                        <div class="swiper-slide slide3"><a href="#"><img src="./images/sec03_item05.png" alt=""></a></div>
+                        <div class="swiper-slide slide3"><a href="#"><img src="./images/sec03_item06.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sec04 디자인에 어울리지 않다 생각하여 제거 -->
+<!--    <div class="sec04 section">
+            <div class="sec04_wrap">
+                <h2>
+                    <span>Logitech의 브랜드로</span>
+                    <span>한 단계 더 높은 가치를 제공합니다.</span>
+                </h2>
+                <div class="sec04_contents">
+                    <div class="images">
+                        <img src="./images/cork-office-building.jpg" alt="">
+                    </div>
+                    <ul class="sec04_g">
+                        <li>
+                            <div class="intro">
+                                <h3>
+                                    <span>headquarters</span>
+                                    <span>회사 소개</span>
+                                </h3>
+                            </div>
+                            <div class="sec04_btn">
+                                <a href="#" class="move_btn">Move<span></span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro">
+                                <h3>
+                                    <span>Business</span>
+                                    <span>비즈니스</span>
+                                </h3>
+                            </div>
+                            <div class="sec04_btn">
+                                <a href="#" class="move_btn">Move<span></span></a>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <div class="sec05 section">
+            <div class="txt">
+                <div class="txt_bg_ani"></div>
+            </div>
+            <div class="images">
+                <img src="./images/sec05_img01.png" alt="">
+                <img src="./images/sec05_main.png" alt="">
+                <img src="./images/sec05_img02.png" alt="">
+            </div>
+        </div>
+        <footer class="section fp-auto-height">
+            <div class="footer_wrap">
+                <ul class="ft_nav">
+                    <li>
+                        <a href="#">소개</a>
+                        <ul>
+                            <li><a href="#">연락처</a></li>
+                            <li><a href="#">채용</a></li>
+                            <li><a href="#">파트너 개발자 랩</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">웹 개인정보 보호정책</a>
+                        <ul>
+                            <li><a href="#">제품 개인정보 보호정책</a></li>
+                            <li><a href="#">쿠키 설정</a></li>
+                            <li><a href="#">사이트 맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이메일 설정</a>
+                        <ul>
+                            <li><a href="#">이메일 등록 페이지</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ft_mid">
+                    <div class="ft_mid_left">
+                        <p>고객 지원 센터 (제품 및 A/S 문의처) / 전화 지원 (수신자부담) </p>
+                        <p>사업자 등록번호: 107-86-10308 </p>
+                        <p>로지텍 코리아 대표이사 : PAO, YA-CHING</p>
+                        <p>서울특별시 영등포구 여의공원로 101, CCMM 빌딩 402B</p>
+                    </div>
+                    <ul class="ft_mid_right">
+                        <li><a href="#"><img src="./images/discord.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/x_logo.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <p class="copy">© 2024 로지텍. All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

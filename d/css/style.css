@@ -653,9 +653,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0 40px;
   background: var(--bg_color_02);
+
   min-height: 650px;
   font-family: "Pretendard Variable";
 
@@ -690,6 +690,7 @@
   width: 550px;
   /* height: 2; */
   gap: 2px;
+  /* box-shadow: rgb(255, 0, 0); */
 }
 
 .MainTraining .tab_con .con .itm strong {
@@ -701,19 +702,19 @@
 
 .MainTraining .tab_con .con .itm p {
   line-height: 20px;
-  margin: 0 0 24px;
+  margin: 0 0 10px;
 
   min-height: 40px;
 }
 
 .MainTraining .tab_con .con .itm a {
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 4px;
+  padding: 10px 42px;
+  border-radius: 10px;
 }
 
 .MainTraining .tab_con .con:nth-of-type(1) .itm a {
-  background: #fca311;
+  background: #e3c997;
 }
 
 .MainTraining .tab_con .con:nth-of-type(2) .itm a {

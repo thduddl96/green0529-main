@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: montserrat;
+  src: url(../webfonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: nanum;
+  src: url(../webfonts/NanumSquareR.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../webfonts/PretendardVariable.woff2') format('woff2-variations');
+}
+*{margin: 0; padding: 0;}
+*{cursor: ;}
+ul{list-style: none;}
+h1, span{font-family: montserrat;}
+p{font-family: 'Pretendard Variable';}
+a{font-family: 'Pretendard Variable'; text-decoration: none;}
+
+.menuwrap{position: fixed; left: 50%; transform: translateX(-50%); top: 0; z-index: 999; width: 90%; max-width: 1800px; display: flex; flex-direction: row;justify-content: space-between; align-items: center;padding: 10px 0; border-bottom: 2px solid #000;}
+.menuwrap .name p{font-size: 18px;font-family: 'montserrat';}
+#menu{display: flex; flex-direction: row; gap: 50px; align-items: center;}
+#menu li:first-child a, #menu li:nth-child(2) a, #menu li:nth-child(3) a{font-size: 24px; font-weight: 400; letter-spacing: -1px; font-family: 'montserrat';}
+#menu li a{font-weight: 300; font-size: 18px; color: #000; font-family: 'montserrat';}
+
+#section0 .wrap{width: 100%; height: 100%;display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+#section0 .wrap h1{font-size: 96px; font-weight: 900; margin-bottom: 20px;}
+#section0 .wrap p span{font-family: 'Pretendard Variable'; font-weight: bold;}
+#section0 .wrap p{font-size: 18px; line-height: 25px;}
+
+#section1 .about{width: 90%; max-width: 1280px; height: 700px;display: flex; flex-direction: row; margin: 0 auto; padding: 80px; box-sizing: border-box; border-radius: 100px; border: 1px solid; gap: 40px; transform: translateY(140px);}
+#section1 .left{flex: 0 0 30%;  transition: 0.3s;}
+#section1 .left p {width: 210px; height: 280px;border-radius: 40px; overflow: hidden; margin: 0 auto;}
+#section1 .left p img{width: 100%; height: 100%; object-fit: cover;}
+
+#section1 .about:hover{box-shadow: 0 0 10px rgb(117, 255, 193);}
+#section1 .right>li{padding: 30px 0; line-height: 30px; font-size: 20px;}
+#section1 .right h2{font-size: 36px; font-weight: 800; line-height: 46px;}
+#section1 .right li:first-child{display: flex; flex-direction: row; gap: 20px;}
+#section1 .right li:first-child a{padding: 8px 12px; display: inline-block; border: 1px solid #000; color: #000; font-size: 15px; transition: 0.2s;}
+#section1 .right li:first-child a:hover{background-color: #000; color: #fff;}
+#section1 .right>li:nth-child(2) p:hover{background-color: #eee;}
+#section1 .right span{color: #797979; font-size: 14px;}
+#section1 .right .icon{display: flex; flex-direction: row; column-gap: 5px;}
+#section1 .right .icon li{display: flex; flex-direction: column; font-size: 13px;}
+#section1 .right .icon li p{width: 44px; height: 44px;}
+#section1 .right .icon li p img{width: 100%; height: 100%; object-fit: cover;}
+#section1 .right li:last-child>p{margin-bottom: 10px;}
+
+.conwrap{width: 90%; width: 1280px; margin: 0 auto; display: flex; flex-direction: row; padding: 150px 0; justify-content: space-between;}
+.conwrap .title{margin-bottom: 70px;}
+.conwrap .left{display: flex; flex-direction: column; row-gap: 50px; }
+.conwrap .left .inner{font-size: 20px; line-height: 30px;}
+.conwrap .left .inner span{font-family: 'Pretendard Variable'; background-color: #ddd;}
+.conwrap .left .color span{display: inline-block; width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.conwrap .left .color span:first-child{background-color: #BED8F0;}
+.conwrap .left .color span:nth-child(2){background-color: #3873AB;}
+.conwrap .left .color span:nth-child(3){background-color: #FFDD00; opacity: 0.5;}
+.conwrap .left .btn a{color: #000; padding: 20px 30px; border: 1px solid #000; margin-right: 10px;transition: 0.2s;}
+.conwrap .left .btn a:hover{background-color: #000; color: #fff;}
+.conwrap .right{transform: translateY(50px); }
+
+#section7 h1{width: 100%; height: 100%;;display: flex; justify-content: center; align-items: center; }

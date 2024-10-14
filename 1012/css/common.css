@@ -1,0 +1,1052 @@
+@charset "UTF-8";
+/* @font-face {
+    font-family: 'subway';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/Subway-Footlong.eot);
+    src: url(../font/Subway-Footlong.eot?#iefix) format('embedded-opentype'),
+         url(../font/Subway-Footlong.woff) format('woff'),
+         url(../font/Subway-Footlong.ttf) format('truetype');
+} */
+
+/* html의 모든 요소와 가상요소선택자에 border-box사용하여 padding, border사용시
+늘어나지않게함 */
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+code,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/*html5추가 시멘틱엘리먼트를 익스하위버전에서 블럭으로 인식되도록함*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+/* button태그에 손모양 커서 */
+button {
+  cursor: pointer;
+}
+
+/* 익스하위버전에서 이미지 선없애기 */
+fieldset,
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+/* 반응형에서 이미지 원본크기보다 커지지않고 줄어들수는 있게함 */
+img {
+  max-width: 100%;
+}
+
+/* 리스트 기호 빼기 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 태그 기본 기울임꼴 제거 */
+address,
+em {
+  font-style: normal;
+}
+
+/* 페이지안에서 가장 많은 링크색 지정 */
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* iframe으로 외부컨텐츠를 연결했을때
+외부컨텐츠안쪽내용이 우리페이지에 영향을 주지못하도록 가려줌
+iframe아래쪽 간격없애기
+*/
+iframe {
+  overflow: hidden;
+  border: 0;
+  vertical-align: top;
+}
+
+/* 칸의 선을 합치기, 칸의 간격없애기, 가로를 늘려줌 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* 굵기 빼고 헤딩태그 폰트크기를 body에 선언한 크기와 일치시킴 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/* 폼요소의 높이가 다를때 요소끼리 세로정렬시킴 */
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+/* textarea 리사이즈기능 빼기 */
+textarea {
+  resize: none;
+}
+
+/* 페이지안의 모든 폰트의 줄간격을 1.5로 통일시킴
+모바일 크롬, 모바일 사파리 브라우져의 텍스트 자동확대 방지
+*/
+body {
+  line-height: 1.5;
+  -webkit-text-size-adjust: none;
+}
+
+/* legend,caption,메뉴제목,섹션제목 블라인드 */
+legend,
+caption,
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+/* 공통스타일 */
+/* 선택영역 컬러 변경*/
+/* ::-moz-selection {background: #009223; color:#fff;}
+::selection {background: #009223; color:#fff;} */
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* skip Navgation */
+/* #skipNavi a { position: absolute; left: 0; top: -1000px; width: 100%; line-height: 40px; background: rgba(28, 28, 28, 0.8); color: #fff; z-index: 99999; text-align: center; transform: translateY(-100%); }
+
+#skipNavi a:focus { transform: translateY(0); top:0;} */
+
+body,
+input,
+select,
+textarea,
+button,
+table {
+  font-family: "Noto Sans KR", "돋움", dotum, "Helvetica Neue",
+    "Apple SD Gothic Neo", sans-serif;
+  font-size: 15px;
+  color: #666;
+}
+
+/* placeholder공통 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bbb;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bbb;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbb;
+  opacity: 1; /* Firefox */
+}
+
+/* 폼요소 공통스타일 */
+input[type="checkbox"] + label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 40px;
+  color: #292929;
+  line-height: 30px;
+  display: inline-block;
+}
+input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #dddddd;
+  border-radius: 50%;
+}
+input[type="checkbox"] + label em {
+  color: #009223;
+}
+/* input[type="checkbox"]:checked + label:before {
+    background: url(../images/icon_checkbox.png) no-repeat 50% 50%;
+    background-size: 50%;
+} */
+input[type="checkbox"] + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 24px;
+  height: 20px;
+  background: url(../images/icon_checkbox.png) no-repeat;
+  width: 0;
+  transition: all 0.3s;
+}
+input[type="checkbox"]:checked + label:after {
+  width: 24px;
+}
+
+/* 셀렉트 공통 */
+.select_wrap {
+  display: inline-block;
+  border: 2px solid #dddddd;
+  width: 196px;
+  position: relative;
+  margin-right: 7px;
+}
+.select_wrap:after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 20px;
+  width: 12px;
+  height: 7px;
+  background: url(../images/icon_select_arr.png) no-repeat;
+}
+.select_wrap select {
+  height: 41px;
+  border: none;
+  width: 100%;
+  color: #999;
+  text-indent: 9px;
+  background: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+textarea {
+  background: #f8f8f8;
+  border: none;
+  width: 100%;
+  height: 230px;
+}
+
+/* 파일선택폼 */
+.file_wrap {
+  width: 364px;
+  display: inline-block;
+  border: 2px solid #dddddd;
+  padding-right: 98px;
+  position: relative;
+}
+.file_wrap input[type="text"] {
+  background: none !important;
+  height: 41px !important;
+  text-indent: 13px;
+}
+.file_wrap label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 98px;
+  height: 41px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 41px;
+  color: #009223;
+  font-weight: 500;
+}
+.file_wrap label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 2px;
+  height: 16px;
+  background: #e8e8e8;
+}
+
+body.on {
+  overflow: hidden;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 모바일단말 최소가로는 320이미만 최근단말기 가로는
+안드로이드기준 360이므로 최소사이즈를 360으로 설정 */
+#wrap {
+  min-width: 360px;
+}
+
+/* 가로모드시 팝업 */
+/* #rotateMobile {position: fixed; left: 0; top:0; background: rgba(0,0,0,0.9) url(../images/smartphone-logo-mobile-phones-png-favpng-affX6A8V6m2LMPNWQwpeARFj8.jpg) no-repeat 50% 50%; background-size: 200px; width:100%; height: 100%; z-index: 9999; display: none;} */
+
+/*********************** 데스크탑 **********************/
+#header {
+}
+#header .header_inner {
+}
+#header .header_inner .logo_box {
+  margin-top: 40px;
+  text-align: center;
+  animation: logo 2s infinite linear;
+}
+#header .header_inner .logo_box .logo img {
+  width: 115px;
+  height: 115px;
+}
+#header .header_inner .logo_box .m_logo {
+  display: none;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/************************************* main **********************************/
+
+#main .main_inner {
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+}
+
+#main .main_inner ul {
+  text-align: center;
+}
+#main .main_inner li:first-child {
+  color: #273ccf;
+  font-weight: 900;
+  font-size: 8rem;
+  padding-top: 40px;
+}
+
+#main .main_inner li:nth-child(2) {
+  color: #273ccf;
+  font-weight: 900;
+  font-size: 8rem;
+}
+
+#main .main_inner li:nth-child(3) {
+  color: #273ccf;
+  font-weight: 900;
+  font-size: 8rem;
+  margin-top: 60px;
+}
+
+.typing-txt {
+  display: none;
+}
+.typing ul li {
+  display: block;
+}
+.typing ul li.on {
+  display: inline-block;
+  animation-name: cursor;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+.typing ul li.on:nth-child(3) {
+  line-height: 100px;
+  display: inline-block;
+  animation-name: cursor;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes cursor {
+  0% {
+    border-right: 4px solid #00adef;
+    padding-right: 10px;
+  }
+  50% {
+    border-right: 4px solid #273ccf;
+    padding-right: 10px;
+  }
+  100% {
+    border-right: 4px solid #00adef;
+    padding-right: 10px;
+  }
+}
+
+/***************************** section1 ********************************/
+
+#main .section1 {
+  width: 100%;
+  margin-top: 120px;
+}
+#main .section1 .sticker {
+  text-align: center;
+}
+
+#main .section1 .portfolio {
+  background: #f8f9fa;
+  padding-bottom: 40px;
+}
+#main .section1 .portfolio h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #273ccf;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#main .section1 .portfolio .portfolio_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+  overflow: hidden;
+  padding: 20px 20px 20px 20px;
+}
+
+#main .section1 .portfolio .portfolio_inner .text_box {
+  float: left;
+}
+
+#main .section1 .portfolio .portfolio_inner .text_box h3 {
+  padding-top: 40px;
+  font-size: 32px;
+  color: #273ccf;
+  font-weight: 600;
+}
+
+#main .section1 .portfolio .portfolio_inner .text_box p {
+  padding-top: 8px;
+  font-size: 16px;
+  color: #585e63;
+}
+
+#main .section1 .portfolio .portfolio_inner .text_box button {
+  margin-top: 24px;
+  width: 84px;
+  height: 33px;
+  background: #273ccf;
+  border: none;
+}
+
+#main .section1 .portfolio .portfolio_inner .text_box button a {
+  font-size: 16px;
+  color: #fff;
+  line-height: 33px;
+  display: block;
+}
+
+#main .section1 .portfolio .portfolio_inner .img_box {
+  float: right;
+  text-align: center;
+  max-width: 650px;
+  margin-top: 150px;
+}
+
+/*************************** skill ******************************/
+#main .section2 {
+}
+#main .section2 .skill {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#main .section2 .skill h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #273ccf;
+  text-align: center;
+  padding-top: 80px;
+}
+#main .section2 .skill .skill_inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#main .section2 .skill .skill_inner .skill_box {
+  margin-top: 40px;
+  float: left;
+}
+
+#main .section2 .skill .skill_inner .skill_box:nth-child(2) {
+  margin-left: 100px;
+}
+
+#main .section2 .skill .skill_inner .skill_box li {
+  color: #273ccf;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 40px;
+}
+#main .section2 .skill .skill_inner .skill_box .bar1 {
+  margin-top: 8px;
+  height: 23px;
+  width: 300px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar1::after {
+  content: "100%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+@keyframes bar {
+  0% {
+    background-color: #9ec5fe;
+  }
+  40% {
+    background-color: #6ea8fe;
+  }
+  80% {
+    background-color: #3d8bfd;
+  }
+  100% {
+    background-color: #273ccf;
+  }
+}
+#main .section2 .skill .skill_inner .skill_box .bar2 {
+  margin-top: 8px;
+  height: 23px;
+  width: 210px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar2:after {
+  content: "70%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar3 {
+  margin-top: 8px;
+  height: 23px;
+  width: 250px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar3:after {
+  content: "80%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar4 {
+  margin-top: 8px;
+  height: 23px;
+  width: 280px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar4:after {
+  content: "90%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar5 {
+  margin-top: 8px;
+  height: 23px;
+  width: 280px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar5:after {
+  content: "90%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar6 {
+  margin-top: 8px;
+  height: 23px;
+  width: 250px;
+  background: #cfe2ff;
+  animation: bar 3s infinite;
+}
+
+#main .section2 .skill .skill_inner .skill_box .bar6:after {
+  content: "80%";
+  display: block;
+  padding-left: 10px;
+  color: #fff;
+}
+
+/****************************section3***************************/
+
+#main .section3 {
+  margin-top: 120px;
+  background: #f8f9fa;
+}
+
+#main .section3 .about h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #273ccf;
+  text-align: center;
+  padding-top: 80px;
+}
+#main .section3 .about .about_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px 80px 10px;
+}
+
+#main .section3 .about .about_inner p {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #273ccf;
+  padding-top: 8px;
+  text-align: center;
+}
+
+#main .section3 .about .about_inner .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  text-align: center;
+  /*background: #fff;*/
+}
+#main .career {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#main .career .text {
+  margin-top: 80px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #273ccf;
+  display: inline-block;
+}
+#main .career .btn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#main .career .dropdown {
+  display: inline-block;
+}
+#main .career .dropdown .btn {
+  background: url(../images/click.png) 50% 50% no-repeat;
+  width: 29px;
+  height: 29px;
+  animation: pin 2s infinite;
+  transform-origin: left bottom;
+}
+
+@keyframes pin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#main .career .dropdown_text {
+  display: none;
+  position: absolute;
+  background-color: #273ccf;
+  min-width: 350px;
+  z-index: 9999;
+  padding: 10px 10px;
+  color: #fff;
+}
+
+#main .career .dropdown:hover .dropdown_text {
+  display: block;
+}
+
+/*********************************section4***************************************/
+
+#main .section4 {
+  margin-top: 120px;
+  background: #f8f9fa;
+}
+#main .section4 .contact {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#main .section4 .contact h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #273ccf;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#main .section4 .contact .form_box {
+  margin-top: 80px;
+  padding: 40px 35px 50px;
+}
+
+#main .section4 .contact .feedback-input {
+  color: #3c3c3c;
+  font-size: 24px;
+  border-radius: 0;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #273ccf;
+}
+
+#main .section4 .contact .feedback-input:focus {
+  background: #fff;
+  box-shadow: 0;
+  /*border: 3px solid #3498db;*/
+  border-color: #00adef;
+  color: #00adef;
+  outline: none;
+  /*padding: 13px 13px 13px 54px;*/
+}
+
+#main .section4 .contact .submit {
+  width: 312px;
+  margin: 40px auto;
+}
+#main .section4 .contact .btn {
+  float: left; /* 플롯 중요 - 플롯 요소는 문서상 부유(흐르지만)하지만 다음 요소에 영향을 미치게 된다. */
+  width: 100%; /* 부모 400px 영역 안의 100% 사용 */
+  text-align: center;
+  margin-top: -4px;
+  background-color: #273ccf;
+  color: white;
+  font-size: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#main .section4 .contact .btn:hover {
+  /* 버튼에 마우스 오버한 경우에 ::after 요소의 컬러를 애니메이션하기 위해 투명도로 변경 */
+  background-color: transparent;
+  /* or background-color: rgba(0,0,0,0); */
+  color: #273ccf;
+  border: 1px solid #273ccf;
+}
+#main .section4 .contact .submit::after {
+  /*
+     * 요소에 텍스트도 없는 빈 요소이기 때문에 플롯된 요소 영역에 자리잡게 된다.
+     * 만약 텍스트가 있다면 텍스트 노드는 떨어지겠지만 해당 영역은 플롯 요소가 100%를 사용하고 있기 때문에 플롯 요소 영역과 겹친다.
+     */
+  display: block;
+  width: 0;
+  height: 74px;
+  background-color: #fbfbfb;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  transition: 0.3s ease;
+  content: "";
+}
+
+.submit:hover::after {
+  /* 마우스 오버시 width:0 을 100% 로 변경하여 배경컬러를 가득차도록 하여 애니메이션 효과를 나타낸다. */
+  width: 100%;
+  background-color: white;
+}
+
+/*************************************footer*******************************************/
+
+#footer {
+  border-top: 1px solid #273ccf;
+}
+#footer .footer_box {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+}
+#footer .footer_box img {
+  width: 62px;
+  height: 62px;
+}
+
+#footer .footer_box p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #273ccf;
+  text-align: center;
+  font-weight: 600;
+}
+#footer .footer_box .copyright {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #273ccf;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 타블렛분기점 */
+@media screen and (max-width: 1200px) {
+  #main .main_inner {
+    width: 80%;
+  }
+  #main .main_inner li:first-child {
+    color: #273ccf;
+    font-weight: 900;
+    font-size: 6rem;
+  }
+
+  #main .main_inner li:nth-child(2) {
+    color: #273ccf;
+    font-weight: 900;
+    font-size: 6rem;
+  }
+
+  #main .main_inner li:nth-child(3) {
+    color: #273ccf;
+    font-weight: 900;
+    font-size: 4rem;
+    margin-top: 0;
+  }
+
+  #main .section1 {
+    margin-top: 0;
+  }
+}
+
+/* 모바일분기점은 이론적으로 767부터지만 최근 단말기
+가로길이가 780이상인 경우가 있으므로 800으로 설정하면
+모바일단말에서는 landscape(가로모드)에서도 모바일디자인으로 나옴 */
+/* 모바일분기점 */
+@media screen and (max-width: 768px) {
+  #header .header_inner .logo_box {
+    margin-top: 20px;
+  }
+  #header .header_inner .logo_box .logo {
+    display: none;
+  }
+  #header .header_inner .logo_box .m_logo {
+    display: block;
+  }
+
+  #main .section1 .sticker img {
+    width: 20px;
+    margin-top: 20px;
+  }
+
+  #main .main_inner {
+    margin-top: 20px;
+  }
+
+  #main .main_inner li:first-child {
+    color: #273ccf;
+    font-weight: bold;
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  #main .main_inner li:nth-child(2) {
+    color: #273ccf;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+
+  #main .main_inner li:nth-child(3) {
+    color: #273ccf;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 0;
+    line-height: 38.6px;
+    display: none;
+  }
+
+  #main .section1 .portfolio .portfolio_inner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background: #fff;*/
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  #main .section1 .portfolio .portfolio_inner .img_box {
+    max-width: 100%;
+  }
+
+  #main .section1 .portfolio h2,
+  #main .section2 .skill h2,
+  #main .section3 .about h2,
+  #main .section4 .contact h2 {
+    font-size: 28px;
+  }
+  #main .section1 .portfolio .portfolio_inner .text_box h3 {
+    font-size: 24px;
+  }
+
+  #main .section2 .skill .skill_inner .skill_box {
+    padding-left: 20px;
+  }
+
+  #main .section2 .skill .skill_inner .skill_box:nth-child(2) {
+    margin-left: 0;
+  }
+
+  #main .section3 .about .about_inner p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  #main .section4 {
+    margin-top: 40px;
+  }
+  #main .section4 .contact .btn {
+    width: 93%;
+  }
+  #main .section4 .contact .form_box {
+    margin-top: 40px;
+  }
+
+  #main .career .text {
+    font-size: 12px;
+  }
+  #main .career .text {
+    margin-top: 40px;
+  }
+  #main .section3 {
+    margin-top: 80px;
+  }
+  #main .section4 .contact .submit {
+    margin: 0;
+  }
+
+  #footer .footer_box {
+    margin-top: 40px;
+  }
+}

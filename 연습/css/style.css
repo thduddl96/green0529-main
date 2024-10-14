@@ -1,0 +1,44 @@
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPMori-Regular.woff) format("woff");
+}
+
+body {
+  font-family: Mori;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #fffce1;
+  background: #0e100f;
+  height: 400vh;
+  text-align: center;
+}
+
+.delayed-section {
+  position: absolute;
+  width: 30vw;
+  height: 38.87vw;
+}
+.delayed-section .inner-container {
+  will-change: transform;
+}
+.delayed-section img {
+  max-width: 100%;
+  will-change: transform;
+}
+
+#del1 {
+  top: 101vh;
+  left: 10vw;
+}
+#del2 {
+  top: 110vh;
+  left: 60vw;
+}
+#del3 {
+  top: 120vh;
+  left: 30vw;
+}

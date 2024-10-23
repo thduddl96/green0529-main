@@ -1,0 +1,16 @@
+@charset "utf-8";
+html,
+body {
+  height: auto;
+}
+.panel {
+  height: 100vh;
+  /*   position: sticky; */ /* causes problems! */
+  top: 0;
+}
+
+.scroll-down {
+  bottom: auto;
+  top: 6vh;
+  position: relative;
+}

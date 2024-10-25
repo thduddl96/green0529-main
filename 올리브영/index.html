@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0813 올리브영learn</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      } /* 참고!! */
+
+      .platforms {
+        width: 90%;
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .platforms .left {
+        width: 40%;
+        position: sticky;
+        top: 100px;
+        height: 100%;
+      }
+      .platforms .right {
+        flex: 1;
+      }
+      .platforms .right ul li::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100px;
+      }
+      .platforms .right ul li .con {
+        display: flex;
+      }
+      .platforms .right ul li .con .number span {
+        display: none;
+      }
+      .platforms .right ul li .con .info {
+        flex: 1;
+      }
+      .platforms .right ul li .con .info .inner {
+        width: 85%;
+        margin: 0 auto;
+      }
+      .platforms .right ul li .con .info .inner img {
+        width: 100%;
+        object-fit: cover;
+      }
+      footer {
+        padding: 500px;
+      }
+
+      @media screen and (max-width: 1169px) {
+        .platforms {
+          flex-direction: column;
+        }
+        .platforms .left {
+          width: 100%;
+          position: relative;
+          top: 0px;
+          height: auto;
+        }
+        .platforms .left ul {
+          display: none;
+        }
+
+        .platforms .right ul li::before {
+          height: 50px;
+        }
+        .platforms .right ul li .con {
+          flex-direction: column;
+        }
+        .platforms .right ul li .con .number span {
+          display: inline-block;
+        }
+        .platforms .right ul li .con .info .inner {
+          width: 96%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="platforms">
+      <div class="left">
+        <h1>OLIVE YOUNG<br />Platforms</h1>
+        <ul>
+          <li><a href="#con1">올리브영 매장</a></li>
+          <li><a href="#con2">올리브영 Online (국내)</a></li>
+          <li><a href="#con3">올리브영 글로벌</a></li>
+          <li><a href="#con4">디플롯</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li id="con1">
+            <div class="con">
+              <p class="number">01<span>올리브영 매장 (국내)</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p>
+                    <img
+                      src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=A7EDD9176F7135A95A9763B96A9E2D69"
+                      alt=""
+                    />
+                  </p>
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                    큐레이션합니다. 또한 체험형 콘텐츠와 커머스 연계를 통해
+                    파트너사들에게 매력적인 브랜딩, 마케팅 채널로 진화하고
+                    있습니다.
+                  </p>
+                  <p><a href="#">올리브영 매장이 보고 싶다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con2">
+            <div class="con">
+              <p class="number">02<span>올리브영 Online (국내)</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p>
+                    <img
+                      src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg;jsessionid=A7EDD9176F7135A95A9763B96A9E2D69"
+                      alt=""
+                    />
+                  </p>
+                  <h1>
+                    고객이 건강한 아름다움을 찾아가는<br />
+                    온라인 PLAYGROUND를 제공합니다.
+                  </h1>
+                  <p>
+                    우리는 차별화된 온라인 콘텐츠와 AI기술 기반상품 추천을 통해
+                    월 이용자 수 480만명, 멤버십 회원 수 1,400만명 이상의
+                    뷰티&헬스 커뮤니티를 구현했습니다. 또한 업계 최초 당일 배송
+                    서비스인 오늘드림을 실행하여 고객경험을 혁신했습니다.
+                  </p>
+                  <p><a href="#">올리브영 Online 서비스가 궁금하다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con3">
+            <div class="con">
+              <p class="number">03<span>올리브영 글로벌</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p>
+                    <img
+                      src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg;jsessionid=A7EDD9176F7135A95A9763B96A9E2D69"
+                      alt=""
+                    />
+                  </p>
+                  <h1>
+                    전세계에 한국의<br />
+                    뷰티&헬스를 알립니다.
+                  </h1>
+                  <p>
+                    우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보
+                    역할을 수행합니다. 2019년 런칭한 글로벌몰과 연간 약 300만명
+                    이상이 외국인 고객이 방문하는 국내 글로벌 특화매장은
+                    파트너사와 함께 글로벌 시장에서 동반 성장을 할 수 있는 핵심
+                    원동력입니다.
+                  </p>
+                  <p><a href="#">올리브영의 글로벌 플랫폼을 보고싶다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="con4">
+            <div class="con">
+              <p class="number">04<span>디플롯</span></p>
+              <div class="info">
+                <div class="inner">
+                  <p>
+                    <img
+                      src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform4-7c45898de0bdfb1de922247a126d8886.jpg;jsessionid=A7EDD9176F7135A95A9763B96A9E2D69"
+                      alt=""
+                    />
+                  </p>
+                  <h1>
+                    가치지향 라이프스타일 플랫폼을 통해<br />
+                    고객에게 다양한 즐거움을 선물합니다.
+                  </h1>
+                  <p>
+                    고객이 뷰티&헬스를 넘어 라이프스타일 전반에서 자신만의
+                    가치와 취향을 반영한 브랜드를 탐색할 수 있습니다. 이러한
+                    고객 경험의 확장을 통해 우리는 뷰티&헬스를 넘어선 종합
+                    라이프스타일 플랫폼으로 도약합니다.
+                  </p>
+                  <p><a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

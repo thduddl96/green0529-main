@@ -10,7 +10,110 @@ a {
   text-decoration: none;
   color: #000;
 }
-#wrap {
+#wrap header {
+  height: 100px;
+}
+
+#wrap header .top {
+  /* position: relative; */
+  width: 1600px;
+  height: 100px;
+  margin-left: -189px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap .logo a img {
+  float: left;
+  width: 210px;
+  height: 70px;
+  position: relative;
+  margin-left: 100px;
+  padding: 30px;
+}
+
+#wrap .menu {
+  /* float: right; */
+  align-items: center;
+}
+#wrap .menu > ul {
+  height: 100px;
+}
+#wrap .menu > ul > li {
+  float: left;
+  position: relative;
+  width: 142px;
+  font-size: 19px;
+  font-weight: bold;
+}
+#wrap .menu > ul > li > a {
+  display: block;
+  line-height: 100px;
+  text-align: center;
+  position: relative;
+}
+#wrap .menu > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #ff7700;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+#wrap .menu > ul > li:hover > a::after {
+  transform: scaleX(1);
+}
+#wrap .menu > ul .sub {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  z-index: 11;
+  font-weight: normal;
+  font-size: 16px;
+  /* background: rgba(255,255,255,0.5); */
+  /* 메뉴 펼쳤을 때 글씨 기본. */
+}
+
+#wrap .menu > ul:hover .sub {
+  height: 320px;
+  padding: 20px 0;
+}
+#wrap .menu > ul .sub.on {
+  height: 320px;
+  padding: 20px 0;
+}
+#wrap .menu > ul .sub li {
+  line-height: 40px;
+  text-align: center;
+}
+
+#wrap .menu > ul .sub li:hover a {
+  color: rgb(255, 255, 255);
+  display: block;
+}
+#wrap .menu .bg {
+  position: absolute;
+  width: 1600px;
+  height: 0px;
+  top: 100px;
+  left: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+#wrap .menu:hover .bg {
+  height: 360px;
+  width: 100%;
+  background-color: rgba(255, 197, 71, 0.8);
+}
+
+/* #wrap {
   width: 1903px;
   margin: 0 auto;
   display: flex;
@@ -33,31 +136,17 @@ a {
   height: 100px;
   text-align: center;
 }
-#wrap .menu > ul > li {
-  float: left;
-  margin: 0 auto;
-  /* position: relative; */
-}
-#wrap .menu > ul > li > a {
+
+/* #wrap .menu > ul > li > a {
   font-weight: bold;
   display: block;
   padding: 0 30px;
-}
+} */
 /* .videoWrap {
 } */
 
 /* 갖고 온 거 */
-* {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
+
 h1 {
   font-size: 35px;
   line-height: 56px;
@@ -102,15 +191,16 @@ h4 {
   width: 100%;
   height: 100%;
 }
+/* 클릭이벤트 css */
 .con {
   position: absolute;
   margin-top: 50px;
   display: flex;
   gap: 30px;
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s;
 }
-
+/* 여기 오파시티1줘서 안보였음 */
 .con.on {
   opacity: 1;
 }
@@ -144,9 +234,34 @@ h4 {
 .con li a p img.on {
   transform: scale(1.2);
 }
-/* 푸터 시작 css */
-#footer {
+/* 까지 */
+/* 카레 콘 카르네 시작부분 */
+ul.txt {
+  width: 1470px;
+  height: 470px;
+  margin: 0 auto;
 }
+ul.txt li {
+  float: left;
+}
+ul.txt li p {
+  padding: 10px;
+}
+ul.txt li a > p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul.txt li a > p > img {
+  width: 337px;
+  height: 337px;
+  float: left;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* 푸터 시작 css */
+
 #footer .footer_box {
   height: 328px;
   padding: 52px 20px;
@@ -194,8 +309,7 @@ h4 {
   font-weight: 500;
   color: #111111;
 }
-#footer .footer_box .footer_inner .app_wrap {
-}
+
 #footer .footer_box .footer_inner .app_wrap .app_list {
   position: absolute;
   right: 7px;
@@ -225,8 +339,6 @@ h4 {
   margin: 20px 0;
 }
 
-#footer .footer_box .footer_inner .sns_wrap {
-}
 #footer .footer_box .footer_inner .sns_wrap .sns_list {
   position: absolute;
   right: 0;
@@ -235,10 +347,6 @@ h4 {
 #footer .footer_box .footer_inner .sns_wrap .sns_list li {
   float: left;
   padding: 0 10px;
-}
-#footer .footer_box .footer_inner .sns_wrap .sns_list li a {
-}
-#footer .footer_box .footer_inner .sns_wrap .sns_list li a img {
 }
 
 #footer .awards_wrap .inner_awards {
@@ -254,8 +362,7 @@ h4 {
   vertical-align: middle;
   margin-right: 44px;
 }
-#footer .awards_wrap .inner_awards ul li img {
-}
+
 #footer .awards_wrap .inner_awards ul li p {
   display: inline-block;
   font-size: 11px;
